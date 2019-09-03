@@ -1,4 +1,4 @@
-# OOP-Helper-Handout
+# OOP-Helper-Handout-Template
 
 Descritpion
 --> copy template branch
