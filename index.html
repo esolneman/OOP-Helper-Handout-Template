@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Studienleistung 2: Rad Racer</title>
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi-print.css" media="print" />
+</head>
+
+<body>
+    <header></header>
+    <nav>
+    <ul>
+    <a href="#WichtigeInformationen"><li>Wichtige Informationen</li></a>
+    <a href="#Bewertungskriterien"><li>Bewertungskriterien</li></a>
+    <a href="#Zusammenfassung"><li>Zusammenfassung</li></a>
+    <a href="#Screenshots"><li>Screenshots</li></a>
+    <a href="#Anforderungen"><li>Anforderungen</li></a>
+    <a href="#HinweiseUndHilfestellungen"><li>Hinweise und Hilfestellungen</li></a>
+    </ul>
+    </nav>
+    <content>
+        <article>
+            <h1>Studienleistung 2: Rad Racer</h1>
+            <section>
+                <a name="WichtigeInformationen"></a>
+                <h1>Wichtige Informationen</h1>
+                <p>
+                    In dieser Studienleistung werden Sie ein Computerspiel implementieren. Um die Aufgabe zu bearbeiten, müssen Sie zuerst das Projekt <a href="https://elearning.uni-regensburg.de/mod/resource/view.php?id=908053">OOP-WS17-18-Studienleistung-2-Starter.zip</a> in IntelliJ öffnen. Nutzen Sie zum Lösen der Aufgabenstellung die bereitgestellten Klassen und Dateien. Zum Einreichen Ihrer Aufgaben nutzen Sie die entsprechende Funktion in <a href="https://elearning.uni-regensburg.de/mod/assign/view.php?id=907847">GRIPS</a>. Falls Sie Probleme mit dem Starterpaket oder dem Einreichen der Aufgabe haben, können Sie sich in den <a href="https://elearning.uni-regensburg.de/mod/resource/view.php?id=872263">Handouts auf GRIPS</a> informieren.
+                </p>
+                <aside>
+                    Bitte denken Sie daran, bei Nachfragen zur Studienleistung keinen Code im <a href="https://elearning.uni-regensburg.de/mod/forum/view.php?id=872248">GRIPS-Forum</a> zu posten. Wenn Sie Ihre Frage nicht ohne Beispiel stellen können, schreiben Sie uns eine <a href="mailto:mi.oop@mailman.uni-regensburg.de">Email</a>.
+                </aside>
+                <p class="important">
+                    <span class="first-word">Abgabe</span>Die fertige Lösung dieser Aufgabe muss bis <span class="highlighted">zum 17. Dezember, 23:55 Uhr</span> über GRIPS eingereicht werden. Bitte beachten Sie: Erstellen Sie ein zip-Archiv (mit der korrekte Endung <i>*.zip</i>) mit dem <span class="highlighted">kompletten</span> Projektordner. Überprüfen Sie vor dem Hochladen Ihrer Lösung, ob das von Ihnen erstellte Archiv funktioniert. Entpacke Sie dieses dazu an einen beliebigen Ort auf Ihrem Rechner und öffnen Sie das entpackte Projekt mit IntelliJ. Abgaben, die nicht im geforderten Format eingereicht werden oder nicht alle benötigten Dateien enthalten, werden bei der Korrektur nicht berücksichtigt und dementsprechend mit 5.0 bewertet. Sollten Sie technische Probleme beim Hochladen haben, wenden Sie sich bitte rechtzeitig per Mail oder Forum an uns.
+                </p>
+                <p class="important">
+                    <span class="first-word">Achtung</span>Eine Verlängerung der Abgabefrist ist nicht möglich. Einreichungen die uns zu spät oder per E-Mail erreichen, werden nicht berücksichtigt. Alle nicht eingereichten Aufgaben werden mit 5.0 bewertet. Testen Sie den Upload am besten schon vor Ablauf der Frist in Ruhe: Sie können bis zum Abgabetermin beliebig viele neue Lösungen einreichen. <span class="highlighted">Denken Sie bitte auch daran, die bekannten <a href="https://elearning.uni-regensburg.de/mod/resource/view.php?id=872253">Regeln zu Plagiaten in der Medieninformatik</a> zu beachten.</span>
+                </p>
+            </section>
+            <section>
+                <a name="Bewertungskriterien"></a>
+                <h1>Bewertungskriterien</h1>
+                <aside>
+                    <p>
+                        Seien Sie kreativ! Wenn Sie möchten, können Sie Ihr Spiel gerne erweitern. Entwerfen Sie ein eigenes Design oder überlegen Sie sich neue Spielmechaniken. Die Grundidee ist auf viele Szenarien anwendbar, wie bspw. ein Raumschiff, das durch einen Asteroidengürtel fliegen muss.
+                    </p>
+                </aside>
+                <p>
+                    Für die gesamte Studienleistung gilt, dass die eingereichten Lösungen nur die in der Aufgabenstellung beschriebenen Probleme lösen sollen. Lassen Sie keinen Teil der jeweiligen Aufgabe weg und interpretieren Sie die Fragestellung nicht selbstständig. Bewertet wird, inwieweit Sie das beschriebene Problem vollständig lösen. Wenn Sie die Aufgaben erfolgreich bearbeitet haben, können Sie Ihre Lösung gerne kreativ gestalten und erweitern; achten Sie dabei darauf, dass die eigentlichen Anforderungen weiterhin erfüllt bleiben.
+                </p>
+                <p>
+                    Die Qualität Ihres Codes fließt in die Gesamtnote mit ein: Nutzen Sie das Decomposition-Pattern um Ihre Programme übersichtlich zu gestalten. Verwenden Sie sinnvolle Bezeichner für Variablen und Methoden und kommentieren Sie ausreichend. Beachten Sie dazu die Kriterien für guten und schlechten Code, die in der Vorlesung erwähnt wurden.
+                </p>
+            </section>
+            <section class="page-break">
+                <a name="Zusammenfassung"></a>
+                <h1>Zusammenfassung</h1>
+                <p>
+                    In dieser Aufgabe sollen Sie ein Geschicklichkeits-Spiel entwickeln. Nutzen Sie dazu die <code>GraphicsApp</code>-Umgebung und die vorgegebene Programmstruktur. In dem Spiel sollen Spieler ein Auto zwischen mehreren Hindernissen hindurch manövrieren. Ziel ist es dabei, möglichst viele der Hindernisse zu überleben, bevor das Spiel endet. Das Spiel ist verloren, wenn das Auto gegen ein Hindernis fährt.
+                </p>
+                <p>
+                    Alle wesentlichen Spielobjekte werden durch die bekannten Elemente der <code>GraphicsApp</code> dargestellt. Die Straße besteht aus einem Rechteck (<code>Rect</code>), die Seiten- und Mittellinien ebenfalls. Für die Darstellung der Spielfigur wird ein Bild genutzt. Die Hindernisse werden als Rechtecke dargestellt. Über die <i>WASD-Tasten</i> hat der Spieler die Möglichkeit, das Auto in eine bestimmte Richtung zu steuern (d.h. 'W' - nach oben, 'S' - nach unten, 'A' - nach links, 'D' - nach rechts). Die Straße wird als fester Hintergrund auf den Bildschirm gezeichnet. 
+                </p>
+                <p>
+                    Um zu simulieren, dass das Auto fährt, werden die Elemente der Welt - die Hindernisse - mit konstanter Geschwindigkeit vom oberen Rand des Bildschirms zum unteren animiert. Diese Geschwindigkeit entspricht demnach der Geschwindigkeit des Autos. Dieses kann sich horizontal bewegen, um Hindernissen auszuweichen. Diese Hindernisse können noch leichter vermieden werden, wenn zudem eine vertikale Verschiebung des Autos auf der Spielfläche durch den Spieler möglich ist. Deswegen sind auch Tasten für "nach oben" und "nach unten" eingeplant.
+                </p>
+            </section>
+            <section>
+                <aside>
+                    Sie können die Farben und Positionen der Spielobjekte in diesen Screenshots als Anhaltspunkt für Ihr eigenes Spiel verwenden. Alternativ können Sie sich aber auch ein eigenes Design ausdenken.
+                </aside>
+                <a name="Screenshots"></a>
+                <h1>Screenshots</h1>
+                <span class="gallery">
+                <a href="img/radracer0.png" class="preview-link"><img class="image preview" src="img/radracer0.png"/></a>
+                <a href="img/radracer1.png" class="preview-link"><img class="image preview" src="img/radracer1.png"/></a>
+                </span>
+            </section>
+            <section class="page-break">
+                <a name="Anforderungen"></a>
+                <h1>Anforderungen</h1>
+                <p>
+                    Um diese Aufgabe erfolgreich zu bestehen, müssen Sie eine Reihe von Anforderungen erfüllen. Diese werden im folgenden aufgeführt und erläutert. Bitte beachten Sie dabei: Die hier genannten <i>funktionalen</i> Anforderungen stellen den Mindestumfang Ihrer Lösung dar, um die Aufgabe zu bestehen. Für eine gute bis sehr gute Bewertung müssen Sie zusätzliche Elemente implementieren und auch auf <a href="#Bewertungskriterien">qualitative Aspekte</a> achten. An den entsprechenden Stellen sind daher sowohl die minimalen Anforderungen (bestehen) als auch die möglichen Erweiterungen für eine gute bis sehr gute Bewertung aufgeführt. Die Umsetzung einiger dieser Erweiterungen können Sie in diesem Gif anschauen:
+                </p>
+                <a href="videos/radracer.gif" class="preview-link"><img class="image preview" src="videos/radracer.gif"/></a>
+                <h3>Design und Parameter</h3>
+                <p>
+                    Wählen Sie geeignete Farben, Positionen, Dimensionen und Parameter für die verschiedenen Komponenten der Anwendung. Es werden hierbei keine Vorgaben gemacht. Wählen Sie Werte, die zum einen eine benutzerfreundliche Verwendung des Spiels erlauben und zum anderen eine ansprechende Gestaltung bewirken. Achte Sie besonders auf die Relationen und Farbkontraste zwischen den Objekten. Ihr Spiel sollte am Ende einen positiven und durchdachten Gesamteindruck machen.
+                </p>
+                <p>
+                    <p class="side-by-side left">
+                        <span class="option-label">Minimale Anforderungen</span> Speichern Sie die Farben und Parameter, die Sie zur Platzierung und Gestaltung der Objekte benötigen, in geeigneten Konstanten ab. Damit Sie die Darstellung des Spiels leichter anpassen und optimieren können, sollten Sie innerhalb Ihrer Anwendung immer nur auf diese Konstanten zurückgreifen. Vermeiden Sie auf jeden Fall sogenannte <i>Magic Numbers</i>. Überlegen Sie sich, in welchen Klassen Sie die unterschiedlichen Konstanten am besten unterbringen können.
+                    </p>
+                    <p class="side-by-side right">
+                        <span class="option-label">Mögliche Erweiterung</span> Nutzen Sie eine zentrale Klasse zur Speicherung der Konfigurationswerte. Stellen Sie die dort gespeicherten Werte in den anderen Teilen Ihrer Anwendung dar. Dies können Sie erreichen, in dem Sie die Konstanten dort öffentlich zugänglich machen (<code>public</code>). Sind die Konstanten über das Schlüsselwort <code>static</code> auf Klassenebene angelegt, können Sie von überall - ohne Instanziierung - über den Namen der Konfigurations-Klasse auf die entsprechenden Werte zugreifen. Achten Sie darauf, keine veränderbaren Werte in der Konfigurations-Klasse zu speichern! Dies ist ein Merkmal für geringe Codequalität.
+                    </p>
+                    <h3>Straße</h3>
+                    <p class="side-by-side left">
+                        <span class="option-label">Minimale Anforderungen</span> Erstellen Sie eine Klasse <code>Road</code>, die Sie zur Darstellung der Straße verwenden. Die Straße besteht aus einem Rechteck für den Asphalt, zwei Rechtecken für die Seitenlinie und einem Rechteck für die Mittellinie. Die Klasse verfügt über eine öffentliche Methode <code>draw</code>, mit deren Aufruf der Boden auf dem Bildschirm gezeichnet wird.
+                    </p>
+                    <p class="side-by-side right">
+                        <span class="option-label">Mögliche Erweiterung</span> Implementieren Sie in der Klasse <code>Road</code> eine gestrichelte Mittellinie, die aus mehreren einzelnen Rechtecken besteht und sich mit der konstanten Geschwindigkeit des Spielfeldes mitbewegt. Hierzu ist es sinnvoll, eine öffentliche Methode <code>update</code> zu implementieren, in der die einzelnen Striche verschoben werden. Wenn ein Strich den unteren Rand des Bildschirms verlässt, muss dafür gesorgt werden, dass von oben wieder ein Strich nachkommt.
+                    </p>
+                    <h3>Spielfigur</h3>
+                    <p>
+                        Implementieren Sie für die Repräsentation der Spielfigur eine Klasse <code>Player</code>. Diese soll alle Variablen und Methoden beinhalten, die zur Realisierung der gewünschten Funktionalitäten benötigt werden. Erstellen Sie in der Klasse öffentliche Methoden, über die die Spielfigur gesteuert werden kann, sowie Methoden, um die Figur zu aktualisieren und zu zeichnen.
+                    </p>
+                    <ul>
+                        <li><code>moveLeft</code>: Über den Aufruf dieser Methode wird eine Bewegung nach links ausgelöst.</li>
+                        <li><code>moveRight</code>: Über den Aufruf dieser Methode wird eine Bewegung nach rechts ausgelöst.</li>
+                        <li><code>moveUp</code>: Über den Aufruf dieser Methode wird eine Bewegung nach oben ausgelöst.</li>
+                        <li><code>moveDown</code>: Über den Aufruf dieser Methode wird eine Bewegung nach unten ausgelöst.</li>
+                        <li><code>draw</code>: Über den Aufruf dieser Methode wird die Spielfigur an ihrer aktuellen Position gezeichnet.</li>
+                        <li><code>update</code>: Über den Aufruf dieser Methode wird die Position der Spielfigur aktualisiert.</li>
+                    </ul>
+                    <p class="side-by-side left">
+                        <span class="option-label">Minimale Anforderungen</span> Die Spielfigur nutzt das bereitgestellte Bild 'car.png' für die Darstellung und <i>startet sich im unteren Drittel der Straße</i>. Drückt der Spieler einer der WASD-Tasten, bewegt sich die Figur um eine konstante Distanz in die entsprechende Richtung. Das Auto kann sich dabei nicht aus dem sichtbaren Spielbereich entfernen.
+                    </p>
+                    <p class="side-by-side right">
+                        <a name="player-extended"></a>
+                        <span class="option-label">Mögliche Erweiterung</span> Die Steuerung ist deutlich angenehmer, wenn sich das Auto bei Tastendruck nicht nur einmal kurz über eine festgelegte Entfernung bewegt, sondern 
+                        über mehrere Frames hinweg in einer glatten Bewegung zur neuen Position gleitet. Hierzu ist es sinnvoll, einen Bewegungsimpuls zu implementieren, der pro Frame, also pro <code>draw</code>-Aufruf, kleiner wird.
+                    </p>
+                    <h3>Hindernisse</h3>
+                    <p>
+                        Die Hindernisse in Ihrem <i>Rad Racer</i>-Spiel sind quadratische Blöcke, zwischen denen der Spieler hindurchfahren muss und werden durch eine neue <code>Obstacle</code>-Klasse modelliert. Stellen Sie die Hindernisse als Instanzen der <code>Rect</code>-Klasse dar. Die Hindernisse bewegen sich vom oberen zum unteren Bildschirmrand, um das Fahren des Autos zu simulieren. Initial wird jedes Hindernis außerhalb des sichtbaren Bildschirms platziert und erscheint erst durch die kontinuierliche Veränderung der y-Position. Sobald das aktuell sichtbare Hindernis aus dem unteren Bildschirmrand hinaus bewegt wurde, wird ein neues Hindernis generiert. Dieses wird dann erneut über dem oberen Bildschirmrand platziert und bewegt sich dann von dort nach unten. Erstellen Sie für die beschrieben Funktionaliät eine Klasse <code>Level</code>. Die Klasse verwaltet die Hindernisse - im Konstruktor werden horizontal zufällig platzierte <code>Obstacles</code> mit zufälliger Größe erzeugt. In den öffentlichen Methoden wird die Aktualisierung und das Zeichnen angestoßen:
+                    </p>
+                    <ul>
+                        <li><code>update</code>: Mit dem Aufruf werden die Hindernisse um einen festen Wert nach unten verschoben und es wird der Fall behandelt, dass Hindernisse vom Bildschirm verschwinden.</li>
+                        <li><code>draw</code>: Mit dem Aufruf dieser Methode werden alle Hindernisse gezeichnet.</li>
+                        <li><code>handleCollisions(Collidable collidable)</code>: Diese Methode bekommt ein <code>Collidable</code> übergeben, welches den Spieler repräsentiert und überprüft, ob der Spieler mit einem Hindernis zusammengestoßen ist. Mehr zu <code>Collidable</code>s folgt in der Teilaufgabe zur Kollisionsdetektion.</li>
+                    </ul>
+                    <p class="side-by-side left">
+                        <span class="option-label">Minimale Anforderungen</span> Es wird eine feste Anzahl an Hindernissen dargestellt, deren Größe und Position zufällig ist. In der <code>Level</code>-Klasse legen Sie dazu geeignete Konstanten für eine minimale und maximale Blockgröße fest. Alle Hindernisse bewegen sich mit der selben Geschwindigkeit über den Bildschirm.
+                    </p>
+                    <p class="side-by-side right">
+                        <span class="option-label">Mögliche Erweiterung</span> Zählen Sie die überwundenen Hindernisse und blenden Sie die entsprechende Zahl auf dem Bildschirm ein.
+                        <br /> Implementieren Sie einen Levelmechanismus, in dem Sie die Geschwindigkeit und/oder die Anzahl oder Größe der Hindernisse mit zunehmender Spielzeit anpassen. Dadurch können Sie die Schwierigkeit und damit die Motivation für den Spieler bewusst gestalten.
+                    </p>
+                    <p class="side-by-side left">
+                    </p>
+                    <p class="side-by-side right">
+                        <span class="option-label">Mögliche Erweiterung</span> Durch die zufällige Platzierung der Hindernisse kann es vorkommen, dass unmöglich zu schaffende Situationen auftreten. Hier gibt es mehrere Wege, Abhilfe zu schaffen - einer davon ist, einen Spaltenmechanismus für die Hindernisse zu implementieren. Geht man davon aus, dass das Spielfeld in bspw. 5 Spalten unterteilt wird, kann für jedes neu erstellte Hindernis eine davon zufällig gewählt werden. Um dem Spieler einen Ausweg zu lassen, kann man für eine bestimmte Anzahl von <code>update</code>-Aufrufen eine der Spalten von neuen Hindernissen frei halten.
+                    </p>
+                    <h3>Kollisionsabfrage</h3>
+                    <p>
+                        Sorgen Sie dafür, dass korrekt erkannt wird, wenn die Spielfigur gegen ein Hindernis fährt. Dabei gilt folgende Spezifikation: <span class="highlighted">Die Spielfigur prallt gegen ein Hindernis, sobald sich ihre x-Position und y-Position mit der Position eines der Hindernis-Rechtecke überschneidet.</span> Sorgen Sie dafür, dass dieser Fall überprüft und korrekt verarbeitet wird. Bedenken Sie, dass Sie bei der Abfrage auch die Breite der Hindernisse und der Spielfigur berücksichtigen müssen. Es lohnt sich, die <code>Obstacle</code>- und die <code>Player</code>-Klassen das <code>Collidable</code>-Interface implementieren zu lassen. So kann über die bereitgestellten, vorgegebenen Methoden die Kollision erkannt werden. Sie dürfen das <code>Collidable</code>-Interface auch sinnvoll, d.h. im engen Rahmen des Einsatzzwecks, erweitern. Fügen Sie keine Funktionen hinzu, die nichts mit der Kollisionsdetektion zu tun haben.
+                    </p>
+                    <h3>Kommunikation innerhalb der Anwendung</h3>
+                    <p>
+                        Im Laufe des Spiels können zwei besondere Ereignisse auftreten, die in der <code>Level</code>-Klasse erkannt werden und möglicherweise an anderen Stellen Ihres Programms relevant sind. Diese Ereignisse sind das erfolgreiche Überwinden eines Hindernisses und das Anstoßen des Spielers an einem Hindernis. Sie müssen diese Information innerhalb Ihrer Anwendung kommunizieren und haben dazu zwei Möglichkeiten.
+                    </p>
+                    <p class="side-by-side left">
+                        <span class="option-label">Minimale Anforderungen</span> Erstellen Sie entsprechende, öffentliche Methoden in der <code>Level</code>-Klasse und fragen Sie in der Hauptklasse Ihres Spiels (<code>GameManager</code>) regelmäßig ab, ob eines der Ereignisse eingetroffen ist. Reagieren Sie dann entsprechend darauf.
+                    </p>
+                    <p class="side-by-side right">
+                        <span class="option-label">Mögliche Erweiterung</span> Implementieren Sie an geeigneter Stelle das vorgegebene Interface <code>GameEventListener</code> und nutzen Sie dieses zur Realisierung eines <i>Observer/Listener</i>-Mechanismus mit dem Sie die Ereignisse (<i>Events</i>) aus dem <code>Level</code> heraus kommunizieren können. Dazu müssen Sie eine Instanz eines <code>GameEventListeners</code> an <code>Level</code> übergeben, wenn Sie dieses instanziieren. Falls in Ihrer Version des Spiels weitere Spiel-Eregnisse eintreten, können Sie das GameEventListener-Interface entsprechend erweitern.
+                    </p>
+                    <h3>Spielende</h3>
+                    <p>
+                        Das Spiel endet, wenn das Auto gegen eines der Hindernisse fährt. Die Bewegung der Spielfigur und der Hindernisse wird in diesem Fall angehalten. Auf dem Bildschirm wird der letzte Zustand des Spiels angezeigt. Alternativ können Sie aber auch eine kreative Reaktion der Spielfigur realisieren. Darüber hinaus gelten folgende Anforderungen:
+                    </p>
+                    <p class="side-by-side left">
+                        <span class="option-label">Minimale Anforderungen</span> Blenden Sie in der Mitte des Bildschirms den Text "Game Over" ein.
+                    </p>
+                    <p class="side-by-side right">
+                        <span class="option-label">Mögliche Erweiterung</span> Ermöglichen Sie es, das Spiel vom <i>Game Over</i>-Screen aus neu zu starten. Sie können dazu z.B. eine Taste verwenden und den Spieler durch einen eingeblendeten Text zum Neustart des Spiels auffordern.
+                    </p>
+            </section>
+            <section>
+                <a name="HinweiseUndHilfestellungen"></a>
+                <h1>Hinweise und Hilfestellungen</h1>
+                <aside>
+                    Während der Arbeit an der Studienleistung können Sie sich jederzeit per Mail oder über das GRIPS-Forum an uns wenden. Zögern Sie bitte nicht, bei Probleme oder Unklarheiten zu fragen.
+                </aside>
+                <h4>Allgemeines Vorgehen</h4>
+                <p class="important">
+                    <span class="first-word">Achtung</span>Lesen Sie die Aufgabenstellung sorgfältig durch. Sollten Sie Teile der Anforderungen nicht verstehen, melden Sie sich rechtzeitig per Mail oder im Forum. Planen Sie ausreichend Zeit für die Bearbeitung der Aufgabe ein und beginnen Sie dementsprechend rechtzeitig mit der Implementierung Ihrer Lösung.
+                </p>
+                <p>
+                    Bearbeiten Sie alle Teile der Anwendung losgelöst voneinander und in einer logischen Reihenfolge. Beginnen Sie mit den einfachen Bestandteilen des Spiels. Erweitern Sie dabei kontinuierlich den Rahmen Ihrer Anwendung in der zentralen Klasse <code>GameManager</code>, welchen Sie in der Anwendungsklasse <code>RadRacer</code> instanziieren und aktualisieren. Testen Sie die neu hinzugekommenen Bestandteile, indem Sie Instanzen der entsprechenden Klassen erzeugen und deren Funktionen in den <i>draw loop</i> der Anwendung integrieren.
+                    <ol>
+                        <li>Implementieren Sie zuerst die Klasse <code>Road</code> um den Boden der Spielwelt darzustellen.</li>
+                        <li>Ergänzen Sie anschließend die Spielfigur durch Implementierung der <code>Player</code>-Klasse.</li>
+                        <li>Zuletzt wird das <code>Level</code> implementiert.</li>
+                        <li>Kombinieren Sie die Funktionaliäten der so entstandenen Klassen sinnvoll in der Hauptklasse Ihrer Anwendung.</li>
+                    </ol>
+                </p>
+                <h4>Sounds in der GraphicsApp</h4>
+                <p>
+                    Die Klasse <code>Sound</code> der <code>GraphicsApp</code>-Umgebung erlaubt das Abspielen von Audiodateien. Diese Dateien müssen im <i>wav</i>-Format vorliegen und im <i>Package</i> <code>data.assets</code> des <code>src</code>-Ordners gespeichert sein. Übergeben Sie den korrekten Pfad zur gewünschten Audiodatei an den Konstruktor der Klasse. Auf dem instanziierten Objekt können Sie verschieden Methoden zur Steuerung der Audioausgabe aufrufen. Weitere Informationen dazu finden Sie auch in der <a href="https://elearning.uni-regensburg.de/mod/url/view.php?id=872257">Dokumentation</a>.
+                </p>
+                <pre>
+                <code>
+                private static final Sound JUMP_SOUND = new Sound("/data/assets/jump.wav");
+                JUMP_SOUND.play();
+                </code>
+                </pre>
+                <h4>Labels in der GraphicsApp</h4>
+                <p>
+                    Um <code>Labels</code> abhängig von Konstanten zu platzieren, ist häufig das Abfragen der Breite eines <code>Labels</code> notwendig. Die Methode <code>getWidth</code> funktioniert leider nicht korrekt. Sie können zur groben Berechnug der Breite folgende Daumenregel nutzen: 
+            
+                </p>
+            <pre><code>
+                (Länge des Textes)*Fontgröße/2
+            </code></pre>
+            </section>
+        </article>
+    </content>
+
+    <footer>Stand: 1. Dezember 2017. Die Aufgabenstellung wurde von Alexander Bazo und Florin Schwappach verfasst. Dieser Text stellt die gültigen Anforderungen für die zweite Studienleistung im Kurs <i>Einführung in die objektorientierte Programmierung mit Java </i> dar. </footer>
+</body>
+
+
+</html>
