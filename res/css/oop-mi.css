@@ -55,6 +55,7 @@ nav {
     height: 54px;
     margin: 0;
     background-color: rgb(156, 0, 75);
+    display: none;
 }
 
 nav ul {
