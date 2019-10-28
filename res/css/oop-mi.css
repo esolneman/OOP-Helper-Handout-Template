@@ -170,6 +170,7 @@ content .preview {
 
 content .preview:hover {
     cursor: zoom-in;
+    transform: scale(1.5);
 }
 
 content .gif-preview {
