@@ -1,6 +1,8 @@
  Studienleistung 2: Rad Racer  
  
- Test for updating repo content
+ 
+ Only changes for testing purpose
+ Test for updating repo content again
 
 [*   Wichtige Informationen](#WichtigeInformationen)[*   Bewertungskriterien](#Bewertungskriterien)[*   Zusammenfassung](#Zusammenfassung)[*   Screenshots](#Screenshots)[*   Anforderungen](#Anforderungen)[*   Hinweise und Hilfestellungen](#HinweiseUndHilfestellungen)
 
