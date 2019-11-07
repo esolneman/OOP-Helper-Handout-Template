@@ -1,27 +1,700 @@
-
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Studienleistung 2: Rad Racer</title>
-    <link rel="stylesheet" type="text/css" href="res/css/oop-mi.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="res/css/oop-mi-print.css" media="print" />
-</head>
-
+<!doctype html>
+<html lang="de">
 <body>
-<table class="criteria table table-condensed table-striped" id="rubric-criteria" aria-label="Rubrik"><tbody id="yui_3_17_2_1_1573056843077_404"><tr class="criterion first even" id="rubric-criteria-636"><td class="description" id="rubric-criteria-636-description-cell" tabindex="0" aria-label="Kriterium zu 1) Funktionale Anforderungen: Bouncer räumt die komplette Wiese und entfernt alle roten Felder. Bouncer kontrolliert jedes Feld der Karte und bleibt in der obersten Zeile stehen.">zu 1) Funktionale Anforderungen: Bouncer räumt die komplette Wiese und entfernt alle roten Felder. Bouncer kontrolliert jedes Feld der Karte und bleibt in der obersten Zeile stehen.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-636-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-636-levels" role="radiogroup"><td id="rubric-criteria-636-levels-2396" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Bouncer färbt keine roten Felder weiß ein., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-636-levels-2396-definition-container">Aufgabe nicht erfüllt: Bouncer färbt keine roten Felder weiß ein.</div><div class="score"><span id="rubric-criteria-636-levels-2396-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-636-levels-2397" class="level odd" tabindex="0" aria-label="Level Aufgabe ansatzweise erfüllt: Bouncer sammelt zwar rote Felder, er sammelt aber nicht alle, oder andere Probleme treten dabei auf., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-636-levels-2397-definition-container">Aufgabe ansatzweise erfüllt: Bouncer sammelt zwar rote Felder, er sammelt aber nicht alle, oder andere Probleme treten dabei auf.</div><div class="score"><span id="rubric-criteria-636-levels-2397-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-636-levels-2398" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt: Bouncer sammelt alle roten Felder und bleibt zum Schluss stehen., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-636-levels-2398-definition-container">Aufgabe komplett erfüllt: Bouncer sammelt alle roten Felder und bleibt zum Schluss stehen.</div><div class="score"><span id="rubric-criteria-636-levels-2398-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-637"><td class="description" id="rubric-criteria-637-description-cell" tabindex="0" aria-label="Kriterium zu 1) Systematisches Vorgehen: Bei der Bearbeitung der Aufgabe sucht Bouncer einen möglichst effizienten Weg über die Wiese.">zu 1) Systematisches Vorgehen: Bei der Bearbeitung der Aufgabe sucht Bouncer einen möglichst effizienten Weg über die Wiese.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-637-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-637-levels" role="radiogroup"><td id="rubric-criteria-637-levels-2399" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Es ist kein Ansatz zur effizienten Gestaltung des Programms ersichtlich. Felder werden mehrmals betreten., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-637-levels-2399-definition-container">Aufgabe nicht erfüllt: Es ist kein Ansatz zur effizienten Gestaltung des Programms ersichtlich. Felder werden mehrmals betreten.</div><div class="score"><span id="rubric-criteria-637-levels-2399-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-637-levels-2400" class="level odd" tabindex="0" aria-label="Level Aufgabe ansatzweise erfüllt: Die Lösung lässt einen Ansatz zur effektiven Gestaltung des Programms erkennen. Die Implementierung weißt jedoch Lücken auf. Einige Felder werden mehrfach betreten., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-637-levels-2400-definition-container">Aufgabe ansatzweise erfüllt: Die Lösung lässt einen Ansatz zur effektiven Gestaltung des Programms erkennen. Die Implementierung weißt jedoch Lücken auf. Einige Felder werden mehrfach betreten.</div><div class="score"><span id="rubric-criteria-637-levels-2400-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-637-levels-2401" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt: Bouncer löst die Problemstellung und betritt dazu jedes Feld nur einmal., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-637-levels-2401-definition-container">Aufgabe komplett erfüllt: Bouncer löst die Problemstellung und betritt dazu jedes Feld nur einmal.</div><div class="score"><span id="rubric-criteria-637-levels-2401-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-638"><td class="description" id="rubric-criteria-638-description-cell" tabindex="0" aria-label="Kriterium zu 1) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.">zu 1) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-638-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-638-levels" role="radiogroup"><td id="rubric-criteria-638-levels-2402" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: In der eingereichten Lösung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-638-levels-2402-definition-container">Aufgabe nicht erfüllt: In der eingereichten Lösung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar.</div><div class="score"><span id="rubric-criteria-638-levels-2402-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-638-levels-2403" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: Die eingereichte Lösung lässt erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen. , 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-638-levels-2403-definition-container">Aufgabe teilweise erfüllt: Die eingereichte Lösung lässt erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen. </div><div class="score"><span id="rubric-criteria-638-levels-2403-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-638-levels-2404" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt: Die Teilprobleme wurden korrekt identifiziert, das Prüfen eines Feldes und die Behandlung der Zeilen sind jeweils strukturell vom Rest des Programms getrennt. , 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-638-levels-2404-definition-container">Aufgabe komplett erfüllt: Die Teilprobleme wurden korrekt identifiziert, das Prüfen eines Feldes und die Behandlung der Zeilen sind jeweils strukturell vom Rest des Programms getrennt. </div><div class="score"><span id="rubric-criteria-638-levels-2404-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-639"><td class="description" id="rubric-criteria-639-description-cell" tabindex="0" aria-label="Kriterium zu 1) Schleifen: Zur Lösung der Aufgabe werden Schleifen eingesetzt um Teilbereiche wiederholt auszuführen und das Programm übersichtlicher zu gestalten.">zu 1) Schleifen: Zur Lösung der Aufgabe werden Schleifen eingesetzt um Teilbereiche wiederholt auszuführen und das Programm übersichtlicher zu gestalten.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-639-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-639-levels" role="radiogroup"><td id="rubric-criteria-639-levels-2405" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Bei der eingereichten Lösung werden keine Schleifen verwendet oder die vorhanden Schleifen werden nicht korrekt eingesetzt bzw. tragen nicht zum erfolgreichen Lösen des Problems bei., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-639-levels-2405-definition-container">Aufgabe nicht erfüllt: Bei der eingereichten Lösung werden keine Schleifen verwendet oder die vorhanden Schleifen werden nicht korrekt eingesetzt bzw. tragen nicht zum erfolgreichen Lösen des Problems bei.</div><div class="score"><span id="rubric-criteria-639-levels-2405-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-639-levels-2406" class="level last odd" tabindex="0" aria-label="Level Aufgabe komplett erfüllt: Bei der Lösung des Problems werden an allen relevanten Stellen sinnvolle Schleifen verwendet., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-639-levels-2406-definition-container">Aufgabe komplett erfüllt: Bei der Lösung des Problems werden an allen relevanten Stellen sinnvolle Schleifen verwendet.</div><div class="score"><span id="rubric-criteria-639-levels-2406-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-640"><td class="description" id="rubric-criteria-640-description-cell" tabindex="0" aria-label="Kriterium zu 1) Code Qualität: Bezeichner">zu 1) Code Qualität: Bezeichner</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-640-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-640-levels" role="radiogroup"><td id="rubric-criteria-640-levels-2407" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-640-levels-2407-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-640-levels-2407-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-640-levels-2408" class="level last odd" tabindex="0" aria-label="Level Bezeichner: In der Lösung wurden sinnvolle Bezeichner für die selbst definierten Methoden gewählt. , 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-640-levels-2408-definition-container">Bezeichner: In der Lösung wurden sinnvolle Bezeichner für die selbst definierten Methoden gewählt. </div><div class="score"><span id="rubric-criteria-640-levels-2408-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-641"><td class="description" id="rubric-criteria-641-description-cell" tabindex="0" aria-label="Kriterium zu 1) Code Qualität: Formatierung">zu 1) Code Qualität: Formatierung</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-641-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-641-levels" role="radiogroup"><td id="rubric-criteria-641-levels-2409" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-641-levels-2409-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-641-levels-2409-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-641-levels-2410" class="level last odd" tabindex="0" aria-label="Level Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einrückungen und Abstände sind korrekt gewählt. Jede Zeile beinhaltet genau eine Anweisung., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-641-levels-2410-definition-container">Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einrückungen und Abstände sind korrekt gewählt. Jede Zeile beinhaltet genau eine Anweisung.</div><div class="score"><span id="rubric-criteria-641-levels-2410-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-642"><td class="description" id="rubric-criteria-642-description-cell" tabindex="0" aria-label="Kriterium zu 1) Code Qualität: Decomposition und Duplicate Code
-">zu 1) Code Qualität: Decomposition und Duplicate Code
-</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-642-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-642-levels" role="radiogroup"><td id="rubric-criteria-642-levels-2411" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-642-levels-2411-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-642-levels-2411-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-642-levels-2412" class="level last odd" tabindex="0" aria-label="Level Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in seprate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-642-levels-2412-definition-container">Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in seprate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt.</div><div class="score"><span id="rubric-criteria-642-levels-2412-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-643"><td class="description" id="rubric-criteria-643-description-cell" tabindex="0" aria-label="Kriterium zu 1) Gesamteindruck der Lösung">zu 1) Gesamteindruck der Lösung</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-643-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-643-levels" role="radiogroup"><td id="rubric-criteria-643-levels-2413" class="level first even" tabindex="0" aria-label="Level Der Gesamteindruck der eingereichten Lösung ist nicht ausreichend. Form und Funktion erfüllen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden können. , 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-643-levels-2413-definition-container">Der Gesamteindruck der eingereichten Lösung ist nicht ausreichend. Form und Funktion erfüllen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden können. </div><div class="score"><span id="rubric-criteria-643-levels-2413-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-643-levels-2414" class="level last odd" tabindex="0" aria-label="Level Der Gesamteindruck der Lösung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte  an die Teilnehmer gestellt werden können., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-643-levels-2414-definition-container">Der Gesamteindruck der Lösung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte  an die Teilnehmer gestellt werden können.</div><div class="score"><span id="rubric-criteria-643-levels-2414-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-644"><td class="description" id="rubric-criteria-644-description-cell" tabindex="0" aria-label="Kriterium zu 2) Funktionale Anforderungen: Bouncer durchquert das Labyrinth und erreicht den grün markierten Ausgang. Das Programm bricht ab, sobald dieses Feld erreicht ist.
-">zu 2) Funktionale Anforderungen: Bouncer durchquert das Labyrinth und erreicht den grün markierten Ausgang. Das Programm bricht ab, sobald dieses Feld erreicht ist.
-</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-644-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-644-levels" role="radiogroup"><td id="rubric-criteria-644-levels-2415" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Das Programm wird nicht beendet oder bricht ab bevor Bouncer das markierte Ziel erreicht., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-644-levels-2415-definition-container">Aufgabe nicht erfüllt: Das Programm wird nicht beendet oder bricht ab bevor Bouncer das markierte Ziel erreicht.</div><div class="score"><span id="rubric-criteria-644-levels-2415-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-644-levels-2416" class="level odd" tabindex="0" aria-label="Level Aufgabe ansatzweise erfüllt: Bouncer bewegt sich durch das Labyrinth und es sind Ansätze für die korrekte Wegfindung vorhanden. Das Programm wird aber nicht bis zum gewünschten Endzustand ausgeführt, funktioniert nur auf einer der beiden Karten oder bricht nicht ab, nachdem das Zielfeld erreicht wurde., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-644-levels-2416-definition-container">Aufgabe ansatzweise erfüllt: Bouncer bewegt sich durch das Labyrinth und es sind Ansätze für die korrekte Wegfindung vorhanden. Das Programm wird aber nicht bis zum gewünschten Endzustand ausgeführt, funktioniert nur auf einer der beiden Karten oder bricht nicht ab, nachdem das Zielfeld erreicht wurde.</div><div class="score"><span id="rubric-criteria-644-levels-2416-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-644-levels-2417" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt: Bouncer findet den korrekten Weg aus dem Labyrinth und das Programm wird korrekt abgebrochen, sobald das Ziel erreicht wurde. Das Programm funktioniert unverändert auf beiden Karten., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-644-levels-2417-definition-container">Aufgabe komplett erfüllt: Bouncer findet den korrekten Weg aus dem Labyrinth und das Programm wird korrekt abgebrochen, sobald das Ziel erreicht wurde. Das Programm funktioniert unverändert auf beiden Karten.</div><div class="score"><span id="rubric-criteria-644-levels-2417-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-645"><td class="description" id="rubric-criteria-645-description-cell" tabindex="0" aria-label="Kriterium zu 2) Entscheidungen bei der Wegfindung: Bouncer überprüft bei jedem Schritt im Labyrinth seine Optionen für den nächsten Abschnitt. Dabei wird auf die  die korrekte Reihenfolge der unterschiedlichen Möglichkeiten geachtet.">zu 2) Entscheidungen bei der Wegfindung: Bouncer überprüft bei jedem Schritt im Labyrinth seine Optionen für den nächsten Abschnitt. Dabei wird auf die  die korrekte Reihenfolge der unterschiedlichen Möglichkeiten geachtet.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-645-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-645-levels" role="radiogroup"><td id="rubric-criteria-645-levels-2418" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Die eingereichte Lösung beeinhaltet keine Ansätze zur Implementierung eines Wegfindungs-Algorithmus. 
-, 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-645-levels-2418-definition-container">Aufgabe nicht erfüllt: Die eingereichte Lösung beeinhaltet keine Ansätze zur Implementierung eines Wegfindungs-Algorithmus. 
-</div><div class="score"><span id="rubric-criteria-645-levels-2418-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-645-levels-2419" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: 
-Ansätze für eine korrekte Implementierung des nötigen Algorithmus sind vorhanden. Die gewählte Lösung ist aber nicht zielführend und beeinhaltet Fehler. Entscheidungen zur Routenfindung wurden fehlerhaft, unvollständig oder an der falschen Stelle getroffen., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-645-levels-2419-definition-container">Aufgabe teilweise erfüllt: 
-Ansätze für eine korrekte Implementierung des nötigen Algorithmus sind vorhanden. Die gewählte Lösung ist aber nicht zielführend und beeinhaltet Fehler. Entscheidungen zur Routenfindung wurden fehlerhaft, unvollständig oder an der falschen Stelle getroffen.</div><div class="score"><span id="rubric-criteria-645-levels-2419-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-645-levels-2420" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt: Die gewählte Lösung sorgt dafür, dass Bouncer an kritischen Stellen korrekte Entscheidungen für den nächsten Abschnitt des Weges trifft. Die verschiedenen Möglichkeiten werden in korekter Reihenfolge geprüft und entsprechen verabeitet., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-645-levels-2420-definition-container">Aufgabe komplett erfüllt: Die gewählte Lösung sorgt dafür, dass Bouncer an kritischen Stellen korrekte Entscheidungen für den nächsten Abschnitt des Weges trifft. Die verschiedenen Möglichkeiten werden in korekter Reihenfolge geprüft und entsprechen verabeitet.</div><div class="score"><span id="rubric-criteria-645-levels-2420-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-646"><td class="description" id="rubric-criteria-646-description-cell" tabindex="0" aria-label="Kriterium zu 2) Sinnvolle Erweiterung der Bewegungsbefehle für Bouncer: Bouncers eingeschränktes Set an möglichen Befehlen wird durch eigene Methoden erweitert um den Code deutlicher und leichter lesbar zu machen.">zu 2) Sinnvolle Erweiterung der Bewegungsbefehle für Bouncer: Bouncers eingeschränktes Set an möglichen Befehlen wird durch eigene Methoden erweitert um den Code deutlicher und leichter lesbar zu machen.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-646-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-646-levels" role="radiogroup"><td id="rubric-criteria-646-levels-2421" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Im Code finden sich wiederholt gleiche Stellen, die identische Bewegungsabläufe durch Kombination vorhandener Bouncer-Befehle ausführen., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-646-levels-2421-definition-container">Aufgabe nicht erfüllt: Im Code finden sich wiederholt gleiche Stellen, die identische Bewegungsabläufe durch Kombination vorhandener Bouncer-Befehle ausführen.</div><div class="score"><span id="rubric-criteria-646-levels-2421-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-646-levels-2422" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: Teilweise werden fehlende Bewegungsabläufe (umdrehen oder Drehung nach rechts) durch eigene Methoden ergänzt und sinnvoll verwendet., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-646-levels-2422-definition-container">Aufgabe teilweise erfüllt: Teilweise werden fehlende Bewegungsabläufe (umdrehen oder Drehung nach rechts) durch eigene Methoden ergänzt und sinnvoll verwendet.</div><div class="score"><span id="rubric-criteria-646-levels-2422-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-646-levels-2423" class="level last even" tabindex="0" aria-label="Level Aufgabe erfüllt: (Häufig) verwendete Bewegungsabläufe, die nicht schon durch Bouncer-Methoden abgedeckt werden, werden durch die Implementierung und den Aufruf eigener Methoden integriert und genutzt., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-646-levels-2423-definition-container">Aufgabe erfüllt: (Häufig) verwendete Bewegungsabläufe, die nicht schon durch Bouncer-Methoden abgedeckt werden, werden durch die Implementierung und den Aufruf eigener Methoden integriert und genutzt.</div><div class="score"><span id="rubric-criteria-646-levels-2423-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-647"><td class="description" id="rubric-criteria-647-description-cell" tabindex="0" aria-label="Kriterium zu 2) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.">zu 2) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-647-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-647-levels" role="radiogroup"><td id="rubric-criteria-647-levels-2424" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: In der eingereichten Lösung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-647-levels-2424-definition-container">Aufgabe nicht erfüllt: In der eingereichten Lösung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar.</div><div class="score"><span id="rubric-criteria-647-levels-2424-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-647-levels-2425" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: Die eingereichte Lösung lässt erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen. , 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-647-levels-2425-definition-container">Aufgabe teilweise erfüllt: Die eingereichte Lösung lässt erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen. </div><div class="score"><span id="rubric-criteria-647-levels-2425-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-647-levels-2426" class="level last even" tabindex="0" aria-label="Level Aufgabe erfüllt:  In der eingereichten Lösung wird das Prüfen und Finden von Schätzen in voneinander getrennten Bereichen bearbeitet. Die Einzelschritte werden in einer separaten Methode verarbeitet. Eine umschließenden Konstruktion prüft die Endbedinung und sorgt für den regelmäßigen Aufruf der Einzelschritt-Methode. , 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-647-levels-2426-definition-container">Aufgabe erfüllt:  In der eingereichten Lösung wird das Prüfen und Finden von Schätzen in voneinander getrennten Bereichen bearbeitet. Die Einzelschritte werden in einer separaten Methode verarbeitet. Eine umschließenden Konstruktion prüft die Endbedinung und sorgt für den regelmäßigen Aufruf der Einzelschritt-Methode. </div><div class="score"><span id="rubric-criteria-647-levels-2426-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-648"><td class="description" id="rubric-criteria-648-description-cell" tabindex="0" aria-label="Kriterium zu 2) Komplexität und Übersicht: Für die Lösung wurde eine effiziente und übersichtliche Lösung gewählt.">zu 2) Komplexität und Übersicht: Für die Lösung wurde eine effiziente und übersichtliche Lösung gewählt.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-648-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-648-levels" role="radiogroup"><td id="rubric-criteria-648-levels-2427" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Der Code der eingereichten Lösung ist unötig komplex und wenig übersichtlich. Es finden sich überflüssige Verzweigungen und Code-Bestandteile. Die Lösung ist nicht effizient., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-648-levels-2427-definition-container">Aufgabe nicht erfüllt: Der Code der eingereichten Lösung ist unötig komplex und wenig übersichtlich. Es finden sich überflüssige Verzweigungen und Code-Bestandteile. Die Lösung ist nicht effizient.</div><div class="score"><span id="rubric-criteria-648-levels-2427-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-648-levels-2428" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: Der Code der eingereichten Lösung zeigt Ansätze einer effizienten Gestaltung und Implementierung. Die Komplexität sowie Übersichtlichkeit ist angemessen., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-648-levels-2428-definition-container">Aufgabe teilweise erfüllt: Der Code der eingereichten Lösung zeigt Ansätze einer effizienten Gestaltung und Implementierung. Die Komplexität sowie Übersichtlichkeit ist angemessen.</div><div class="score"><span id="rubric-criteria-648-levels-2428-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-648-levels-2429" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt: Bei der Lösung des Problems wurde eine effiziente und übersichtliche Form gewählt. , 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-648-levels-2429-definition-container">Aufgabe komplett erfüllt: Bei der Lösung des Problems wurde eine effiziente und übersichtliche Form gewählt. </div><div class="score"><span id="rubric-criteria-648-levels-2429-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-649"><td class="description" id="rubric-criteria-649-description-cell" tabindex="0" aria-label="Kriterium zu 2) Code Qualität: Bezeichner">zu 2) Code Qualität: Bezeichner</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-649-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-649-levels" role="radiogroup"><td id="rubric-criteria-649-levels-2430" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-649-levels-2430-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-649-levels-2430-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-649-levels-2431" class="level last odd" tabindex="0" aria-label="Level Bezeichner: In der Lösung wurden sinnvolle Bezeichner für die selbst definierten Methoden gewählt., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-649-levels-2431-definition-container">Bezeichner: In der Lösung wurden sinnvolle Bezeichner für die selbst definierten Methoden gewählt.</div><div class="score"><span id="rubric-criteria-649-levels-2431-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-650"><td class="description" id="rubric-criteria-650-description-cell" tabindex="0" aria-label="Kriterium zu 2) Code Qualität: Formatierung">zu 2) Code Qualität: Formatierung</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-650-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-650-levels" role="radiogroup"><td id="rubric-criteria-650-levels-2432" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-650-levels-2432-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-650-levels-2432-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-650-levels-2433" class="level last odd" tabindex="0" aria-label="Level Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einrückungen und Abstände sind korrekt gewählt. Jede Zeile beinhaltet genau eine Anweisung., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-650-levels-2433-definition-container">Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einrückungen und Abstände sind korrekt gewählt. Jede Zeile beinhaltet genau eine Anweisung.</div><div class="score"><span id="rubric-criteria-650-levels-2433-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-651"><td class="description" id="rubric-criteria-651-description-cell" tabindex="0" aria-label="Kriterium zu 2) Code Qualität: Decompostion  und Duplicate Code">zu 2) Code Qualität: Decompostion  und Duplicate Code</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-651-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-651-levels" role="radiogroup"><td id="rubric-criteria-651-levels-2434" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-651-levels-2434-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-651-levels-2434-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-651-levels-2435" class="level last odd" tabindex="0" aria-label="Level Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in separate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-651-levels-2435-definition-container">Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in separate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt.</div><div class="score"><span id="rubric-criteria-651-levels-2435-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-652"><td class="description" id="rubric-criteria-652-description-cell" tabindex="0" aria-label="Kriterium zu 2) Gesamteindruck der Lösung">zu 2) Gesamteindruck der Lösung</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-652-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-652-levels" role="radiogroup"><td id="rubric-criteria-652-levels-2436" class="level first even" tabindex="0" aria-label="Level Der Gesamteindruck der eingereichten Lösung ist nicht ausreichend. Form und Funktion erfüllen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden können. , 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-652-levels-2436-definition-container">Der Gesamteindruck der eingereichten Lösung ist nicht ausreichend. Form und Funktion erfüllen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden können. </div><div class="score"><span id="rubric-criteria-652-levels-2436-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-652-levels-2437" class="level last odd" tabindex="0" aria-label="Level Der Gesamteindruck der Lösung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte  an die Teilnehmer gestellt werden können., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-652-levels-2437-definition-container">Der Gesamteindruck der Lösung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte  an die Teilnehmer gestellt werden können.</div><div class="score"><span id="rubric-criteria-652-levels-2437-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-653"><td class="description" id="rubric-criteria-653-description-cell" tabindex="0" aria-label="Kriterium zu 3) Funktionale Anforderungen: Die Karte wird nach Programmstart genau so dargestellt, wie es auf dem Screenshot der Aufgabenstellung zu sehen ist.">zu 3) Funktionale Anforderungen: Die Karte wird nach Programmstart genau so dargestellt, wie es auf dem Screenshot der Aufgabenstellung zu sehen ist.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-653-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-653-levels" role="radiogroup"><td id="rubric-criteria-653-levels-2438" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt:  Die Karte wird nicht korrekt dargestellt. Städte und/oder Straßen werden nicht oder nicht korrekt dargestellt. Positionen und/oder Farben stimmen nicht mit dem Screenshot überein.
-, 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-653-levels-2438-definition-container">Aufgabe nicht erfüllt:  Die Karte wird nicht korrekt dargestellt. Städte und/oder Straßen werden nicht oder nicht korrekt dargestellt. Positionen und/oder Farben stimmen nicht mit dem Screenshot überein.
-</div><div class="score"><span id="rubric-criteria-653-levels-2438-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-653-levels-2439" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: Die Kartendarstellung ähnelt stark dem gewünschten Ergebnisse. Teilweise sind aber Fehler in Farbe, Form oder Postion zu bemerken., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-653-levels-2439-definition-container">Aufgabe teilweise erfüllt: Die Kartendarstellung ähnelt stark dem gewünschten Ergebnisse. Teilweise sind aber Fehler in Farbe, Form oder Postion zu bemerken.</div><div class="score"><span id="rubric-criteria-653-levels-2439-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-653-levels-2440" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt:Die Darstellung ist identisch mit der der Aufgabenstellung. Position, Farbe und Größe der Elemente entsprechen den Erwartungen oder wurden in gewinnbringender Art und Weise erweitert., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-653-levels-2440-definition-container">Aufgabe komplett erfüllt:Die Darstellung ist identisch mit der der Aufgabenstellung. Position, Farbe und Größe der Elemente entsprechen den Erwartungen oder wurden in gewinnbringender Art und Weise erweitert.</div><div class="score"><span id="rubric-criteria-653-levels-2440-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-654"><td class="description" id="rubric-criteria-654-description-cell" tabindex="0" aria-label="Kriterium zu 3) Konstanten: Alle relevanten Zahlen werden als Konstanten definiert.">zu 3) Konstanten: Alle relevanten Zahlen werden als Konstanten definiert.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-654-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-654-levels" role="radiogroup"><td id="rubric-criteria-654-levels-2441" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: Es werden keine Konstanten verwendet., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-654-levels-2441-definition-container">Aufgabe nicht erfüllt: Es werden keine Konstanten verwendet.</div><div class="score"><span id="rubric-criteria-654-levels-2441-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-654-levels-2442" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: Manche Werte werden in Kostanten ausgelagert. Es sind jedoch Magic Numbers im Code vorhanden., 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-654-levels-2442-definition-container">Aufgabe teilweise erfüllt: Manche Werte werden in Kostanten ausgelagert. Es sind jedoch Magic Numbers im Code vorhanden.</div><div class="score"><span id="rubric-criteria-654-levels-2442-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-654-levels-2443" class="level last even" tabindex="0" aria-label="Level Aufgabe komplett erfüllt:In der eingereichten Lösung werden alle relevanten Werte als Konstanten angelegt und verwendet., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-654-levels-2443-definition-container">Aufgabe komplett erfüllt:In der eingereichten Lösung werden alle relevanten Werte als Konstanten angelegt und verwendet.</div><div class="score"><span id="rubric-criteria-654-levels-2443-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-655"><td class="description" id="rubric-criteria-655-description-cell" tabindex="0" aria-label="Kriterium zu 3) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.">zu 3) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-655-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-655-levels" role="radiogroup"><td id="rubric-criteria-655-levels-2444" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: In der eingereichten Lösung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar., 0 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-655-levels-2444-definition-container">Aufgabe nicht erfüllt: In der eingereichten Lösung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar.</div><div class="score"><span id="rubric-criteria-655-levels-2444-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-655-levels-2445" class="level odd" tabindex="0" aria-label="Level Aufgabe teilweise erfüllt: Die eingereichte Lösung lässt erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen. , 1 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-655-levels-2445-definition-container">Aufgabe teilweise erfüllt: Die eingereichte Lösung lässt erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen. </div><div class="score"><span id="rubric-criteria-655-levels-2445-score" class="scorevalue">1</span> Punkte</div></div></td><td id="rubric-criteria-655-levels-2446" class="level last even" tabindex="0" aria-label="Level Aufgabe erfüllt: Initalisierung der Zeichenfläche und das eigentliche Zeichnen der Karte sind in der eingereichten Lösung klar von einander getrennt., 2 Punkte." width="33%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-655-levels-2446-definition-container">Aufgabe erfüllt: Initalisierung der Zeichenfläche und das eigentliche Zeichnen der Karte sind in der eingereichten Lösung klar von einander getrennt.</div><div class="score"><span id="rubric-criteria-655-levels-2446-score" class="scorevalue">2</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-705"><td class="description" id="rubric-criteria-705-description-cell" tabindex="0" aria-label="Kriterium zu 3)
-Nutzen von Methoden und Parametern: In dem eingereichten Programm wird auch bei den selbsterstellen Methoden auf Parameter und/oder Rückgabewerte zurück gegriffen.">zu 3)
-Nutzen von Methoden und Parametern: In dem eingereichten Programm wird auch bei den selbsterstellen Methoden auf Parameter und/oder Rückgabewerte zurück gegriffen.</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-705-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-705-levels" role="radiogroup"><td id="rubric-criteria-705-levels-2573" class="level first even" tabindex="0" aria-label="Level Aufgabe nicht erfüllt: In dem Programm werden weder Parameter noch Rückgabewerte genutzt um den Code übersichtliche und effizienter zu gestalten., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-705-levels-2573-definition-container">Aufgabe nicht erfüllt: In dem Programm werden weder Parameter noch Rückgabewerte genutzt um den Code übersichtliche und effizienter zu gestalten.</div><div class="score"><span id="rubric-criteria-705-levels-2573-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-705-levels-2574" class="level last odd" tabindex="0" aria-label="Level Aufgabe erfüllt: In der eingereichten Lösung wird auf Parameter und/oder Rückgabewerte zurückgegriffen um den Code übersichtlicher und effizienter zu gestalten., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-705-levels-2574-definition-container">Aufgabe erfüllt: In der eingereichten Lösung wird auf Parameter und/oder Rückgabewerte zurückgegriffen um den Code übersichtlicher und effizienter zu gestalten.</div><div class="score"><span id="rubric-criteria-705-levels-2574-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-656"><td class="description" id="rubric-criteria-656-description-cell" tabindex="0" aria-label="Kriterium zu 3) Code Qualität: Bezeichner">zu 3) Code Qualität: Bezeichner</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-656-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-656-levels" role="radiogroup"><td id="rubric-criteria-656-levels-2447" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-656-levels-2447-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-656-levels-2447-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-656-levels-2448" class="level last odd" tabindex="0" aria-label="Level Bezeichner: In der Lösung wurden sinnvolle Bezeichner für die selbst definierten Methoden gewählt., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-656-levels-2448-definition-container">Bezeichner: In der Lösung wurden sinnvolle Bezeichner für die selbst definierten Methoden gewählt.</div><div class="score"><span id="rubric-criteria-656-levels-2448-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion even" id="rubric-criteria-657"><td class="description" id="rubric-criteria-657-description-cell" tabindex="0" aria-label="Kriterium zu 3) Code Qualität: Formatierung">zu 3) Code Qualität: Formatierung</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-657-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-657-levels" role="radiogroup"><td id="rubric-criteria-657-levels-2449" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-657-levels-2449-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-657-levels-2449-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-657-levels-2450" class="level last odd" tabindex="0" aria-label="Level Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einrückungen und Abstände sind korrekt gewählt. Jede Zeile beinhaltet genau eine Anweisung., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-657-levels-2450-definition-container">Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einrückungen und Abstände sind korrekt gewählt. Jede Zeile beinhaltet genau eine Anweisung.</div><div class="score"><span id="rubric-criteria-657-levels-2450-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion odd" id="rubric-criteria-658"><td class="description" id="rubric-criteria-658-description-cell" tabindex="0" aria-label="Kriterium zu 3) Code Qualität: Decompostion  und Duplicate Code">zu 3) Code Qualität: Decompostion  und Duplicate Code</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-658-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-658-levels" role="radiogroup"><td id="rubric-criteria-658-levels-2451" class="level first even" tabindex="0" aria-label="Level Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt., 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-658-levels-2451-definition-container">Mangelhafte Codequalität: Die bekannten Maßstäbe und Vorschläge für die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div><div class="score"><span id="rubric-criteria-658-levels-2451-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-658-levels-2452" class="level last odd" tabindex="0" aria-label="Level Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in separate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-658-levels-2452-definition-container">Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in separate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt.</div><div class="score"><span id="rubric-criteria-658-levels-2452-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr><tr class="criterion last even" id="rubric-criteria-659"><td class="description" id="rubric-criteria-659-description-cell" tabindex="0" aria-label="Kriterium zu 3) Gesamteindruck der Lösung">zu 3) Gesamteindruck der Lösung</td><td class="levels"><div class="table-responsive"><table id="rubric-criteria-659-levels-table" aria-label="Level-Gruppen" class="table table-condensed table-striped"><tbody><tr id="rubric-criteria-659-levels" role="radiogroup"><td id="rubric-criteria-659-levels-2453" class="level first even" tabindex="0" aria-label="Level Der Gesamteindruck der eingereichten Lösung ist nicht ausreichend. Form und Funktion erfüllen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden können. , 0 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-659-levels-2453-definition-container">Der Gesamteindruck der eingereichten Lösung ist nicht ausreichend. Form und Funktion erfüllen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden können. </div><div class="score"><span id="rubric-criteria-659-levels-2453-score" class="scorevalue">0</span> Punkte</div></div></td><td id="rubric-criteria-659-levels-2454" class="level last odd" tabindex="0" aria-label="Level Der Gesamteindruck der Lösung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte  an die Teilnehmer gestellt werden können., 1 Punkte." width="50%"><div class="level-wrapper"><div class="definition" id="rubric-criteria-659-levels-2454-definition-container">Der Gesamteindruck der Lösung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte  an die Teilnehmer gestellt werden können.</div><div class="score"><span id="rubric-criteria-659-levels-2454-score" class="scorevalue">1</span> Punkte</div></div></td></tr></tbody></table></div></td></tr></tbody></table>
-
+<table>
+<<tbody>
+<tr>
+<td tabindex="0">zu 1) Funktionale Anforderungen: Bouncer r&auml;umt die komplette Wiese und entfernt alle roten Felder. Bouncer kontrolliert jedes Feld der Karte und bleibt in der obersten Zeile stehen.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Bouncer f&auml;rbt keine roten Felder wei&szlig; ein.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe ansatzweise erf&uuml;llt: Bouncer sammelt zwar rote Felder, er sammelt aber nicht alle, oder andere Probleme treten dabei auf.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt: Bouncer sammelt alle roten Felder und bleibt zum Schluss stehen.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 1) Systematisches Vorgehen: Bei der Bearbeitung der Aufgabe sucht Bouncer einen m&ouml;glichst effizienten Weg &uuml;ber die Wiese.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Es ist kein Ansatz zur effizienten Gestaltung des Programms ersichtlich. Felder werden mehrmals betreten.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe ansatzweise erf&uuml;llt: Die L&ouml;sung l&auml;sst einen Ansatz zur effektiven Gestaltung des Programms erkennen. Die Implementierung wei&szlig;t jedoch L&uuml;cken auf. Einige Felder werden mehrfach betreten.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt: Bouncer l&ouml;st die Problemstellung und betritt dazu jedes Feld nur einmal.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 1) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: In der eingereichten L&ouml;sung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Die eingereichte L&ouml;sung l&auml;sst erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt: Die Teilprobleme wurden korrekt identifiziert, das Pr&uuml;fen eines Feldes und die Behandlung der Zeilen sind jeweils strukturell vom Rest des Programms getrennt.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 1) Schleifen: Zur L&ouml;sung der Aufgabe werden Schleifen eingesetzt um Teilbereiche wiederholt auszuf&uuml;hren und das Programm &uuml;bersichtlicher zu gestalten.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Bei der eingereichten L&ouml;sung werden keine Schleifen verwendet oder die vorhanden Schleifen werden nicht korrekt eingesetzt bzw. tragen nicht zum erfolgreichen L&ouml;sen des Problems bei.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt: Bei der L&ouml;sung des Problems werden an allen relevanten Stellen sinnvolle Schleifen verwendet.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 1) Code Qualit&auml;t: Bezeichner</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Bezeichner: In der L&ouml;sung wurden sinnvolle Bezeichner f&uuml;r die selbst definierten Methoden gew&auml;hlt.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 1) Code Qualit&auml;t: Formatierung</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einr&uuml;ckungen und Abst&auml;nde sind korrekt gew&auml;hlt. Jede Zeile beinhaltet genau eine Anweisung.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 1) Code Qualit&auml;t: Decomposition und Duplicate Code</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in seprate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 1) Gesamteindruck der L&ouml;sung</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Der Gesamteindruck der eingereichten L&ouml;sung ist nicht ausreichend. Form und Funktion erf&uuml;llen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden k&ouml;nnen.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Der Gesamteindruck der L&ouml;sung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte an die Teilnehmer gestellt werden k&ouml;nnen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Funktionale Anforderungen: Bouncer durchquert das Labyrinth und erreicht den gr&uuml;n markierten Ausgang. Das Programm bricht ab, sobald dieses Feld erreicht ist.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Das Programm wird nicht beendet oder bricht ab bevor Bouncer das markierte Ziel erreicht.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe ansatzweise erf&uuml;llt: Bouncer bewegt sich durch das Labyrinth und es sind Ans&auml;tze f&uuml;r die korrekte Wegfindung vorhanden. Das Programm wird aber nicht bis zum gew&uuml;nschten Endzustand ausgef&uuml;hrt, funktioniert nur auf einer der beiden Karten oder bricht nicht ab, nachdem das Zielfeld erreicht wurde.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt: Bouncer findet den korrekten Weg aus dem Labyrinth und das Programm wird korrekt abgebrochen, sobald das Ziel erreicht wurde. Das Programm funktioniert unver&auml;ndert auf beiden Karten.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Entscheidungen bei der Wegfindung: Bouncer &uuml;berpr&uuml;ft bei jedem Schritt im Labyrinth seine Optionen f&uuml;r den n&auml;chsten Abschnitt. Dabei wird auf die die korrekte Reihenfolge der unterschiedlichen M&ouml;glichkeiten geachtet.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Die eingereichte L&ouml;sung beeinhaltet keine Ans&auml;tze zur Implementierung eines Wegfindungs-Algorithmus.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Ans&auml;tze f&uuml;r eine korrekte Implementierung des n&ouml;tigen Algorithmus sind vorhanden. Die gew&auml;hlte L&ouml;sung ist aber nicht zielf&uuml;hrend und beeinhaltet Fehler. Entscheidungen zur Routenfindung wurden fehlerhaft, unvollst&auml;ndig oder an der falschen Stelle getroffen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt: Die gew&auml;hlte L&ouml;sung sorgt daf&uuml;r, dass Bouncer an kritischen Stellen korrekte Entscheidungen f&uuml;r den n&auml;chsten Abschnitt des Weges trifft. Die verschiedenen M&ouml;glichkeiten werden in korekter Reihenfolge gepr&uuml;ft und entsprechen verabeitet.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Sinnvolle Erweiterung der Bewegungsbefehle f&uuml;r Bouncer: Bouncers eingeschr&auml;nktes Set an m&ouml;glichen Befehlen wird durch eigene Methoden erweitert um den Code deutlicher und leichter lesbar zu machen.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Im Code finden sich wiederholt gleiche Stellen, die identische Bewegungsabl&auml;ufe durch Kombination vorhandener Bouncer-Befehle ausf&uuml;hren.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Teilweise werden fehlende Bewegungsabl&auml;ufe (umdrehen oder Drehung nach rechts) durch eigene Methoden erg&auml;nzt und sinnvoll verwendet.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe erf&uuml;llt: (H&auml;ufig) verwendete Bewegungsabl&auml;ufe, die nicht schon durch Bouncer-Methoden abgedeckt werden, werden durch die Implementierung und den Aufruf eigener Methoden integriert und genutzt.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: In der eingereichten L&ouml;sung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Die eingereichte L&ouml;sung l&auml;sst erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe erf&uuml;llt: In der eingereichten L&ouml;sung wird das Pr&uuml;fen und Finden von Sch&auml;tzen in voneinander getrennten Bereichen bearbeitet. Die Einzelschritte werden in einer separaten Methode verarbeitet. Eine umschlie&szlig;enden Konstruktion pr&uuml;ft die Endbedinung und sorgt f&uuml;r den regelm&auml;&szlig;igen Aufruf der Einzelschritt-Methode.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Komplexit&auml;t und &Uuml;bersicht: F&uuml;r die L&ouml;sung wurde eine effiziente und &uuml;bersichtliche L&ouml;sung gew&auml;hlt.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Der Code der eingereichten L&ouml;sung ist un&ouml;tig komplex und wenig &uuml;bersichtlich. Es finden sich &uuml;berfl&uuml;ssige Verzweigungen und Code-Bestandteile. Die L&ouml;sung ist nicht effizient.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Der Code der eingereichten L&ouml;sung zeigt Ans&auml;tze einer effizienten Gestaltung und Implementierung. Die Komplexit&auml;t sowie &Uuml;bersichtlichkeit ist angemessen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt: Bei der L&ouml;sung des Problems wurde eine effiziente und &uuml;bersichtliche Form gew&auml;hlt.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Code Qualit&auml;t: Bezeichner</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Bezeichner: In der L&ouml;sung wurden sinnvolle Bezeichner f&uuml;r die selbst definierten Methoden gew&auml;hlt.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Code Qualit&auml;t: Formatierung</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einr&uuml;ckungen und Abst&auml;nde sind korrekt gew&auml;hlt. Jede Zeile beinhaltet genau eine Anweisung.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Code Qualit&auml;t: Decompostion und Duplicate Code</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in separate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 2) Gesamteindruck der L&ouml;sung</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Der Gesamteindruck der eingereichten L&ouml;sung ist nicht ausreichend. Form und Funktion erf&uuml;llen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden k&ouml;nnen.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Der Gesamteindruck der L&ouml;sung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte an die Teilnehmer gestellt werden k&ouml;nnen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Funktionale Anforderungen: Die Karte wird nach Programmstart genau so dargestellt, wie es auf dem Screenshot der Aufgabenstellung zu sehen ist.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Die Karte wird nicht korrekt dargestellt. St&auml;dte und/oder Stra&szlig;en werden nicht oder nicht korrekt dargestellt. Positionen und/oder Farben stimmen nicht mit dem Screenshot &uuml;berein.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Die Kartendarstellung &auml;hnelt stark dem gew&uuml;nschten Ergebnisse. Teilweise sind aber Fehler in Farbe, Form oder Postion zu bemerken.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt:Die Darstellung ist identisch mit der der Aufgabenstellung. Position, Farbe und Gr&ouml;&szlig;e der Elemente entsprechen den Erwartungen oder wurden in gewinnbringender Art und Weise erweitert.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Konstanten: Alle relevanten Zahlen werden als Konstanten definiert.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: Es werden keine Konstanten verwendet.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Manche Werte werden in Kostanten ausgelagert. Es sind jedoch Magic Numbers im Code vorhanden.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe komplett erf&uuml;llt:In der eingereichten L&ouml;sung werden alle relevanten Werte als Konstanten angelegt und verwendet.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Programmaufbau: Das Programm ist in sinnvolle Abschnitte unterteilt, die jeweils in unterschiedlichen Methoden implementiert werden.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: In der eingereichten L&ouml;sung ist keine sinnvolle Aufteilung des Programmablaufs erkennbar.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe teilweise erf&uuml;llt: Die eingereichte L&ouml;sung l&auml;sst erkennen, dass versucht wurde die Aufgabe auf Teilprobleme in sinnvolle Abschnitte aufzuteilen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="33%">
+<div>
+<div>Aufgabe erf&uuml;llt: Initalisierung der Zeichenfl&auml;che und das eigentliche Zeichnen der Karte sind in der eingereichten L&ouml;sung klar von einander getrennt.</div>
+<div>2 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Nutzen von Methoden und Parametern: In dem eingereichten Programm wird auch bei den selbsterstellen Methoden auf Parameter und/oder R&uuml;ckgabewerte zur&uuml;ck gegriffen.</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Aufgabe nicht erf&uuml;llt: In dem Programm werden weder Parameter noch R&uuml;ckgabewerte genutzt um den Code &uuml;bersichtliche und effizienter zu gestalten.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Aufgabe erf&uuml;llt: In der eingereichten L&ouml;sung wird auf Parameter und/oder R&uuml;ckgabewerte zur&uuml;ckgegriffen um den Code &uuml;bersichtlicher und effizienter zu gestalten.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Code Qualit&auml;t: Bezeichner</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Bezeichner: In der L&ouml;sung wurden sinnvolle Bezeichner f&uuml;r die selbst definierten Methoden gew&auml;hlt.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Code Qualit&auml;t: Formatierung</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Formatierung: Der Code wurde mit korrekter Formatierung eingereicht. Einr&uuml;ckungen und Abst&auml;nde sind korrekt gew&auml;hlt. Jede Zeile beinhaltet genau eine Anweisung.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Code Qualit&auml;t: Decompostion und Duplicate Code</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Mangelhafte Codequalit&auml;t: Die bekannten Ma&szlig;st&auml;be und Vorschl&auml;ge f&uuml;r die Gestaltung qualitativ hochwertigen Codes wurden nicht umgesetzt.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Teilprobleme wurden korrekt in einzelnen Methoden verarbeitet. Alle Stellen, die mehrfach verwendet werden, wurden in separate Methoden ausgelagert oder so im Code aufgerufen, dass sich an keiner Stelle Code wiederholt.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td tabindex="0">zu 3) Gesamteindruck der L&ouml;sung</td>
+<td>
+<div>
+<table>
+<tbody>
+<tr>
+<td tabindex="0" width="50%">
+<div>
+<div>Der Gesamteindruck der eingereichten L&ouml;sung ist nicht ausreichend. Form und Funktion erf&uuml;llen nicht die Erwartungen, die zum aktuellen Stand des Kurses erwartet werden k&ouml;nnen.</div>
+<div>0 Punkte</div>
+</div>
+</td>
+<td tabindex="0" width="50%">
+<div>
+<div>Der Gesamteindruck der L&ouml;sung spiegelt die Erwartungen wieder, die auf Basis der bisherigen Kursinhalte an die Teilnehmer gestellt werden k&ouml;nnen.</div>
+<div>1 Punkte</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 </body>
 </html>
