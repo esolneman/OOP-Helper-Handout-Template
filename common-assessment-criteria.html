@@ -1,5 +1,35 @@
-| Bewertungskriterium | Beschreibung |
-| ------ | ----------- |
-| Variablennamen   | Text zur Erklärung von Variablennamen   |
-| Klassennamen | Text zur Erklärung von Klassennamen |
-| Kommentieren    | Text zur Erklärung zum Einsatz von Kommentaren. Vielleicht kann hier auch ein Beispiel angezeigt werden. Bzw. Shortcut link zum automatischen Kommentieren mit JAvaDoc |
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Spezifische Bewertungsskriterien</title>
+        <link rel="stylesheet" type="text/css" href="res/css/oop-mi-assessment.css" media="screen">
+    </head>
+    <body>
+    <button class="accordion">Coding Styles</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">Variablen</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+    </body>
+</html>
