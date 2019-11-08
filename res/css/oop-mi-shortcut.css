@@ -1,0 +1,47 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    background: rgba(255, 255, 255, 1);
+    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+}
+
+th {
+    text-align: middle;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: lightgrey;
+    color: #333;
+}
+
+td{
+    text-align: left;
+}
+
+tbody > tr > td  {
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td > div>div {
+    text-align: left;
+    font-weight: normal;
+    border: none;
+}
+
+td > div>div:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+    color: darkslategrey;
+}
+
+tr:hover {background-color: #ddd;}
