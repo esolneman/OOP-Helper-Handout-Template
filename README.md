@@ -6,3 +6,4 @@ Descritpion
 --> copy branch name in configuration file and add it to the project folder
 
 TODO: Write detailed description
+ToDo: Merge in Master
