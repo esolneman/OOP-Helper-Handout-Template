@@ -1,5 +1,4 @@
-{"checklist":
- [{"task":
+[{"task":
    "Create *Player* class",
    "childtasks":["Create *update* method","Create *setOrbitMovementType* method","Create *setRangeMovementType* method"]
   },
@@ -11,5 +10,4 @@
  "collision detection between player and projecttile",
  "childtasks":[]
 }
-]}
-
+]
