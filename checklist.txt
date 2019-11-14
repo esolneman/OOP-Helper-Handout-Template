@@ -1,12 +1,12 @@
 {"checklist":
  [{"task":"Create *Player* class",
-   "cheked":"false",
+   "checked":"false",
    "id": 1},
    {"task":"Create *Projectile* class",
-   "cheked":"false",
+   "checked":"false",
    "id": 1},
    {"task":"collision detection between player and projecttile",
-   "cheked":"false",
+   "checked":"false",
    "id": 1}
  ]
 }
