@@ -1,9 +1,12 @@
 {"checklist":
  [{"task":"Create *Player* class",
-   "childtasks":["Create *update* method","Create *setOrbitMovementType* method","Create *setRangeMovementType* method"]},
-  {"task":"Create *Projectile* class",
-   "childtasks":[]},
-  {"task":"collision detection between player and projecttile",
-   "childtasks":[]}
+   "cheked":"false",
+   "id": 1},
+   {"task":"Create *Projectile* class",
+   "cheked":"false",
+   "id": 1},
+   {"task":"collision detection between player and projecttile",
+   "cheked":"false",
+   "id": 1}
  ]
 }
