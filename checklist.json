@@ -5,8 +5,8 @@
    {"taskDescription":"Create *Projectile* class",
    "checked":"false",
    "id": 2},
-   {"task":"collision detection between player and projecttile",
-   "taskDescription":"false",
+   {"taskDescription":"collision detection between player and projecttile",
+   "checked":"false",
    "id": 3}
  ]
 }
