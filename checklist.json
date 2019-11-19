@@ -1,12 +1,12 @@
 {"checklist":
- [{"taskDescription":"Create *Projectile* class",
+ [{"taskDescription":"Create *Player* class",
+   "checked":"false",
+   "id": 1},
+  {"taskDescription":"Create *Projectile* class",
    "checked":"false",
    "id": 2},
-   {"taskDescription":"New Task from Repo",
+   {"taskDescription":"New Task",
    "checked":"false",
    "id": 5},
-  {"taskDescription":"Test Checklist entry",
-   "checked":"false",
-   "id": 13},
  ]
 }
