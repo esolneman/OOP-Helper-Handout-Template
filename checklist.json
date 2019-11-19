@@ -1,12 +1,12 @@
 {"checklist":
- [{"taskDescription":"Create *Projectile* class Now Updated",
+ [{"taskDescription":"Create *Projectile* class",
    "checked":"false",
    "id": 2},
-   {"taskDescription":"collision detection between player and projecttile",
-   "checked":"false",
-   "id": 7},
    {"taskDescription":"New Task from Repo",
    "checked":"false",
-   "id": 5}
+   "id": 5},
+  {"taskDescription":"Test Checklist entry",
+   "checked":"false",
+   "id": 13},
  ]
 }
