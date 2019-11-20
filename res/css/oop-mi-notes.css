@@ -12,10 +12,6 @@ body {
     color: #333;
 }
 
-th {
-    text-align: middle;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: lightgrey;
-    color: #333;
+note {
+    border-bottom:1px solid #000000;
 }
