@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OOP-Nachschlagewerk</title>
+    <link rel="stylesheet" type="text/css" href="../res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi-print.css" media="print"/>
+</head>
+<body>
+
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+    <div class="topnav" id="myTopnav">
+        <a href="#news" class="active">Start</a>
+        <div class="dropdown">
+            <button class="dropbtn">Coding Styles
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Variables
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <a href="#news">Shortcuts</a>
+        <a href="#news">Tutorial</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+   
+<content>
+    <article>
+        <h1>Nachschlagewerk</h1>
+    </article>
+    <section class="descritpion">
+        Dies ist ein Nachschlagewerk für die Studierenden des OOP-Kurses. Hier findet ihr Informationen bezüglich
+        allgemeiner Bewertungskriterien (Coding Styles, Variablen) und weitere nützlich Informationen, die euch beim
+        Bearbeiten der Studienleistung nützlich sein können.
+        <p>Des Weiteren findet ihr hier ein Tutorial für die Benutzung des Plugins, in dem alle Funktionen erklärt werden.
+        </p>
+    </section>
+    <section class="NavButtons">
+
+    </section>
+</content>
+    
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>  
+    
+    
+</body>
+</html>
