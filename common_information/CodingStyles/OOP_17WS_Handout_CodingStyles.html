@@ -1,0 +1,196 @@
+<!-- 
+Source: Nick Parlaute, May 2004, Coding Style, http://web.stanford.edu/class/archive/cs/cs108/cs108.1082/106a-java-handouts/HO30CodingStyle.pdf
+-->
+
+<!DOCTYPE html><html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+    
+    
+<body>
+    
+<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<div id="helpPageNavBar"></div> 
+    
+<a name=1></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+Coding&#160;Style<br/>
+Einführung&#160;in&#160;die&#160;objektorientierte&#160;Programmierung&#160;mit&#160;Java,&#160;WS1718&#160;-&#160;Alexander&#160;Bazo,&#160;Florin&#160;Schwappach&#160;10.&#160;Oktober&#160;2017<br/>
+Dieser&#160;Text&#160;stammt&#160;aus&#160;einem&#160;Handout&#160;für&#160;den&#160;Kurs&#160;CS106A&#160;der&#160;Universi-<br/>tät&#160;Stanford:&#160;<a href="http://web.stanford.edu/class/archive/cs/cs108/cs108.1082/106a-java-handouts/HO30CodingStyle.pdf">http://web.stanford.edu/class/archive/cs/cs108/cs108.1082/</a><br/>
+<a href="http://web.stanford.edu/class/archive/cs/cs108/cs108.1082/106a-java-handouts/HO30CodingStyle.pdf">106a-java-handouts/HO30CodingStyle.pdf</a><br/>
+Most&#160;of&#160;this&#160;handout&#160;was&#160;written&#160;by&#160;Nick&#160;Parlante<br/>
+When&#160;writing&#160;a&#160;paper,&#160;you&#160;can&#160;have&#160;well-crafted,&#160;correctly&#160;spelled&#160;sentences&#160;and<br/>create&#160;“A“&#160;work.&#160;Or&#160;you&#160;can&#160;hack&#160;out&#160;the&#160;text&#160;in&#160;a&#160;hurry.&#160;It&#160;will&#160;not&#160;look&#160;as&#160;good,<br/>but&#160;it&#160;can&#160;convey&#160;your&#160;thoughts&#160;and&#160;get&#160;the&#160;job&#160;done;&#160;it’s&#160;worth&#160;maybe&#160;a&#160;“B“&#160;or&#160;a<br/>“C“.&#160;Computer&#160;code&#160;is&#160;not&#160;like&#160;that.&#160;Code&#160;that&#160;is&#160;messy&#160;tends&#160;to&#160;have&#160;all&#160;sorts&#160;of<br/>bugs&#160;and&#160;other&#160;problems.&#160;Messy&#160;code&#160;attracts&#160;problems&#160;like&#160;a&#160;half-eaten&#160;lollipop<br/>attracts&#160;lint.&#160;The&#160;problems&#160;and&#160;bugs&#160;in&#160;poorly&#160;written&#160;code&#160;tend&#160;to&#160;compound&#160;each<br/>other&#160;and&#160;pile&#160;up,&#160;so&#160;the&#160;code&#160;ends&#160;up&#160;nearly&#160;worthless.&#160;It&#160;has&#160;bugs.&#160;Nobody<br/>knows&#160;how&#160;to&#160;fix&#160;them&#160;or&#160;add&#160;features&#160;without&#160;creating&#160;more&#160;bugs.&#160;Once&#160;code&#160;is&#160;in<br/>that&#160;state,&#160;it&#160;is&#160;hard&#160;to&#160;escape.&#160;In&#160;a&#160;sense,&#160;code&#160;tends&#160;to&#160;be&#160;more&#160;either&#160;“A“,&#160;or&#160;“D“<br/>or&#160;“F“.&#160;Therefore,&#160;it&#160;is&#160;best&#160;to&#160;write&#160;code&#160;that&#160;is&#160;clean&#160;to&#160;start,&#160;and&#160;keep&#160;it&#160;clean&#160;as<br/>you&#160;add&#160;features.&#160;This&#160;is&#160;one&#160;of&#160;the&#160;lessons&#160;in&#160;CS&#160;for&#160;successfully&#160;building&#160;large<br/>projects.&#160;For&#160;that&#160;reason&#160;CS&#160;106A&#160;emphasizes&#160;the&#160;habits&#160;of&#160;clean,&#160;well-engineered<br/>code&#160;right&#160;from&#160;the&#160;start,&#160;building&#160;the&#160;right&#160;habits&#160;for&#160;the&#160;future.<br/>
+One&#160;reason&#160;to&#160;write&#160;clean,&#160;well-structured&#160;code&#160;is&#160;that&#160;it&#160;works&#160;better&#160;and&#160;takes&#160;less<br/>time&#160;in&#160;the&#160;end.&#160;The&#160;other&#160;reason&#160;to&#160;write&#160;clean&#160;code&#160;is&#160;that&#160;it&#160;is&#160;just&#160;more<br/>satisfying&#160;to&#160;do&#160;a&#160;good&#160;job&#160;on&#160;something.&#160;Clear,&#160;elegant&#160;code&#160;feels&#160;right,&#160;just&#160;like<br/>any&#160;other&#160;engineering&#160;or&#160;artistic&#160;creation.&#160;Doing&#160;it&#160;right&#160;the&#160;first&#160;time&#160;is&#160;better&#160;for<br/>your&#160;engineering&#160;soul.<br/>
+The&#160;messy&#160;code&#160;trap<br/>It&#160;is&#160;a&#160;basic&#160;fact&#160;of&#160;computer&#160;science&#160;that&#160;poorly&#160;designed,&#160;messy&#160;code&#160;is&#160;harder&#160;to<br/>build&#160;and&#160;debug&#160;than&#160;clean&#160;code.&#160;It&#160;is&#160;tempting&#160;to&#160;just&#160;type&#160;out&#160;a&#160;quick&#160;solution&#160;as<br/>it&#160;occurs&#160;to&#160;you&#160;to&#160;get&#160;started.&#160;It&#160;is&#160;better&#160;to&#160;take&#160;a&#160;little&#160;more&#160;time&#160;at&#160;the&#160;start&#160;to<br/>build&#160;the&#160;clean&#160;version,&#160;creating&#160;fewer&#160;headaches&#160;in&#160;the&#160;debugging&#160;phase.&#160;Once<br/>code&#160;gets&#160;messy,&#160;it’s&#160;hard&#160;to&#160;clean&#160;it&#160;up.&#160;It’s&#160;easier&#160;to&#160;start&#160;clean,&#160;and&#160;then&#160;keep&#160;it<br/>clean&#160;with&#160;each&#160;addition.&#160;The&#160;worst&#160;possible&#160;strategy&#160;is&#160;to&#160;build&#160;the&#160;messy&#160;version,<br/>do&#160;your&#160;debugging&#160;on&#160;that,&#160;and&#160;then&#160;clean&#160;it&#160;up&#160;before&#160;turning&#160;it&#160;in—all&#160;the&#160;work<br/>and&#160;little&#160;of&#160;the&#160;benefit!&#160;Do&#160;it&#160;the&#160;right&#160;way&#160;from&#160;the&#160;start,&#160;and&#160;you’ll&#160;be&#160;happier.<br/>
+1<br/>
+<hr/>
+<a name=2></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+Readable<br/>One&#160;metric&#160;for&#160;good&#160;code&#160;is&#160;that&#160;it&#160;“reads?&#160;nicely—that&#160;someone&#160;sweeping&#160;their<br/>eye&#160;over&#160;the&#160;code&#160;can&#160;see&#160;the&#160;algorithmic&#160;idea&#160;at&#160;hand.&#160;The&#160;original&#160;programmer<br/>had&#160;an&#160;idea&#160;in&#160;mind—a&#160;way&#160;to&#160;solve&#160;the&#160;problem.&#160;Does&#160;the&#160;code&#160;communicate&#160;that<br/>idea?&#160;Writing&#160;readable&#160;code&#160;is&#160;important&#160;both&#160;because&#160;it&#160;will&#160;help&#160;any&#160;future<br/>reader&#160;and&#160;because&#160;it&#160;helps&#160;you&#160;avoid&#160;your&#160;own&#160;bugs.&#160;Bugs,&#160;after&#160;all,&#160;are&#160;simply<br/>where&#160;the&#160;code&#160;expresses&#160;an&#160;idea,&#160;but&#160;it&#160;is&#160;not&#160;the&#160;idea&#160;you&#160;had&#160;in&#160;mind.&#160;Readable<br/>code&#160;has&#160;fewer&#160;bugs.<br/>
+Variable&#160;names<br/>The&#160;first&#160;step&#160;in&#160;readable&#160;code&#160;is&#160;choosing&#160;good&#160;names&#160;for&#160;variables.&#160;Typically&#160;a<br/>variable&#160;gets&#160;a&#160;noun&#160;name&#160;that&#160;reflects&#160;what&#160;it&#160;stores—<b>width&#160;</b>or&#160;<b>url&#160;</b>or&#160;<b>parent</b>.&#160;If<br/>you&#160;have&#160;the&#160;number&#160;2,&#160;but&#160;do&#160;not&#160;know&#160;anything&#160;about&#160;it,&#160;then&#160;the&#160;generic&#160;<b>num&#160;</b>is<br/>an&#160;okay&#160;name.&#160;If&#160;you&#160;know&#160;more&#160;specifically&#160;that&#160;it’s&#160;a&#160;weight&#160;or&#160;a&#160;number&#160;of<br/>pixels&#160;then&#160;the&#160;name&#160;should&#160;reflect&#160;that&#160;knowledge.&#160;In&#160;Java,&#160;the&#160;convention&#160;is&#160;to<br/>begin&#160;variables&#160;with&#160;the&#160;first&#160;word&#160;lowercase,&#160;and&#160;uppercase&#160;later&#160;words&#160;like&#160;this:<br/><b>bestScore</b>,&#160;<b>remainingCreamPuffs</b>.&#160;If&#160;you&#160;have&#160;a&#160;pointer&#160;to&#160;an&#160;object&#160;but&#160;without<br/>any&#160;more&#160;specific&#160;word&#160;to&#160;use&#160;for&#160;its&#160;variable&#160;name,&#160;then&#160;you&#160;can&#160;use&#160;the&#160;name&#160;of<br/>the&#160;class&#160;in&#160;lowercase.&#160;So&#160;if&#160;code&#160;deals&#160;with&#160;a&#160;<b>Circle&#160;</b>or&#160;<b>Person&#160;</b>object,&#160;then&#160;obvious<br/>variable&#160;names&#160;are&#160;<b>circle&#160;</b>or&#160;<b>person</b>.&#160;If&#160;you&#160;know&#160;something&#160;more&#160;specific&#160;about&#160;the<br/>objects,&#160;then&#160;more&#160;specific&#160;names&#160;like&#160;<b>leftCircle&#160;</b>or&#160;<b>mother&#160;</b>are&#160;better.&#160;There&#160;are&#160;a<br/>few&#160;idiomatic&#160;one-letter&#160;names—<b>i,&#160;j,&#160;k&#160;</b>for&#160;<b>int&#160;</b>loop&#160;counters;&#160;<b>x,&#160;y,&#160;z&#160;</b>for&#160;coordinates.<br/>These&#160;are&#160;in&#160;such&#160;wide&#160;use&#160;that&#160;they&#160;make&#160;very&#160;readable&#160;code&#160;just&#160;by&#160;familiarity.<br/>
+Method&#160;names<br/>If&#160;variables&#160;names&#160;are&#160;the&#160;nouns,&#160;method&#160;names&#160;are&#160;the&#160;verbs.&#160;Method&#160;names<br/>should&#160;reflect&#160;the&#160;action&#160;they&#160;perform—<b>removeAll(),&#160;drawLine(),&#160;getX()</b>.&#160;The<br/>prefixes&#160;<b>get&#160;</b>and&#160;<b>set&#160;</b>have&#160;a&#160;typical&#160;role.&#160;A&#160;<b>get&#160;</b>method&#160;gets&#160;a&#160;piece&#160;of&#160;information<br/>from&#160;an&#160;object,&#160;either&#160;a&#160;value&#160;that&#160;the&#160;object&#160;stores&#160;or&#160;computes:&#160;<b>getWidth(),<br/>getNumChildren()</b>.&#160;Likewise,&#160;<b>set&#160;</b>methods&#160;typically&#160;are&#160;used&#160;to&#160;pass&#160;a&#160;value&#160;in&#160;to<br/>an&#160;object&#160;for&#160;it&#160;to&#160;store&#160;or&#160;use:&#160;<b>setWidth(int&#160;width)</b>.&#160;Methods&#160;that&#160;return&#160;a&#160;boolean<br/>are&#160;often&#160;named&#160;starting&#160;with&#160;<b>is&#160;</b>or&#160;<b>has</b>.<br/>
+Whitespace<br/>Use&#160;whitespace&#160;to&#160;help&#160;separate&#160;the&#160;logical&#160;parts&#160;of&#160;the&#160;code,&#160;in&#160;much&#160;the&#160;same<br/>way&#160;that&#160;paragraphs&#160;separate&#160;groups&#160;of&#160;sentences.&#160;Rather&#160;than&#160;write&#160;a&#160;block&#160;of&#160;20<br/>lines,&#160;it’s&#160;nice&#160;to&#160;put&#160;in&#160;blank&#160;lines&#160;to&#160;separate&#160;the&#160;code&#160;into&#160;its&#160;natural&#160;6-line<br/>sections&#160;that&#160;accomplish&#160;logical&#160;sub-parts&#160;of&#160;the&#160;computation.&#160;Each&#160;little&#160;section&#160;of<br/>code&#160;might&#160;have&#160;a&#160;comment&#160;to&#160;describe&#160;what&#160;it&#160;accomplishes.&#160;Likewise,&#160;you&#160;can<br/>
+2<br/>
+<hr/>
+<a name=3></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+use&#160;whitespace&#160;to&#160;show&#160;the&#160;logical&#160;grouping&#160;of&#160;elements&#160;within&#160;a&#160;line.&#160;Do&#160;not&#160;run<br/>everything&#160;together&#160;with&#160;no&#160;spaces.&#160;Here&#160;are&#160;a&#160;few&#160;examples<br/>
+1<br/>
+/*&#160;many&#160;terms&#160;with&#160;no&#160;spaces&#160;--&#160;never&#160;do&#160;this&#160;*/<br/>
+2<br/>
+int&#160;i=2*i&#160;+12/&#160;i;<br/>
+3<br/>
+4<br/>
+/*&#160;spaces&#160;around&#160;every&#160;operator&#160;--&#160;okay&#160;*/<br/>
+5<br/>
+int&#160;i&#160;=&#160;2&#160;*&#160;i&#160;+&#160;12&#160;/&#160;i;<br/>
+6<br/>
+7<br/>
+/*&#160;could&#160;add&#160;parens&#160;for&#160;readability&#160;*/<br/>
+8<br/>
+int&#160;i&#160;=&#160;(2&#160;*&#160;i)&#160;+&#160;(12&#160;/&#160;i);<br/>
+9<br/>
+10<br/>
+/*&#160;heres&#160;the&#160;same&#160;idea&#160;,&#160;but&#160;with&#160;boolean&#160;expressions&#160;...&#160;*/<br/>
+11<br/>
+12<br/>
+/*&#160;spaces&#160;-&#160;ok&#160;*/<br/>
+13<br/>
+if&#160;(i&#160;*&#160;12&#160;&lt;&#160;j)&#160;{<br/>
+14<br/>
+15<br/>
+/*&#160;could&#160;add&#160;parens&#160;for&#160;clarity&#160;*/<br/>
+16<br/>
+if&#160;((i&#160;*&#160;12)&#160;&lt;&#160;j)&#160;{<br/>
+Indentation<br/>All&#160;programming&#160;languages&#160;use&#160;indentation&#160;to&#160;show&#160;which&#160;parts&#160;of&#160;the&#160;code&#160;are<br/>owned&#160;or&#160;controlled&#160;by&#160;other&#160;parts.&#160;In&#160;CS&#160;106A,&#160;whenever&#160;there&#160;is&#160;a&#160;<b>{</b>,&#160;the&#160;code&#160;on<br/>the&#160;next&#160;line&#160;should&#160;be&#160;indented—this&#160;applies&#160;to&#160;methods,&#160;classes,&#160;if-statements,<br/>loops,&#160;and&#160;so&#160;on.&#160;Eclipse&#160;will&#160;do&#160;this&#160;automatically.&#160;Hit&#160;the&#160;tab&#160;key&#160;to&#160;indent&#160;one<br/>level&#160;manually.&#160;You&#160;can&#160;also&#160;select&#160;a&#160;few&#160;lines&#160;and&#160;use&#160;tab&#160;to&#160;move&#160;them&#160;all&#160;right&#160;on<br/>level,&#160;and&#160;shift-tab&#160;to&#160;move&#160;them&#160;all&#160;left&#160;one&#160;level.&#160;At&#160;the&#160;end&#160;of&#160;the&#160;indented&#160;code<br/>the&#160;matching&#160;<b>}&#160;</b>should&#160;not&#160;be&#160;indented.&#160;In&#160;this&#160;way,&#160;the&#160;indented&#160;section&#160;is&#160;visually<br/>set-off&#160;from&#160;the&#160;outer&#160;<b>{&#160;}&#160;</b>that&#160;controls&#160;it,&#160;as&#160;shown:<br/>
+1<br/>
+if&#160;(i&#160;&gt;&#160;10)&#160;{<br/>
+2<br/>
+System&#160;.out.&#160;println&#160;(&#34;i&#160;too&#160;big&#34;);<br/>
+3<br/>
+i&#160;=&#160;i&#160;%&#160;10;<br/>
+4<br/>
+someMethod&#160;(i);<br/>
+5<br/>
+}<br/>
+3<br/>
+<hr/>
+<a name=4></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+Comments<br/>Comments&#160;add&#160;the&#160;human&#160;context&#160;to&#160;the&#160;raw&#160;lines&#160;of&#160;code.&#160;They&#160;explain&#160;the&#160;overall<br/>flow&#160;and&#160;strategy&#160;of&#160;what&#160;is&#160;going&#160;on.&#160;Comments&#160;point&#160;out&#160;assumptions&#160;or&#160;issues<br/>that&#160;affect&#160;a&#160;part&#160;of&#160;the&#160;program&#160;that&#160;are&#160;not&#160;obvious&#160;from&#160;the&#160;code&#160;itself.<br/>
+As&#160;you&#160;write&#160;larger&#160;and&#160;more&#160;complex&#160;pieces&#160;of&#160;code,&#160;comments&#160;help&#160;you&#160;keep<br/>track&#160;of&#160;your&#160;own&#160;assumptions&#160;and&#160;ideas,&#160;as&#160;you&#160;scroll&#160;around,&#160;building&#160;and<br/>testing&#160;various&#160;parts&#160;of&#160;the&#160;code.&#160;There&#160;gets&#160;to&#160;be&#160;more&#160;than&#160;you&#160;can&#160;keep&#160;in&#160;your<br/>head&#160;at&#160;one&#160;time.&#160;The&#160;first&#160;step&#160;is&#160;good&#160;variable&#160;and&#160;method&#160;names.&#160;They&#160;make&#160;the<br/>code&#160;“read“&#160;well&#160;on&#160;its&#160;own,&#160;so&#160;fewer&#160;comments&#160;are&#160;required.<br/>
+Class&#160;comments<br/>
+Each&#160;class&#160;should&#160;have&#160;a&#160;comment&#160;summarizing&#160;what&#160;it&#160;does.&#160;Typically&#160;the&#160;class<br/>comment&#160;will&#160;mention&#160;what&#160;sort&#160;of&#160;data&#160;the&#160;class&#160;encapsulates&#160;and&#160;what&#160;sort&#160;of<br/>methods&#160;it&#160;implements.&#160;Professional&#160;quality&#160;documentation&#160;for&#160;a&#160;class&#160;or&#160;group&#160;of<br/>classes&#160;intended&#160;for&#160;use&#160;by&#160;others,&#160;such&#160;as&#160;the&#160;<b>String&#160;</b>class,&#160;will&#160;also&#160;have&#160;a&#160;few<br/>introductory&#160;paragraphs&#160;of&#160;discussion&#160;of&#160;what&#160;sort&#160;of&#160;problems&#160;the&#160;class&#160;solves&#160;and<br/>what&#160;typical&#160;client&#160;use&#160;of&#160;the&#160;class&#160;looks&#160;like.&#160;For&#160;a&#160;system&#160;of&#160;classes,&#160;there&#160;may&#160;be<br/>an&#160;architectural&#160;overview&#160;that&#160;summarizes&#160;the&#160;role&#160;of&#160;each&#160;class&#160;and&#160;how&#160;they&#160;all<br/>fit&#160;together&#160;to&#160;build&#160;the&#160;program.<br/>
+Variable&#160;comments<br/>
+Sometimes&#160;the&#160;meaning&#160;of&#160;an&#160;instance&#160;variable&#160;or&#160;local&#160;variable&#160;is&#160;completely&#160;clear<br/>just&#160;from&#160;its&#160;name.&#160;For&#160;a&#160;complex&#160;variable,&#160;there&#160;is&#160;often&#160;extra&#160;contextual<br/>information&#160;about&#160;the&#160;variable&#160;that&#160;the&#160;code&#160;must&#160;be&#160;consistent&#160;about.&#160;A&#160;comment<br/>where&#160;the&#160;instance&#160;variable&#160;is&#160;declared&#160;is&#160;the&#160;perfect&#160;place&#160;to&#160;document&#160;such<br/>side-issues&#160;for&#160;the&#160;variable:&#160;what&#160;are&#160;its&#160;units?&#160;Are&#160;there&#160;constraints&#160;on&#160;what&#160;values<br/>it&#160;is&#160;allowed&#160;to&#160;take&#160;on?&#160;For&#160;example,&#160;<b>weight&#160;</b>might&#160;be&#160;the&#160;perfect&#160;name&#160;for&#160;an<br/>instance&#160;variable&#160;indicating&#160;the&#160;weight&#160;of&#160;the&#160;object,&#160;but&#160;you&#160;still&#160;need&#160;to&#160;know,&#160;say<br/>for&#160;a&#160;car&#160;simulator,&#160;that&#160;it&#160;is&#160;in&#160;pounds,&#160;or&#160;that&#160;the&#160;weight&#160;is&#160;for&#160;the&#160;car&#160;but&#160;does&#160;not<br/>include&#160;the&#160;passengers&#160;or&#160;fuel.&#160;There&#160;is&#160;often&#160;ancillary&#160;information&#160;about&#160;an<br/>instance&#160;variable—its&#160;meaning,&#160;assumptions,&#160;and&#160;constraints—beyond&#160;what&#160;is<br/>captured&#160;in&#160;its&#160;name.&#160;The&#160;comment&#160;for&#160;an&#160;instance&#160;variable&#160;can&#160;capture&#160;this&#160;extra<br/>information&#160;about&#160;the&#160;variable&#160;in&#160;one&#160;place.<br/>
+Method&#160;comments<br/>
+Method&#160;comments&#160;should&#160;describe&#160;what&#160;the&#160;method&#160;accomplishes.&#160;Emphasize<br/>what&#160;the&#160;method&#160;does&#160;for&#160;the&#160;caller,&#160;not&#160;how&#160;it&#160;is&#160;implemented.&#160;The&#160;comment<br/>should&#160;describe&#160;what&#160;the&#160;method&#160;does&#160;to&#160;the&#160;receiver&#160;object,&#160;adding&#160;in&#160;the&#160;role&#160;of<br/>any&#160;parameters.&#160;In&#160;the&#160;standard&#160;comment&#160;style&#160;used&#160;with&#160;<b>javadoc</b>,&#160;the&#160;method<br/>
+4<br/>
+<hr/>
+<a name=5></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+comment&#160;begin&#160;with&#160;a&#160;verb&#160;in&#160;the&#160;third-person&#160;singular&#160;form&#160;(typically&#160;ending&#160;in<br/>“s“)&#160;describing&#160;what&#160;the&#160;method&#160;does.&#160;For&#160;a&#160;complex&#160;method,&#160;the&#160;comment&#160;can<br/>address&#160;the&#160;preconditions&#160;that&#160;should&#160;be&#160;true&#160;before&#160;the&#160;method&#160;is&#160;called,&#160;and&#160;the<br/>postconditions&#160;that&#160;will&#160;be&#160;true&#160;after&#160;it&#160;is&#160;done.<br/>
+1<br/>
+/*&#160;Method&#160;:&#160;removeAll&#160;*/<br/>
+2<br/>
+/**<br/>
+3<br/>
+*&#160;Removes&#160;all&#160;the&#160;shapes&#160;from&#160;the&#160;window&#160;.<br/>
+4<br/>
+*/<br/>
+5<br/>
+public&#160;void&#160;removeAll&#160;()&#160;{&#160;.&#160;.&#160;.&#160;}<br/>
+6<br/>
+7<br/>
+/*&#160;Method&#160;:&#160;addBet&#160;*/<br/>
+8<br/>
+/**<br/>
+9<br/>
+*&#160;Adds&#160;the&#160;given&#160;bet&#160;amount&#160;to&#160;the&#160;pool&#160;.<br/>
+10<br/>
+*/<br/>
+11<br/>
+public&#160;void&#160;addBet&#160;(int&#160;bet)&#160;{&#160;.&#160;.&#160;.&#160;}<br/>
+12<br/>
+13<br/>
+/*&#160;Method&#160;:&#160;getCollisionOdds&#160;*/<br/>
+14<br/>
+/**<br/>
+15<br/>
+*&#160;Returns&#160;the&#160;odds&#160;between&#160;0&#160;and&#160;1&#160;of&#160;a&#160;collision<br/>
+16<br/>
+*&#160;with&#160;the&#160;specified&#160;other&#160;craft&#160;.<br/>
+17<br/>
+*/<br/>
+18<br/>
+public&#160;double&#160;getCollisionOdds&#160;(&#160;Craft&#160;other&#160;)&#160;{&#160;.&#160;.&#160;.&#160;}<br/>
+19<br/>
+20<br/>
+/*&#160;Method&#160;:&#160;addCreature&#160;*/<br/>
+21<br/>
+/**<br/>
+22<br/>
+*&#160;Adds&#160;the&#160;given&#160;creature&#160;to&#160;the&#160;room&#160;on&#160;which&#160;this<br/>
+23<br/>
+*&#160;method&#160;is&#160;invoked&#160;.&#160;The&#160;creature&#160;must&#160;be&#160;valid&#160;before<br/>
+24<br/>
+*&#160;this&#160;method&#160;is&#160;called&#160;.&#160;After&#160;the&#160;call&#160;,&#160;the&#160;Creature<br/>
+25<br/>
+*&#160;object&#160;will&#160;have&#160;been&#160;updated&#160;to&#160;show&#160;its&#160;location&#160;as<br/>
+26<br/>
+*&#160;the&#160;room&#160;into&#160;which&#160;it&#160;was&#160;placed&#160;.<br/>
+27<br/>
+*/<br/>
+28<br/>
+public&#160;void&#160;addCreature&#160;(&#160;Creature&#160;creature&#160;)&#160;{&#160;.&#160;.&#160;.&#160;}<br/>
+5<br/>
+<hr/>
+<a name="outline"></a><h1>Document Outline</h1>
+<ul>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#1">Einführung in die objektorientierte Programmierung mit Java WS1718 - Coding Style</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#1">The messy code trap</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#2">Readable</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#2">Variable names</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#2">Method names</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#2">Whitespace</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#3">Indentation</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#4">Comments</a>
+<ul>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#4">Class comments</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#4">Variable comments</a></li>
+<li><a href="OOP_17WS_Handout_CodingStyles.html#4">Method comments</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+</body>
+</html>
+
+<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$.get("navbar.html", function(data){
+    $("#helpPageNavBar").replaceWith(data);
+});
+</script>

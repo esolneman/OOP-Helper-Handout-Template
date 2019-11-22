@@ -1,0 +1,44 @@
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<div id="helpPageNavBar">
+    <div id="navBar" class="topnav">
+        <a href="/common_information/index.html" class="active">Start</a>
+        <div class="dropdown">
+            <button class="dropbtn">Coding Styles
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/common_information/CodingStyles/OOP_17WS_Handout_CodingStyles.html#1">The messy code trap</a>
+                <a href="/common_information/CodingStyles/OOP_17WS_Handout_CodingStyles.html#1">Readable</a>
+                <a href="/common_information/CodingStyles/OOP_17WS_Handout_CodingStyles.html#1">Variable names</a>
+                <a href="/common_information/CodingStyles/OOP_17WS_Handout_CodingStyles.html#1">Method names</a>
+                <a href="/common_information/CodingStyles/OOP_17WS_Handout_CodingStyles.html#1">Whitespace</a>
+                <a href="/common_information/CodingStyles/OOP_17WS_Handout_CodingStyles.html#1">Indentation</a>
+                <a href="/common_information/CodingStyles/OOP_17WS_Handout_CodingStyles.html#1">Comments</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Variables
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/common_information/Variables/OOP_17WS_Handout_Variablens.html">Local Variables</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <a href="/common_information/shortcuts.html">Shortcuts</a>
+        <a href="/common_information/tutorial.html">Tutorial</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script> 

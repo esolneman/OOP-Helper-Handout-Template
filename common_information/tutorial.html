@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi-print.css" media="print"/>
+</head>
+    <!--add navbar html: https://stackoverflow.com/a/33876057-->
+    <div id="helpPageNavBar"></div>
+    
+<body>
+
+    under construction
+    
+</body>
+</html>
+
+
+<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$.get("navbar.html", function(data){
+    $("#helpPageNavBar").replaceWith(data);
+});
+</script>

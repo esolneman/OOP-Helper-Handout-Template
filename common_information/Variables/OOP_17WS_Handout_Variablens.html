@@ -33,6 +33,11 @@ http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pd
 </style>
 </head>
 <body>
+    
+<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<div id="helpPageNavBar"></div> 
+    
+    
 <a name=1></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
 Variables,&#160;variables,&#160;everywhere...<br/>
 Einführung&#160;in&#160;die&#160;objektorientierte&#160;Programmierung&#160;mit&#160;Java,&#160;WS1718&#160;-&#160;Alexander&#160;Bazo,&#160;Florin&#160;Schwappach&#160;10.&#160;Oktober&#160;2017<br/>
@@ -294,3 +299,12 @@ Constants<br/>As&#160;we&#160;discussed&#160;in&#160;class,&#160;we&#160;will&#1
 <hr/>
 </body>
 </html>
+
+
+<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$.get("navbar.html", function(data){
+    $("#helpPageNavBar").replaceWith(data);
+});
+</script>
