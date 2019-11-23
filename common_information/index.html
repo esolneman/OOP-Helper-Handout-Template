@@ -8,9 +8,37 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    
-    <!-- add navbar html: https://stackoverflow.com/a/33876057 -->
-    <div id="helpPageNavBar"></div>
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<div id="navBar" class="topnav">
+    <a href="/common_information/index.html" class="active">Start</a>
+    <div class="dropdown">
+        <button class="dropbtn">Coding Styles
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_CodingStyles.html#1">The messy code trap</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#2">Readable</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#2">Variable names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#2">Method names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#2">Whitespace</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#3">Indentation</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#4">Comments</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Variables
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_Variablens.html">Local Variables</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <a href="shortcuts.html">Shortcuts</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
 
 <content>
     <article>
@@ -20,17 +48,39 @@
         Dies ist ein Nachschlagewerk für die Studierenden des OOP-Kurses. Hier findet ihr Informationen bezüglich
         allgemeiner Bewertungskriterien (Coding Styles, Variablen) und weitere nützlich Informationen, die euch beim
         Bearbeiten der Studienleistung nützlich sein können.
-        <p>Des Weiteren findet ihr hier ein Tutorial für die Benutzung des Plugins, in dem alle Funktionen erklärt werden.
+        <p>Des Weiteren findet ihr hier ein Tutorial für die Benutzung des Plugins, in dem alle Funktionen erklärt
+            werden.
         </p>
     </section>
 </content>
-</body>
-</html>
 
-<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<script language="JavaScript">
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+<!--
+
+add navbar html: https://stackoverflow.com/a/33876057
+
 <script language='javascript' src="//code.jquery.com/jquery.min.js"></script>
 <script language='javascript'>
+function getNavBar(){
 $.get("navbar.html", function(data){
     $("#helpPageNavBar").replaceWith(data);
 });
+}
 </script>
+
+-->
+
+
+</body>
+</html>
