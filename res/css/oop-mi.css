@@ -164,7 +164,8 @@ tr:hover {background-color: #ddd;}
 
  /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;    
+  background-color: #333;
+    
   /*https://www.w3schools.com/howto/howto_css_fixed_menu.asp*/
   position: fixed;  /*Set the navbar to fixed position*/
   top: 0; /* Position the navbar at the top of the page */
