@@ -126,7 +126,11 @@ content .important .first-word {
 
 
 
-/* css for shortcut table */
+/* css for shortcut and assessment-criteria table */
+table {
+    width: 100%;
+}
+
 th {
     text-align: middle;
     padding-top: 12px;
@@ -155,10 +159,32 @@ td > div>div {
 
 tr:hover {background-color: #ddd;}
 
+td > div>div {
+    text-align: left;
+    font-weight: normal;
+    border: none;
+}
 
+td > div>div:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+    color: darkslategrey;
+}
 
+.headerText{
+    text-align: center;
+}
 
+.headerDiv{
+    display: block;
+    color: #f2f2f2;
+    font-size: 17px;
+    margin: 14px 16px;
+}
 
+.editNotesButton{
+    float: right;
+}
 
 /*https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp*/
 
