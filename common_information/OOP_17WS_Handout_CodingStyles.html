@@ -185,14 +185,18 @@ public&#160;double&#160;getCollisionOdds&#160;(&#160;Craft&#160;other&#160;)&#16
 public&#160;void&#160;addCreature&#160;(&#160;Creature&#160;creature&#160;)&#160;{&#160;.&#160;.&#160;.&#160;}<br/>
 5<br/>
 
-<!--add navbar html: https://stackoverflow.com/a/33876057-->
-<!--<script language='javascript' src="//code.jquery.com/jquery.min.js"></script>
-<script language='javascript'>
-$.get("navbar.html", function(data){
-    $("#helpPageNavBar").replaceWith(data);
-});
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<script language="JavaScript">
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 </script>
--->
+           
         </section>
     </content>         
             
