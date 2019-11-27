@@ -17,7 +17,7 @@
         <input type="text" id="myInput" placeholder="Title...">
         <span onclick="newElement()" class="addBtn">Add</span>
     </div>
-    <ul id="myUL">
+    <ul id="userDataTaskList">
     </ul>
 </content>
 </body>
@@ -62,7 +62,7 @@ function newElement() {
   if (inputValue === '') {
     alert("You must write something!");
   } else {
-    document.getElementById("myUL").appendChild(li);
+    document.getElementById("userDataTaskList").appendChild(li);
   }
   document.getElementById("myInput").value = "";
 
