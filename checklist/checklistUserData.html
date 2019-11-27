@@ -15,7 +15,7 @@
 <content>
     <div id="myDIV" class="header">
         <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
+        <span onclick="checklistController.addTask(\'' + myInput.value + '\')" class="addBtn">Add</span>
     </div>
     <ul id="userDataTaskList">
     </ul>
@@ -23,7 +23,9 @@
 </body>
 </html>
 
-<script>
+
+
+<script language="JavaScript">
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
