@@ -18,20 +18,19 @@
     <ul id="predefinedTaskList">
     </ul>
 </content>
-
-    
               
-<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<!--add navbar html: https://stackoverflow.com/a/33876057
 <script language='javascript' src="//code.jquery.com/jquery.min.js" language='javascript'>
     function toogleCheckedClass() {
+        alert('test');
         var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+        list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }
+        }, false);
     }
-</script>
+</script>-->
  
 </body>
 </html>
