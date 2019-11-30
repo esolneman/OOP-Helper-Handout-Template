@@ -11,6 +11,8 @@
 <div id="navBar" class="topnav">
     <a href="checklistPredefined.html">Vordefinierte Checkliste</a>
     <a href="checklistUserData.html" class="active" >Deine eigene Checkliste</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
 </div>
 <content>
     <div id="myDIV" class="header">
@@ -19,6 +21,21 @@
     </div>
     <ul id="userDataTaskList">
     </ul>
+    
+    
+    <!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<script language="JavaScript">
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+    
+    
 </content>
 </body>
 </html>
