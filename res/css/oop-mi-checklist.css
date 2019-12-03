@@ -202,12 +202,13 @@ ul li {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+   /* make the list items unselectable */
+    user-select: none;
+}
+
+ul li div.editableLI{
+     cursor: text !important;
+     user-select: text !important;
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
@@ -250,7 +251,7 @@ ul li.checked::before {
 }
 
 .close:hover {
-  background-color: #f44336;
+  background-color: #7D003C;
   color: white;
 }
 
