@@ -318,31 +318,21 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown */
 .dropbtn .handout {
   background-color: #3498DB;
   color: white;
-  padding: 16px;
   font-size: 16px;
-  border: none;
   cursor: pointer;
-    float: right;
-
 }
 
 .dropbtn:hover, .dropbtn:focus .handout {
   background-color: #7D003C;
 }
 
-.dropdown .handout{
-  position: relative;
-  display: inline-block;
-}
 
 .dropdown-content .handout{
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    float: none;
+    display: block;
+    text-align: left;
+      min-width: 160px;
+      position: absolute;
 }
 
 .dropdown-content a .handout{
@@ -357,8 +347,12 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown */
 .show {display: block;}
 
 .handoutDownloadButton {
-    float: right;
     cursor: pointer;
+}
+
+.handoutBtns{
+    float: right;
+      overflow: hidden;
 
 }
 
