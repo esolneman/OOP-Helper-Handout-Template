@@ -315,34 +315,40 @@ td > div>div:nth-child(2) {
 /* Dropdown for handout menu 
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown */
 
-.dropbtn .handout {
+
+.dropbtn-handout {
   background-color: #3498DB;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus .handout {
+.dropdownHandoutContent{
+    display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    float: none;
+    display: block;
+    position: absolute;
+    margin-left: -160px;
+}
+
+.dropbtn-handout:hover, .dropbtn-handout:focus{
   background-color: #7D003C;
 }
 
-
-.dropdown-content .handout{
-    float: none;
-    display: block;
-    text-align: left;
-      min-width: 160px;
-      position: absolute;
-}
-
-.dropdown-content a .handout{
+.dropdownHandoutContent a{
   color: black;
-  padding: 12px 16px;
+  padding: -12px -16px;
   text-decoration: none;
   display: block;
+  text-align: left;
 }
 
-.dropdown .handout a:hover {background-color: #ddd;}
+.dropdownHandoutContent a:hover {background-color: #ddd;}
 
 .show {display: block;}
 
@@ -352,7 +358,5 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown */
 
 .handoutBtns{
     float: right;
-      overflow: hidden;
-
 }
 

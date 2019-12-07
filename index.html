@@ -6,6 +6,8 @@
     <title>Studienleistung 2: Rad Racer</title>
     <link rel="stylesheet" type="text/css" href="res/css/oop-mi.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 
 </head>
 
@@ -37,33 +39,20 @@
     <div class="headerDiv">
         <div class="headerText">
             Studienleistung 2: Rad Racer
-            
+
             <div class="handoutBtns">
-
-                
-                 <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();"><i class="fa fa-download"></i></button>
-                <button onclick="myFunction()" class="dropbtn handout"><i class="fa fa-bars"></i></button>
-                
+                <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();"><i class="fa fa-download"></i></button>
+                <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
                 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
-            <div id="handoutDropdown" class="dropdown-content handout">
-                <a href="#WichtigeInformationen"> Wichtige Informationen</a>
-                <a href="#Bewertungskriterien"> Bewertungskriterien</a>
-                <a href="#Zusammenfassung">
-                   Zusammenfassung
-                </a>
-                <a href="#Screenshots">
-                    Screenshots
-                </a>
-                <a href="#Anforderungen">
-                    Anforderungen
-                </a>
-                <a href="#HinweiseUndHilfestellungen">
-                    Hinweise und Hilfestellungen
-                </a>
+                <div id="handoutDropdown" class="dropdownHandoutContent">
+                    <a href="#WichtigeInformationen"> Wichtige Informationen</a>
+                    <a href="#Bewertungskriterien"> Bewertungskriterien</a>
+                    <a href="#Zusammenfassung">Zusammenfassung</a>
+                        <a href="#Screenshots">Screenshots</a>
+                        <a href="#Anforderungen">Anforderungen</a>
+                        <a href="#HinweiseUndHilfestellungen">Hinweise und Hilfestellungen</a>
+                </div>
             </div>
-            </div>
-            
-
         </div>
     </div>
 </div>
@@ -90,7 +79,8 @@
 
             <h3> Links to specific page in PDF</h3>
 
-            <a href="https://regensburger-forscher.de/oop-slides/index.html?slides=01-Einfuerhung-in-die-Programmierung-und-die-Programmiersprachen&startAtSlide=5"> Example External
+            <a href="https://regensburger-forscher.de/oop-slides/index.html?slides=01-Einfuerhung-in-die-Programmierung-und-die-Programmiersprachen&startAtSlide=5">
+                Example External
                 Topic </a>
 
             <p>
@@ -449,19 +439,19 @@
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 
-    
+
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function toggleShowContent() {
   document.getElementById("handoutDropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
+  if (!event.target.matches('.handoutDownloadButton')) {
+    var dropdowns = document.getElementsByClassName("dropdownHandoutContent");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
@@ -471,6 +461,7 @@ window.onclick = function(event) {
     }
   }
 }
+
 
 
 </script>
