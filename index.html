@@ -7,50 +7,25 @@
     <link rel="stylesheet" type="text/css" href="res/css/oop-mi.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-
 </head>
 
 <body>
 <header></header>
-<nav>
-    <ul>
-        <a href="#WichtigeInformationen">
-            <li>Wichtige Informationen</li>
-        </a>
-        <a href="#Bewertungskriterien">
-            <li>Bewertungskriterien</li>
-        </a>
-        <a href="#Zusammenfassung">
-            <li>Zusammenfassung</li>
-        </a>
-        <a href="#Screenshots">
-            <li>Screenshots</li>
-        </a>
-        <a href="#Anforderungen">
-            <li>Anforderungen</li>
-        </a>
-        <a href="#HinweiseUndHilfestellungen">
-            <li>Hinweise und Hilfestellungen</li>
-        </a>
-    </ul>
-</nav>
 <div id="navBar" class="topnav">
     <div class="headerDiv">
         <div class="headerText">
             Studienleistung 2: Rad Racer
-
             <div class="handoutBtns">
                 <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();"><i class="fa fa-download"></i></button>
                 <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
                 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
-                <div id="handoutDropdown" class="dropdownHandoutContent">
+                <div id="handoutDropdownContent" class="dropdownHandoutContent">
                     <a href="#WichtigeInformationen"> Wichtige Informationen</a>
                     <a href="#Bewertungskriterien"> Bewertungskriterien</a>
                     <a href="#Zusammenfassung">Zusammenfassung</a>
-                        <a href="#Screenshots">Screenshots</a>
-                        <a href="#Anforderungen">Anforderungen</a>
-                        <a href="#HinweiseUndHilfestellungen">Hinweise und Hilfestellungen</a>
+                    <a href="#Screenshots">Screenshots</a>
+                    <a href="#Anforderungen">Anforderungen</a>
+                    <a href="#HinweiseUndHilfestellungen">Hinweise und Hilfestellungen</a>
                 </div>
             </div>
         </div>
@@ -437,18 +412,17 @@
         Programmierung mit Java </i> dar.
 </footer>
 
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+<!--Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon  -->
 
 
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+<script language="JavaScript">
+// When the user clicks on the button, toggle between hiding and showing the dropdown content
 function toggleShowContent() {
-  document.getElementById("handoutDropdown").classList.toggle("show");
+  document.getElementById("handoutDropdownContent").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
+// Close the dropdown if the user clicks outside of it -->
 window.onclick = function(event) {
   if (!event.target.matches('.handoutDownloadButton')) {
     var dropdowns = document.getElementsByClassName("dropdownHandoutContent");

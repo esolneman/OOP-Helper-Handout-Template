@@ -196,7 +196,7 @@ ul {
 /* Style the list items */
 ul li {
   cursor: pointer;
-  position: relative;
+  position: static;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
   background: #eee;
@@ -256,7 +256,7 @@ ul li.checked::before {
 }
 
 /* Style the header */
-.header {
+.checklistHeader {
   background-color: gray;
   padding: 30px 40px;
   color: white;
@@ -266,7 +266,7 @@ ul li.checked::before {
 }
 
 /* Clear floats after the header */
-.header:after {
+.checklistHeader:after {
   content: "";
   display: table;
   clear: both;
