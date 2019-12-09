@@ -59,7 +59,7 @@ http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pd
 <content>
         <section>
             <article>
-                <a name=1></a>
+                <a class="anchor" name=1></a>
                 <h1>Lehrstuhl&#160;für Medieninformatik</h1><h3>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg
                 </h3>  
             </article>
@@ -97,7 +97,7 @@ println&#160;(&#34;b&#160;=&#160;&#34;&#160;+&#160;b);<br/>
 The&#160;variables&#160;a&#160;and&#160;b&#160;are&#160;local&#160;variables&#160;declared&#160;within&#160;different&#160;methods&#160;in&#160;the<br/>class&#160;<b>AnExample</b>.&#160;Because&#160;these&#160;variables&#160;are&#160;local&#160;variables,&#160;a&#160;can&#160;only&#160;be&#160;referred<br/>to&#160;within&#160;<b>methodOne&#160;</b>and&#160;variable&#160;b&#160;can&#160;only&#160;be&#160;accessed&#160;within&#160;<b>methodTwo</b>.&#160;Our<br/>attempt&#160;to&#160;initialize&#160;b&#160;using&#160;the&#160;value&#160;of&#160;a&#160;is&#160;illegal,&#160;as&#160;code&#160;in&#160;<b>methodTwo&#160;</b>cannot<br/>access&#160;local&#160;variables&#160;from&#160;<b>methodOne&#160;</b>or&#160;any&#160;other&#160;method.<br/>
 1<br/>
 <hr/>
-<a name=2></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+<a class="anchor" name=2></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
 Because&#160;local&#160;variable&#160;values&#160;do&#160;not&#160;persist&#160;after&#160;their&#160;containing&#160;method&#160;has<br/>completed,&#160;the&#160;variable&#160;a&#160;will&#160;be&#160;destroyed&#160;when&#160;<b>methodOne&#160;</b>has&#160;completed<br/>execution.&#160;The&#160;next&#160;time&#160;<b>methodOne&#160;</b>is&#160;called,&#160;a&#160;new&#160;variable&#160;a&#160;will&#160;be&#160;created.<br/>
 Block&#160;Scope<br/>While&#160;we&#160;typically&#160;think&#160;of&#160;local&#160;variables&#160;as&#160;local&#160;to&#160;a&#160;particular&#160;method,&#160;in&#160;Java<br/>local&#160;variables&#160;are&#160;actually&#160;local&#160;to&#160;a&#160;block&#160;of&#160;code.&#160;While&#160;a&#160;method&#160;defines&#160;a&#160;block<br/>of&#160;code&#160;(since&#160;the&#160;opening&#160;and&#160;closing&#160;braces&#160;of&#160;the&#160;method&#160;define&#160;a&#160;block),&#160;for&#160;and<br/>while&#160;loops,&#160;if&#160;-statements,&#160;and&#160;other&#160;constructs&#160;are&#160;also&#160;considered&#160;blocks&#160;of&#160;code.<br/>If&#160;we&#160;declare&#160;a&#160;local&#160;variable&#160;inside&#160;one&#160;of&#160;these&#160;constructs,&#160;the&#160;local&#160;variable&#160;will<br/>be&#160;created&#160;when&#160;it&#160;is&#160;declared&#160;in&#160;the&#160;block&#160;and&#160;destroyed&#160;when&#160;the&#160;block&#160;ends<br/>execution.&#160;Consider&#160;the&#160;following&#160;example:<br/>
 1<br/>
@@ -148,7 +148,7 @@ for&#160;loop<br/>
 The&#160;variable&#160;a&#160;is&#160;local&#160;to&#160;<b>methodThree</b>,&#160;so&#160;accessing&#160;a&#160;within&#160;the&#160;<b>for&#160;</b>loop,&#160;or&#160;in&#160;the<br/><b>println&#160;</b>is&#160;fine.&#160;The&#160;variables&#160;i&#160;and&#160;b&#160;are&#160;only&#160;in&#160;scope&#160;(i.e.,&#160;“alive“)&#160;within&#160;the<br/>confines&#160;of&#160;the&#160;for&#160;loop&#160;in&#160;which&#160;they&#160;are&#160;declared.&#160;They&#160;are&#160;no&#160;longer&#160;available&#160;by<br/>the&#160;time&#160;the&#160;last&#160;two&#160;printlns&#160;try&#160;to&#160;access&#160;them.&#160;The&#160;variable&#160;c&#160;is&#160;only&#160;in&#160;scope<br/>
 2<br/>
 <hr/>
-<a name=3></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+<a class="anchor" name=3></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
 within&#160;the&#160;confines&#160;of&#160;the&#160;<b>if&#160;</b>statement&#160;body&#160;in&#160;which&#160;it&#160;is&#160;declared.&#160;Note&#160;that&#160;a&#160;new<br/>copy&#160;of&#160;c&#160;will&#160;get&#160;created&#160;each&#160;time&#160;the&#160;<b>if&#160;</b>statement&#160;body&#160;is&#160;executed,&#160;therefore&#160;it<br/>cannot&#160;be&#160;used&#160;to&#160;store&#160;values&#160;across&#160;iterations&#160;of&#160;the&#160;<b>for&#160;</b>loop.<br/>
 Instance&#160;Variables<br/>Instance&#160;variables&#160;(also&#160;known&#160;as&#160;“ivars“)&#160;are&#160;defined&#160;as&#160;part&#160;of&#160;a&#160;class,&#160;but&#160;not<br/>within&#160;any&#160;particular&#160;method&#160;of&#160;the&#160;class.&#160;Each&#160;object&#160;of&#160;the&#160;class&#160;will&#160;have&#160;its&#160;own<br/>independent&#160;copy&#160;of&#160;all&#160;the&#160;instance&#160;variables&#160;defined&#160;in&#160;a&#160;class.&#160;Instance&#160;variables<br/>are&#160;created&#160;when&#160;an&#160;object&#160;is&#160;created.&#160;They&#160;are&#160;destroyed&#160;when&#160;their&#160;corresponding<br/>object&#160;is&#160;destroyed.&#160;Instance&#160;variables&#160;can&#160;be&#160;accessed&#160;from&#160;any&#160;method&#160;defined&#160;as<br/>part&#160;of&#160;the&#160;class&#160;in&#160;which&#160;the&#160;instance&#160;variable&#160;is&#160;defined.&#160;Access&#160;to&#160;instance<br/>variables&#160;from&#160;other&#160;classes&#160;is&#160;controlled&#160;by&#160;the&#160;variable’s&#160;visibility&#160;specifier&#160;(e.g.,<br/><b>public&#160;</b>or&#160;<b>private</b>).&#160;Instance&#160;variables&#160;that&#160;are&#160;<b>public&#160;</b>are&#160;accessible&#160;from&#160;methods&#160;in<br/>other&#160;classes&#160;while&#160;those&#160;that&#160;are&#160;<b>private&#160;</b>(which&#160;is&#160;by&#160;far&#160;the&#160;more&#160;common&#160;case)<br/>are&#160;not.<br/>
 Instance&#160;Variables&#160;Example<br/>
@@ -199,7 +199,7 @@ println&#160;(th3.x);<br/>
 }<br/>
 3<br/>
 <hr/>
-<a name=4></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+<a class="anchor" name=4></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
 In&#160;this&#160;case&#160;we&#160;have&#160;a&#160;class&#160;<b>Thing&#160;</b>which&#160;has&#160;an&#160;instance&#160;variable&#160;x&#160;.&#160;Each&#160;instance<br/>of&#160;the&#160;class&#160;has&#160;its&#160;own&#160;independent&#160;copy&#160;of&#160;the&#160;variable.&#160;Our&#160;main&#160;program&#160;creates<br/>three&#160;instances&#160;(objects)&#160;of&#160;the&#160;<b>Thing&#160;</b>class.&#160;It&#160;then&#160;sets&#160;the&#160;value&#160;of&#160;each&#160;instance’s<br/>
 x&#160;variable.&#160;Because&#160;there&#160;are&#160;three&#160;different&#160;<b>Thing&#160;</b>objects,&#160;there&#160;are&#160;three&#160;different<br/>
 x&#160;variables—one&#160;x&#160;variable&#160;per&#160;instance.&#160;We&#160;can&#160;change&#160;the&#160;variable&#160;values<br/>independently&#160;from&#160;one&#160;another.&#160;When&#160;we&#160;print&#160;out&#160;the&#160;results&#160;we’ll&#160;see:<br/>
@@ -237,7 +237,7 @@ public&#160;static&#160;int&#160;y;<br/>
 class&#160;MainProgram&#160;extends&#160;ConsoleProgram&#160;{<br/>
 4<br/>
 <hr/>
-<a name=5></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+<a class="anchor" name=5></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
 14<br/>
 15<br/>
 public&#160;void&#160;run&#160;()&#160;{<br/>
@@ -298,7 +298,7 @@ th1.y&#160;=&#160;7;<br/>
 Example&#160;1<br/>
 5<br/>
 <hr/>
-<a name=6></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+<a class="anchor" name=6></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
 1<br/>
 Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
 2<br/>
