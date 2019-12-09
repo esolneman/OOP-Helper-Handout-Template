@@ -18,6 +18,7 @@
             <div class="handoutBtns">
                 <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();"><i class="fa fa-download"></i></button>
                 <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
+                
                 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
                 <div id="handoutDropdownContent" class="dropdownHandoutContent">
                     <a href="#WichtigeInformationen"> Wichtige Informationen</a>
@@ -424,7 +425,7 @@ function toggleShowContent() {
 
 // Close the dropdown if the user clicks outside of it -->
 window.onclick = function(event) {
-  if (!event.target.matches('.handoutDownloadButton')) {
+  if (!event.target.matches('.dropbtn-handout')) {
     var dropdowns = document.getElementsByClassName("dropdownHandoutContent");
     var i;
     for (i = 0; i < dropdowns.length; i++) {

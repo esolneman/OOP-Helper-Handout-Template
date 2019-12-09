@@ -12,10 +12,6 @@ body {
     color: #333;
 }
 
-nav {
-    display: none;
-}
-
 footer {
     width: 850px;
     padding: 10%;
@@ -177,10 +173,6 @@ content .important .first-word {
 
 
 
-
-
-
-
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo */
 /* Include the padding and border in an element's total width and height */
 * {
@@ -196,7 +188,7 @@ ul {
 /* Style the list items */
 ul li {
   cursor: pointer;
-  position: static;
+  position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
   background: #eee;
