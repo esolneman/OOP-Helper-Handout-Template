@@ -16,21 +16,22 @@
         <div class="headerText">
             Studienleistung 2: Rad Racer
             <div class="handoutBtns">
-                <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();"><i class="fa fa-download"></i></button>
+                <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();"><i
+                        class="fa fa-download"></i></button>
                 <div class="dropdownHandoutMenu" onclick="toggleShowContent()">
-                 <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
-                
-                <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
-                <div id="handoutDropdownContent" class="dropdownHandoutContent">
-                    <a href="#WichtigeInformationen"> Wichtige Informationen</a>
-                    <a href="#Bewertungskriterien"> Bewertungskriterien</a>
-                    <a href="#Zusammenfassung">Zusammenfassung</a>
-                    <a href="#Screenshots">Screenshots</a>
-                    <a href="#Anforderungen">Anforderungen</a>
-                    <a href="#HinweiseUndHilfestellungen">Hinweise und Hilfestellungen</a>
+                    <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
+
+                    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
+                    <div id="handoutDropdownContent" class="dropdownHandoutContent">
+                        <a href="#WichtigeInformationen"> Wichtige Informationen</a>
+                        <a href="#Bewertungskriterien"> Bewertungskriterien</a>
+                        <a href="#Zusammenfassung">Zusammenfassung</a>
+                        <a href="#Screenshots">Screenshots</a>
+                        <a href="#Anforderungen">Anforderungen</a>
+                        <a href="#HinweiseUndHilfestellungen">Hinweise und Hilfestellungen</a>
+                    </div>
                 </div>
-                </div>
-               
+
             </div>
         </div>
     </div>
@@ -421,20 +422,20 @@
 
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
 <script language="JavaScript">
-// When the user clicks on the button, toggle between hiding and showing the dropdown content
-function toggleShowContent() {
-  document.getElementById("handoutDropdownContent").classList.add("show");
-}
+    // When the user clicks on the button, toggle between hiding and showing the dropdown content
+    function toggleShowContent() {
+    document.getElementById("handoutDropdownContent").classList.add("show");
+    }
 
-// Close the dropdown if the user clicks outside of it -->
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn-handout')) {
-    var dropdowns = document.getElementsByClassName("dropdownHandoutContent");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    // Close the dropdown if the user clicks outside of it -->
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn-handout')) {
+            var dropdowns = document.getElementsByClassName("dropdownHandoutContent");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
       }
     }
   }
@@ -442,10 +443,7 @@ window.onclick = function(event) {
 
 
 
+
 </script>
-
-
 </body>
-
-
 </html>

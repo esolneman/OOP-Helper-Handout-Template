@@ -14,14 +14,14 @@ http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pd
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    
+
 <!--add navbar html: https://stackoverflow.com/a/33876057-->
 <!--<div id="helpPageNavBar"></div>-->
 
-    
+
 <!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
 <div id="navBar" class="topnav">
-    <a href="index.html" >Start</a>
+    <a href="index.html">Start</a>
     <div class="dropdown">
         <button class="dropbtn">Coding Styles
             <i class="fa fa-caret-down"></i>
@@ -54,282 +54,283 @@ http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pd
     <a href="shortcuts.html">Shortcuts</a>
     <a href="tutorial.html">Tutorial</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>  
-    
+</div>
+
 <content>
-        <section>
-            <article>
-                <a class="anchor" name=1></a>
-                <h1>Lehrstuhl&#160;für Medieninformatik</h1><h3>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg
-                </h3>  
-            </article>
-            
-Variables,&#160;variables,&#160;everywhere...<br/>
-Einführung&#160;in&#160;die&#160;objektorientierte&#160;Programmierung&#160;mit&#160;Java,&#160;WS1718&#160;-&#160;Alexander&#160;Bazo,&#160;Florin&#160;Schwappach&#160;10.&#160;Oktober&#160;2017<br/>
-Dieser&#160;Text&#160;stammt&#160;aus&#160;einem&#160;Handout&#160;für&#160;den&#160;Kurs&#160;CS106A&#160;der&#160;Universität&#160;St-<br/>anford:&#160;<a href="http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pdf">http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/</a><br/>
-<a href="http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pdf">18-variables.pdf</a><br/>
-Based&#160;on&#160;a&#160;handout&#160;by&#160;Patrick&#160;Young.<br/>
-Local&#160;Variables<br/>Local&#160;variables&#160;are&#160;created&#160;local&#160;to&#160;the&#160;method&#160;(or&#160;the&#160;block—see&#160;“Block&#160;Scope“<br/>section&#160;below)&#160;in&#160;which&#160;they&#160;are&#160;defined.&#160;They&#160;are&#160;destroyed&#160;when&#160;execution&#160;of&#160;the<br/>method&#160;has&#160;been&#160;completed.&#160;Local&#160;variables&#160;can&#160;only&#160;be&#160;accessed&#160;from&#160;within&#160;the<br/>method&#160;in&#160;which&#160;they&#160;are&#160;declared.&#160;Because&#160;of&#160;their&#160;transient&#160;nature,&#160;local&#160;variables<br/>cannot&#160;store&#160;persistent&#160;information&#160;about&#160;an&#160;object&#160;between&#160;method&#160;calls.<br/>
-Local&#160;Variables&#160;Example<br/>Consider,&#160;for&#160;example,&#160;the&#160;following&#160;snippet&#160;of&#160;code.<br/>
-1<br/>
-class&#160;AnExample&#160;extends&#160;ConsoleProgram&#160;{<br/>
-2<br/>
-3<br/>
-public&#160;void&#160;methodOne&#160;{<br/>
-4<br/>
-int&#160;a&#160;=&#160;readInt&#160;(&#34;&#160;Enter&#160;a:&#160;&#34;);<br/>
-5<br/>
-println&#160;(&#34;a&#160;=&#160;&#34;&#160;+&#160;a);<br/>
-6<br/>
-}<br/>
-7<br/>
-8<br/>
-public&#160;void&#160;methodTwo&#160;{<br/>
-9<br/>
-int&#160;b&#160;=&#160;a;&#160;//&#160;BUG&#160;!:&#160;cannot&#160;refer&#160;to&#160;variable&#160;a&#160;in<br/>
-methodOne<br/>
-10<br/>
-println&#160;(&#34;b&#160;=&#160;&#34;&#160;+&#160;b);<br/>
-11<br/>
-}<br/>
-12<br/>
-}<br/>
-The&#160;variables&#160;a&#160;and&#160;b&#160;are&#160;local&#160;variables&#160;declared&#160;within&#160;different&#160;methods&#160;in&#160;the<br/>class&#160;<b>AnExample</b>.&#160;Because&#160;these&#160;variables&#160;are&#160;local&#160;variables,&#160;a&#160;can&#160;only&#160;be&#160;referred<br/>to&#160;within&#160;<b>methodOne&#160;</b>and&#160;variable&#160;b&#160;can&#160;only&#160;be&#160;accessed&#160;within&#160;<b>methodTwo</b>.&#160;Our<br/>attempt&#160;to&#160;initialize&#160;b&#160;using&#160;the&#160;value&#160;of&#160;a&#160;is&#160;illegal,&#160;as&#160;code&#160;in&#160;<b>methodTwo&#160;</b>cannot<br/>access&#160;local&#160;variables&#160;from&#160;<b>methodOne&#160;</b>or&#160;any&#160;other&#160;method.<br/>
-1<br/>
-<hr/>
-<a class="anchor" name=2></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
-Because&#160;local&#160;variable&#160;values&#160;do&#160;not&#160;persist&#160;after&#160;their&#160;containing&#160;method&#160;has<br/>completed,&#160;the&#160;variable&#160;a&#160;will&#160;be&#160;destroyed&#160;when&#160;<b>methodOne&#160;</b>has&#160;completed<br/>execution.&#160;The&#160;next&#160;time&#160;<b>methodOne&#160;</b>is&#160;called,&#160;a&#160;new&#160;variable&#160;a&#160;will&#160;be&#160;created.<br/>
-Block&#160;Scope<br/>While&#160;we&#160;typically&#160;think&#160;of&#160;local&#160;variables&#160;as&#160;local&#160;to&#160;a&#160;particular&#160;method,&#160;in&#160;Java<br/>local&#160;variables&#160;are&#160;actually&#160;local&#160;to&#160;a&#160;block&#160;of&#160;code.&#160;While&#160;a&#160;method&#160;defines&#160;a&#160;block<br/>of&#160;code&#160;(since&#160;the&#160;opening&#160;and&#160;closing&#160;braces&#160;of&#160;the&#160;method&#160;define&#160;a&#160;block),&#160;for&#160;and<br/>while&#160;loops,&#160;if&#160;-statements,&#160;and&#160;other&#160;constructs&#160;are&#160;also&#160;considered&#160;blocks&#160;of&#160;code.<br/>If&#160;we&#160;declare&#160;a&#160;local&#160;variable&#160;inside&#160;one&#160;of&#160;these&#160;constructs,&#160;the&#160;local&#160;variable&#160;will<br/>be&#160;created&#160;when&#160;it&#160;is&#160;declared&#160;in&#160;the&#160;block&#160;and&#160;destroyed&#160;when&#160;the&#160;block&#160;ends<br/>execution.&#160;Consider&#160;the&#160;following&#160;example:<br/>
-1<br/>
-class&#160;AnExample&#160;extends&#160;ConsoleProgram&#160;{<br/>
-2<br/>
-3<br/>
-public&#160;void&#160;methodThree&#160;{<br/>
-4<br/>
-int&#160;a&#160;=&#160;4;<br/>
-5<br/>
-6<br/>
-for&#160;(int&#160;i&#160;=&#160;0;&#160;i&#160;&lt;&#160;5;&#160;i++)&#160;{<br/>
-7<br/>
-int&#160;b&#160;=&#160;a;&#160;//&#160;this&#160;is&#160;okay<br/>
-8<br/>
-9<br/>
-if&#160;(a&#160;&gt;&#160;b)&#160;{&#160;//&#160;okay&#160;to&#160;access&#160;a&#160;and&#160;b&#160;here<br/>
-10<br/>
-int&#160;c&#160;=&#160;3;<br/>
-11<br/>
-12<br/>
-println&#160;(i);&#160;//&#160;okay&#160;to&#160;access&#160;i&#160;here<br/>
-13<br/>
-println&#160;(b);&#160;//&#160;okay&#160;to&#160;access&#160;b&#160;here<br/>
-14<br/>
-println&#160;(c);&#160;//&#160;okay&#160;to&#160;access&#160;c&#160;here<br/>
-15<br/>
-}<br/>
-16<br/>
-17<br/>
-println&#160;(c);&#160;//&#160;illegal&#160;:&#160;c&#160;is&#160;no&#160;longer&#160;in&#160;scope<br/>
-here<br/>
-18<br/>
-}<br/>
-19<br/>
-20<br/>
-println&#160;(a);&#160;//&#160;okay&#160;to&#160;access&#160;a&#160;here<br/>
-21<br/>
-println&#160;(b);&#160;//&#160;illegal&#160;:&#160;b&#160;is&#160;only&#160;in&#160;scope&#160;in&#160;body&#160;of<br/>
-for&#160;loop<br/>
-22<br/>
-println&#160;(i);&#160;//&#160;illegal&#160;:&#160;i&#160;is&#160;only&#160;in&#160;scope&#160;in&#160;body&#160;of<br/>
-for&#160;loop<br/>
-23<br/>
-}<br/>
-24<br/>
-}<br/>
-The&#160;variable&#160;a&#160;is&#160;local&#160;to&#160;<b>methodThree</b>,&#160;so&#160;accessing&#160;a&#160;within&#160;the&#160;<b>for&#160;</b>loop,&#160;or&#160;in&#160;the<br/><b>println&#160;</b>is&#160;fine.&#160;The&#160;variables&#160;i&#160;and&#160;b&#160;are&#160;only&#160;in&#160;scope&#160;(i.e.,&#160;“alive“)&#160;within&#160;the<br/>confines&#160;of&#160;the&#160;for&#160;loop&#160;in&#160;which&#160;they&#160;are&#160;declared.&#160;They&#160;are&#160;no&#160;longer&#160;available&#160;by<br/>the&#160;time&#160;the&#160;last&#160;two&#160;printlns&#160;try&#160;to&#160;access&#160;them.&#160;The&#160;variable&#160;c&#160;is&#160;only&#160;in&#160;scope<br/>
-2<br/>
-<hr/>
-<a class="anchor" name=3></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
-within&#160;the&#160;confines&#160;of&#160;the&#160;<b>if&#160;</b>statement&#160;body&#160;in&#160;which&#160;it&#160;is&#160;declared.&#160;Note&#160;that&#160;a&#160;new<br/>copy&#160;of&#160;c&#160;will&#160;get&#160;created&#160;each&#160;time&#160;the&#160;<b>if&#160;</b>statement&#160;body&#160;is&#160;executed,&#160;therefore&#160;it<br/>cannot&#160;be&#160;used&#160;to&#160;store&#160;values&#160;across&#160;iterations&#160;of&#160;the&#160;<b>for&#160;</b>loop.<br/>
-Instance&#160;Variables<br/>Instance&#160;variables&#160;(also&#160;known&#160;as&#160;“ivars“)&#160;are&#160;defined&#160;as&#160;part&#160;of&#160;a&#160;class,&#160;but&#160;not<br/>within&#160;any&#160;particular&#160;method&#160;of&#160;the&#160;class.&#160;Each&#160;object&#160;of&#160;the&#160;class&#160;will&#160;have&#160;its&#160;own<br/>independent&#160;copy&#160;of&#160;all&#160;the&#160;instance&#160;variables&#160;defined&#160;in&#160;a&#160;class.&#160;Instance&#160;variables<br/>are&#160;created&#160;when&#160;an&#160;object&#160;is&#160;created.&#160;They&#160;are&#160;destroyed&#160;when&#160;their&#160;corresponding<br/>object&#160;is&#160;destroyed.&#160;Instance&#160;variables&#160;can&#160;be&#160;accessed&#160;from&#160;any&#160;method&#160;defined&#160;as<br/>part&#160;of&#160;the&#160;class&#160;in&#160;which&#160;the&#160;instance&#160;variable&#160;is&#160;defined.&#160;Access&#160;to&#160;instance<br/>variables&#160;from&#160;other&#160;classes&#160;is&#160;controlled&#160;by&#160;the&#160;variable’s&#160;visibility&#160;specifier&#160;(e.g.,<br/><b>public&#160;</b>or&#160;<b>private</b>).&#160;Instance&#160;variables&#160;that&#160;are&#160;<b>public&#160;</b>are&#160;accessible&#160;from&#160;methods&#160;in<br/>other&#160;classes&#160;while&#160;those&#160;that&#160;are&#160;<b>private&#160;</b>(which&#160;is&#160;by&#160;far&#160;the&#160;more&#160;common&#160;case)<br/>are&#160;not.<br/>
-Instance&#160;Variables&#160;Example<br/>
-1<br/>
-class&#160;Thing&#160;{<br/>
-2<br/>
-public&#160;Thing&#160;()&#160;{<br/>
-3<br/>
-x&#160;=&#160;0;<br/>
-4<br/>
-}<br/>
-5<br/>
-6<br/>
-/*&#160;Public&#160;instance&#160;variable&#160;*/<br/>
-7<br/>
-public&#160;int&#160;x;<br/>
-8<br/>
-}<br/>
-9<br/>
-10<br/>
-class&#160;MyProgram&#160;extends&#160;ConsoleProgram&#160;{<br/>
-11<br/>
-12<br/>
-public&#160;void&#160;run&#160;()&#160;{<br/>
-13<br/>
-Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
-14<br/>
-Thing&#160;th2&#160;=&#160;new&#160;Thing&#160;();<br/>
-15<br/>
-Thing&#160;th3&#160;=&#160;new&#160;Thing&#160;();<br/>
-16<br/>
-th1.x&#160;=&#160;8;<br/>
-17<br/>
-//&#160;Can&#160;access&#160;x&#160;here&#160;because&#160;it&#160;is&#160;public<br/>
-18<br/>
-th2.x&#160;=&#160;17;<br/>
-19<br/>
-th3.x&#160;=&#160;18;<br/>
-20<br/>
-println&#160;(th1.x);<br/>
-21<br/>
-println&#160;(th2.x);<br/>
-22<br/>
-println&#160;(th3.x);<br/>
-23<br/>
-}<br/>
-24<br/>
-}<br/>
-3<br/>
-<hr/>
-<a class="anchor" name=4></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
-In&#160;this&#160;case&#160;we&#160;have&#160;a&#160;class&#160;<b>Thing&#160;</b>which&#160;has&#160;an&#160;instance&#160;variable&#160;x&#160;.&#160;Each&#160;instance<br/>of&#160;the&#160;class&#160;has&#160;its&#160;own&#160;independent&#160;copy&#160;of&#160;the&#160;variable.&#160;Our&#160;main&#160;program&#160;creates<br/>three&#160;instances&#160;(objects)&#160;of&#160;the&#160;<b>Thing&#160;</b>class.&#160;It&#160;then&#160;sets&#160;the&#160;value&#160;of&#160;each&#160;instance’s<br/>
-x&#160;variable.&#160;Because&#160;there&#160;are&#160;three&#160;different&#160;<b>Thing&#160;</b>objects,&#160;there&#160;are&#160;three&#160;different<br/>
-x&#160;variables—one&#160;x&#160;variable&#160;per&#160;instance.&#160;We&#160;can&#160;change&#160;the&#160;variable&#160;values<br/>independently&#160;from&#160;one&#160;another.&#160;When&#160;we&#160;print&#160;out&#160;the&#160;results&#160;we’ll&#160;see:<br/>
-1<br/>
-8<br/>
-2<br/>
-17<br/>
-3<br/>
-18<br/>
-Class&#160;Variables<br/>As&#160;with&#160;instance&#160;variables,&#160;class&#160;variables&#160;are&#160;defined&#160;as&#160;part&#160;of&#160;a&#160;class.&#160;However,&#160;in<br/>contrast&#160;to&#160;instance&#160;variables,&#160;with&#160;a&#160;class&#160;variable&#160;there&#160;is&#160;only&#160;one&#160;copy&#160;of&#160;the<br/>variable&#160;which&#160;is&#160;shared&#160;by&#160;all&#160;instances&#160;of&#160;the&#160;class.&#160;Similar&#160;to&#160;an&#160;instance&#160;variable,<br/>a&#160;class&#160;variable&#160;can&#160;be&#160;accessed&#160;by&#160;any&#160;method&#160;in&#160;the&#160;class&#160;in&#160;which&#160;the&#160;variable&#160;is<br/>declared.&#160;Access&#160;to&#160;class&#160;variables&#160;from&#160;other&#160;classes&#160;is&#160;controlled&#160;by&#160;the&#160;variable’s<br/>visibility&#160;specifier&#160;(e.g.,&#160;<b>public&#160;</b>or&#160;<b>private</b>).&#160;Class&#160;variables&#160;that&#160;are&#160;<b>public&#160;</b>are<br/>accessible&#160;from&#160;methods&#160;in&#160;other&#160;classes&#160;while&#160;those&#160;that&#160;are&#160;<b>private&#160;</b>are&#160;not.<br/>
-Syntactically,&#160;class&#160;variable&#160;declarations&#160;are&#160;distinguished&#160;from&#160;instance&#160;variable<br/>declarations&#160;by&#160;using&#160;the&#160;keyword&#160;<b>static&#160;</b>before&#160;the&#160;variable&#160;type&#160;in&#160;the&#160;variable<br/>declaration.&#160;Because&#160;of&#160;this,&#160;class&#160;variables&#160;are&#160;sometimes&#160;referred&#160;to&#160;as&#160;<b>static<br/></b>variables.&#160;Note&#160;that&#160;the&#160;constants&#160;you&#160;have&#160;seen&#160;so&#160;far&#160;were&#160;all&#160;in&#160;fact&#160;class<br/>variables,&#160;since&#160;they&#160;were&#160;defined&#160;using&#160;the&#160;keyword&#160;<b>static</b>,&#160;and&#160;it&#160;would&#160;make<br/>sense&#160;that&#160;all&#160;objects&#160;of&#160;a&#160;particular&#160;class&#160;would&#160;share&#160;the&#160;same&#160;value&#160;for&#160;some<br/>constant.<br/>
-Class&#160;Variables&#160;Example<br/>
-1<br/>
-class&#160;Thing&#160;{<br/>
-2<br/>
-public&#160;Thing&#160;()&#160;{<br/>
-3<br/>
-x&#160;=&#160;0;<br/>
-4<br/>
-}<br/>
-5<br/>
-6<br/>
-/*&#160;Public&#160;instance&#160;variable&#160;*/<br/>
-7<br/>
-public&#160;int&#160;x;<br/>
-8<br/>
-9<br/>
-/*&#160;Public&#160;class&#160;variable&#160;*/<br/>
-10<br/>
-public&#160;static&#160;int&#160;y;<br/>
-11<br/>
-}<br/>
-12<br/>
-13<br/>
-class&#160;MainProgram&#160;extends&#160;ConsoleProgram&#160;{<br/>
-4<br/>
-<hr/>
-<a class="anchor" name=5></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
-14<br/>
-15<br/>
-public&#160;void&#160;run&#160;()&#160;{<br/>
-16<br/>
-Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
-17<br/>
-Thing&#160;th2&#160;=&#160;new&#160;Thing&#160;();<br/>
-18<br/>
-Thing&#160;th3&#160;=&#160;new&#160;Thing&#160;();<br/>
-19<br/>
-20<br/>
-//&#160;NOTE&#160;:&#160;we&#160;can&#160;access&#160;a&#160;public&#160;class&#160;variable&#160;directly<br/>
-via<br/>
-21<br/>
-//&#160;the&#160;class&#160;name&#160;(see&#160;below&#160;).<br/>
-22<br/>
-Thing&#160;.y&#160;=&#160;7;<br/>
-23<br/>
-24<br/>
-//&#160;We&#160;can&#160;also&#160;access&#160;a&#160;public&#160;class&#160;variable&#160;by&#160;any<br/>
-object<br/>
-25<br/>
-//&#160;of&#160;that&#160;class&#160;.<br/>
-26<br/>
-th1.y&#160;=&#160;8;<br/>
-27<br/>
-th2.y&#160;=&#160;17;<br/>
-28<br/>
-th3.y&#160;=&#160;18;<br/>
-29<br/>
-30<br/>
-println&#160;(&#160;Thing&#160;.y);<br/>
-31<br/>
-println&#160;(th1.y);<br/>
-32<br/>
-println&#160;(th2.y);<br/>
-33<br/>
-println&#160;(th3.y);<br/>
-34<br/>
-}<br/>
-35<br/>
-}<br/>
-In&#160;this&#160;case&#160;we&#160;have&#160;a&#160;class&#160;<b>Thing&#160;</b>which&#160;has&#160;a&#160;public&#160;instance&#160;variable&#160;x&#160;and&#160;a<br/>public&#160;class&#160;variable&#160;y.&#160;All&#160;instances&#160;(objects)&#160;of&#160;that&#160;class&#160;share&#160;the&#160;variable.&#160;Our<br/>main&#160;program&#160;creates&#160;three&#160;instances&#160;of&#160;the&#160;<b>Thing&#160;</b>class.&#160;When&#160;it&#160;changes&#160;the&#160;value<br/>of&#160;y,&#160;it&#160;is&#160;changing&#160;the&#160;value&#160;shared&#160;by&#160;all&#160;the&#160;instances.&#160;When&#160;we&#160;print&#160;the&#160;results,<br/>we’ll&#160;see:<br/>
-1<br/>
-18<br/>
-2<br/>
-18<br/>
-3<br/>
-18<br/>
-As&#160;seen&#160;in&#160;the&#160;example&#160;above,&#160;a&#160;public&#160;class&#160;variable&#160;can&#160;be&#160;accessed&#160;via&#160;the&#160;name<br/>of&#160;the&#160;class&#160;instead&#160;of&#160;through&#160;an&#160;instance&#160;of&#160;the&#160;class&#160;like&#160;this:<br/>
-1<br/>
-Thing&#160;.y&#160;=&#160;7;<br/>
-This&#160;has&#160;an&#160;important&#160;advantage&#160;over&#160;accessing&#160;the&#160;variable&#160;via&#160;the&#160;name&#160;of&#160;an<br/>instance&#160;of&#160;the&#160;object:&#160;it&#160;emphasizes&#160;that&#160;y&#160;is&#160;really&#160;a&#160;property&#160;of&#160;the&#160;class,&#160;shared<br/>by&#160;all&#160;the&#160;instances&#160;of&#160;a&#160;class,&#160;rather&#160;than&#160;a&#160;property&#160;of&#160;a&#160;particular&#160;instance&#160;of&#160;the<br/>class.&#160;Compare&#160;the&#160;following&#160;two&#160;code&#160;snippets:<br/>
-1<br/>
-Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
-2<br/>
-th1.y&#160;=&#160;7;<br/>
-Example&#160;1<br/>
-5<br/>
-<hr/>
-<a class="anchor" name=6></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
-1<br/>
-Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
-2<br/>
-Thing&#160;.y&#160;=&#160;7;<br/>
-Example&#160;2<br/>
-Looking&#160;at&#160;Example&#160;1,&#160;we&#160;cannot&#160;tell&#160;whether&#160;y&#160;is&#160;an&#160;instance&#160;variable&#160;or&#160;a&#160;class<br/>variable.&#160;In&#160;order&#160;to&#160;know&#160;for&#160;sure&#160;which&#160;type&#160;of&#160;variable&#160;is&#160;in&#160;use,&#160;we&#160;need&#160;to<br/>search&#160;out&#160;the&#160;declaration&#160;for&#160;the&#160;y&#160;variable&#160;and&#160;see&#160;if&#160;it&#160;used&#160;the&#160;<b>static&#160;</b>keyword.&#160;In<br/>contrast,&#160;looking&#160;at&#160;Example&#160;2,&#160;we&#160;see&#160;that&#160;y&#160;must&#160;be&#160;a&#160;class&#160;variable,&#160;because&#160;we<br/>cannot&#160;access&#160;an&#160;instance&#160;variable&#160;using&#160;a&#160;class&#160;name.&#160;Because&#160;of&#160;this&#160;reason,&#160;using<br/>the&#160;name&#160;of&#160;the&#160;class&#160;(rather&#160;than&#160;the&#160;name&#160;of&#160;an&#160;instance)&#160;is&#160;the&#160;preferred&#160;method<br/>for&#160;accessing&#160;a&#160;class&#160;variable.<br/>
-Constants<br/>As&#160;we&#160;discussed&#160;in&#160;class,&#160;we&#160;will&#160;sometimes&#160;find&#160;it&#160;useful&#160;to&#160;define&#160;a&#160;“variable“<br/>whose&#160;value&#160;does&#160;not&#160;change&#160;during&#160;the&#160;entire&#160;program.&#160;Such&#160;a&#160;variable&#160;is&#160;called&#160;a<br/><b>constant</b>.&#160;In&#160;this&#160;case,&#160;the&#160;constant&#160;does&#160;not&#160;fulfill&#160;the&#160;traditional&#160;purpose&#160;of&#160;a<br/>variable&#160;(i.e.,&#160;storing&#160;a&#160;temporary&#160;program&#160;value).&#160;To&#160;declare&#160;a&#160;variable&#160;as&#160;a<br/>constant,&#160;use&#160;the&#160;keyword&#160;<b>final&#160;</b>when&#160;declaring&#160;the&#160;variable.&#160;As&#160;mentioned&#160;above,<br/>virtually&#160;all&#160;constants&#160;are&#160;class&#160;variables.&#160;However,&#160;it&#160;is&#160;possible&#160;to&#160;also&#160;define<br/>constant&#160;instance&#160;variables&#160;or&#160;constant&#160;local&#160;variables.<br/>
-6<br/>
-            
-<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
-<script language="JavaScript">
-function myFunction() {
-  var x = document.getElementById("navBar");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-            
-<!--add navbar html: https://stackoverflow.com/a/33876057-->
-<!--<script language='javascript' src="//code.jquery.com/jquery.min.js"></script>
-<script language='javascript'>
-$.get("navbar.html", function(data){
-    $("#helpPageNavBar").replaceWith(data);
-});
-</script>
--->
-        </section>
-    </content>         
-            
+    <section>
+        <a class="anchor" name=1></a>
+        <h1>Lehrstuhl&#160;für Medieninformatik</h1>
+        <h3>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg
+        </h3>
+
+        Variables,&#160;variables,&#160;everywhere...<br/>
+        Einführung&#160;in&#160;die&#160;objektorientierte&#160;Programmierung&#160;mit&#160;Java,&#160;WS1718&#160;-&#160;Alexander&#160;Bazo,&#160;Florin&#160;Schwappach&#160;10.&#160;Oktober&#160;2017<br/>
+        Dieser&#160;Text&#160;stammt&#160;aus&#160;einem&#160;Handout&#160;für&#160;den&#160;Kurs&#160;CS106A&#160;der&#160;Universität&#160;St-<br/>anford:&#160;<a
+            href="http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pdf">http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/</a><br/>
+        <a href="http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pdf">18-variables.pdf</a><br/>
+        Based&#160;on&#160;a&#160;handout&#160;by&#160;Patrick&#160;Young.<br/>
+        Local&#160;Variables<br/>Local&#160;variables&#160;are&#160;created&#160;local&#160;to&#160;the&#160;method&#160;(or&#160;the&#160;block—see&#160;“Block&#160;Scope“<br/>section&#160;below)&#160;in&#160;which&#160;they&#160;are&#160;defined.&#160;They&#160;are&#160;destroyed&#160;when&#160;execution&#160;of&#160;the<br/>method&#160;has&#160;been&#160;completed.&#160;Local&#160;variables&#160;can&#160;only&#160;be&#160;accessed&#160;from&#160;within&#160;the<br/>method&#160;in&#160;which&#160;they&#160;are&#160;declared.&#160;Because&#160;of&#160;their&#160;transient&#160;nature,&#160;local&#160;variables<br/>cannot&#160;store&#160;persistent&#160;information&#160;about&#160;an&#160;object&#160;between&#160;method&#160;calls.<br/>
+        Local&#160;Variables&#160;Example<br/>Consider,&#160;for&#160;example,&#160;the&#160;following&#160;snippet&#160;of&#160;code.<br/>
+        1<br/>
+        class&#160;AnExample&#160;extends&#160;ConsoleProgram&#160;{<br/>
+        2<br/>
+        3<br/>
+        public&#160;void&#160;methodOne&#160;{<br/>
+        4<br/>
+        int&#160;a&#160;=&#160;readInt&#160;(&#34;&#160;Enter&#160;a:&#160;&#34;);<br/>
+        5<br/>
+        println&#160;(&#34;a&#160;=&#160;&#34;&#160;+&#160;a);<br/>
+        6<br/>
+        }<br/>
+        7<br/>
+        8<br/>
+        public&#160;void&#160;methodTwo&#160;{<br/>
+        9<br/>
+        int&#160;b&#160;=&#160;a;&#160;//&#160;BUG&#160;!:&#160;cannot&#160;refer&#160;to&#160;variable&#160;a&#160;in<br/>
+        methodOne<br/>
+        10<br/>
+        println&#160;(&#34;b&#160;=&#160;&#34;&#160;+&#160;b);<br/>
+        11<br/>
+        }<br/>
+        12<br/>
+        }<br/>
+        The&#160;variables&#160;a&#160;and&#160;b&#160;are&#160;local&#160;variables&#160;declared&#160;within&#160;different&#160;methods&#160;in&#160;the<br/>class&#160;<b>AnExample</b>.&#160;Because&#160;these&#160;variables&#160;are&#160;local&#160;variables,&#160;a&#160;can&#160;only&#160;be&#160;referred<br/>to&#160;within&#160;<b>methodOne&#160;</b>and&#160;variable&#160;b&#160;can&#160;only&#160;be&#160;accessed&#160;within&#160;<b>methodTwo</b>.&#160;Our<br/>attempt&#160;to&#160;initialize&#160;b&#160;using&#160;the&#160;value&#160;of&#160;a&#160;is&#160;illegal,&#160;as&#160;code&#160;in&#160;<b>methodTwo&#160;</b>cannot<br/>access&#160;local&#160;variables&#160;from&#160;<b>methodOne&#160;</b>or&#160;any&#160;other&#160;method.<br/>
+        1<br/>
+        <hr/>
+        <a class="anchor" name=2></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+        Because&#160;local&#160;variable&#160;values&#160;do&#160;not&#160;persist&#160;after&#160;their&#160;containing&#160;method&#160;has<br/>completed,&#160;the&#160;variable&#160;a&#160;will&#160;be&#160;destroyed&#160;when&#160;<b>methodOne&#160;</b>has&#160;completed<br/>execution.&#160;The&#160;next&#160;time&#160;<b>methodOne&#160;</b>is&#160;called,&#160;a&#160;new&#160;variable&#160;a&#160;will&#160;be&#160;created.<br/>
+        Block&#160;Scope<br/>While&#160;we&#160;typically&#160;think&#160;of&#160;local&#160;variables&#160;as&#160;local&#160;to&#160;a&#160;particular&#160;method,&#160;in&#160;Java<br/>local&#160;variables&#160;are&#160;actually&#160;local&#160;to&#160;a&#160;block&#160;of&#160;code.&#160;While&#160;a&#160;method&#160;defines&#160;a&#160;block<br/>of&#160;code&#160;(since&#160;the&#160;opening&#160;and&#160;closing&#160;braces&#160;of&#160;the&#160;method&#160;define&#160;a&#160;block),&#160;for&#160;and<br/>while&#160;loops,&#160;if&#160;-statements,&#160;and&#160;other&#160;constructs&#160;are&#160;also&#160;considered&#160;blocks&#160;of&#160;code.<br/>If&#160;we&#160;declare&#160;a&#160;local&#160;variable&#160;inside&#160;one&#160;of&#160;these&#160;constructs,&#160;the&#160;local&#160;variable&#160;will<br/>be&#160;created&#160;when&#160;it&#160;is&#160;declared&#160;in&#160;the&#160;block&#160;and&#160;destroyed&#160;when&#160;the&#160;block&#160;ends<br/>execution.&#160;Consider&#160;the&#160;following&#160;example:<br/>
+        1<br/>
+        class&#160;AnExample&#160;extends&#160;ConsoleProgram&#160;{<br/>
+        2<br/>
+        3<br/>
+        public&#160;void&#160;methodThree&#160;{<br/>
+        4<br/>
+        int&#160;a&#160;=&#160;4;<br/>
+        5<br/>
+        6<br/>
+        for&#160;(int&#160;i&#160;=&#160;0;&#160;i&#160;&lt;&#160;5;&#160;i++)&#160;{<br/>
+        7<br/>
+        int&#160;b&#160;=&#160;a;&#160;//&#160;this&#160;is&#160;okay<br/>
+        8<br/>
+        9<br/>
+        if&#160;(a&#160;&gt;&#160;b)&#160;{&#160;//&#160;okay&#160;to&#160;access&#160;a&#160;and&#160;b&#160;here<br/>
+        10<br/>
+        int&#160;c&#160;=&#160;3;<br/>
+        11<br/>
+        12<br/>
+        println&#160;(i);&#160;//&#160;okay&#160;to&#160;access&#160;i&#160;here<br/>
+        13<br/>
+        println&#160;(b);&#160;//&#160;okay&#160;to&#160;access&#160;b&#160;here<br/>
+        14<br/>
+        println&#160;(c);&#160;//&#160;okay&#160;to&#160;access&#160;c&#160;here<br/>
+        15<br/>
+        }<br/>
+        16<br/>
+        17<br/>
+        println&#160;(c);&#160;//&#160;illegal&#160;:&#160;c&#160;is&#160;no&#160;longer&#160;in&#160;scope<br/>
+        here<br/>
+        18<br/>
+        }<br/>
+        19<br/>
+        20<br/>
+        println&#160;(a);&#160;//&#160;okay&#160;to&#160;access&#160;a&#160;here<br/>
+        21<br/>
+        println&#160;(b);&#160;//&#160;illegal&#160;:&#160;b&#160;is&#160;only&#160;in&#160;scope&#160;in&#160;body&#160;of<br/>
+        for&#160;loop<br/>
+        22<br/>
+        println&#160;(i);&#160;//&#160;illegal&#160;:&#160;i&#160;is&#160;only&#160;in&#160;scope&#160;in&#160;body&#160;of<br/>
+        for&#160;loop<br/>
+        23<br/>
+        }<br/>
+        24<br/>
+        }<br/>
+        The&#160;variable&#160;a&#160;is&#160;local&#160;to&#160;<b>methodThree</b>,&#160;so&#160;accessing&#160;a&#160;within&#160;the&#160;<b>for&#160;</b>loop,&#160;or&#160;in&#160;the<br/><b>println&#160;</b>is&#160;fine.&#160;The&#160;variables&#160;i&#160;and&#160;b&#160;are&#160;only&#160;in&#160;scope&#160;(i.e.,&#160;“alive“)&#160;within&#160;the<br/>confines&#160;of&#160;the&#160;for&#160;loop&#160;in&#160;which&#160;they&#160;are&#160;declared.&#160;They&#160;are&#160;no&#160;longer&#160;available&#160;by<br/>the&#160;time&#160;the&#160;last&#160;two&#160;printlns&#160;try&#160;to&#160;access&#160;them.&#160;The&#160;variable&#160;c&#160;is&#160;only&#160;in&#160;scope<br/>
+        2<br/>
+        <hr/>
+        <a class="anchor" name=3></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+        within&#160;the&#160;confines&#160;of&#160;the&#160;<b>if&#160;</b>statement&#160;body&#160;in&#160;which&#160;it&#160;is&#160;declared.&#160;Note&#160;that&#160;a&#160;new<br/>copy&#160;of&#160;c&#160;will&#160;get&#160;created&#160;each&#160;time&#160;the&#160;<b>if&#160;</b>statement&#160;body&#160;is&#160;executed,&#160;therefore&#160;it<br/>cannot&#160;be&#160;used&#160;to&#160;store&#160;values&#160;across&#160;iterations&#160;of&#160;the&#160;<b>for&#160;</b>loop.<br/>
+        Instance&#160;Variables<br/>Instance&#160;variables&#160;(also&#160;known&#160;as&#160;“ivars“)&#160;are&#160;defined&#160;as&#160;part&#160;of&#160;a&#160;class,&#160;but&#160;not<br/>within&#160;any&#160;particular&#160;method&#160;of&#160;the&#160;class.&#160;Each&#160;object&#160;of&#160;the&#160;class&#160;will&#160;have&#160;its&#160;own<br/>independent&#160;copy&#160;of&#160;all&#160;the&#160;instance&#160;variables&#160;defined&#160;in&#160;a&#160;class.&#160;Instance&#160;variables<br/>are&#160;created&#160;when&#160;an&#160;object&#160;is&#160;created.&#160;They&#160;are&#160;destroyed&#160;when&#160;their&#160;corresponding<br/>object&#160;is&#160;destroyed.&#160;Instance&#160;variables&#160;can&#160;be&#160;accessed&#160;from&#160;any&#160;method&#160;defined&#160;as<br/>part&#160;of&#160;the&#160;class&#160;in&#160;which&#160;the&#160;instance&#160;variable&#160;is&#160;defined.&#160;Access&#160;to&#160;instance<br/>variables&#160;from&#160;other&#160;classes&#160;is&#160;controlled&#160;by&#160;the&#160;variable’s&#160;visibility&#160;specifier&#160;(e.g.,<br/><b>public&#160;</b>or&#160;<b>private</b>).&#160;Instance&#160;variables&#160;that&#160;are&#160;<b>public&#160;</b>are&#160;accessible&#160;from&#160;methods&#160;in<br/>other&#160;classes&#160;while&#160;those&#160;that&#160;are&#160;<b>private&#160;</b>(which&#160;is&#160;by&#160;far&#160;the&#160;more&#160;common&#160;case)<br/>are&#160;not.<br/>
+        Instance&#160;Variables&#160;Example<br/>
+        1<br/>
+        class&#160;Thing&#160;{<br/>
+        2<br/>
+        public&#160;Thing&#160;()&#160;{<br/>
+        3<br/>
+        x&#160;=&#160;0;<br/>
+        4<br/>
+        }<br/>
+        5<br/>
+        6<br/>
+        /*&#160;Public&#160;instance&#160;variable&#160;*/<br/>
+        7<br/>
+        public&#160;int&#160;x;<br/>
+        8<br/>
+        }<br/>
+        9<br/>
+        10<br/>
+        class&#160;MyProgram&#160;extends&#160;ConsoleProgram&#160;{<br/>
+        11<br/>
+        12<br/>
+        public&#160;void&#160;run&#160;()&#160;{<br/>
+        13<br/>
+        Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
+        14<br/>
+        Thing&#160;th2&#160;=&#160;new&#160;Thing&#160;();<br/>
+        15<br/>
+        Thing&#160;th3&#160;=&#160;new&#160;Thing&#160;();<br/>
+        16<br/>
+        th1.x&#160;=&#160;8;<br/>
+        17<br/>
+        //&#160;Can&#160;access&#160;x&#160;here&#160;because&#160;it&#160;is&#160;public<br/>
+        18<br/>
+        th2.x&#160;=&#160;17;<br/>
+        19<br/>
+        th3.x&#160;=&#160;18;<br/>
+        20<br/>
+        println&#160;(th1.x);<br/>
+        21<br/>
+        println&#160;(th2.x);<br/>
+        22<br/>
+        println&#160;(th3.x);<br/>
+        23<br/>
+        }<br/>
+        24<br/>
+        }<br/>
+        3<br/>
+        <hr/>
+        <a class="anchor" name=4></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+        In&#160;this&#160;case&#160;we&#160;have&#160;a&#160;class&#160;<b>Thing&#160;</b>which&#160;has&#160;an&#160;instance&#160;variable&#160;x&#160;.&#160;Each&#160;instance<br/>of&#160;the&#160;class&#160;has&#160;its&#160;own&#160;independent&#160;copy&#160;of&#160;the&#160;variable.&#160;Our&#160;main&#160;program&#160;creates<br/>three&#160;instances&#160;(objects)&#160;of&#160;the&#160;<b>Thing&#160;</b>class.&#160;It&#160;then&#160;sets&#160;the&#160;value&#160;of&#160;each&#160;instance’s<br/>
+        x&#160;variable.&#160;Because&#160;there&#160;are&#160;three&#160;different&#160;<b>Thing&#160;</b>objects,&#160;there&#160;are&#160;three&#160;different<br/>
+        x&#160;variables—one&#160;x&#160;variable&#160;per&#160;instance.&#160;We&#160;can&#160;change&#160;the&#160;variable&#160;values<br/>independently&#160;from&#160;one&#160;another.&#160;When&#160;we&#160;print&#160;out&#160;the&#160;results&#160;we’ll&#160;see:<br/>
+        1<br/>
+        8<br/>
+        2<br/>
+        17<br/>
+        3<br/>
+        18<br/>
+        Class&#160;Variables<br/>As&#160;with&#160;instance&#160;variables,&#160;class&#160;variables&#160;are&#160;defined&#160;as&#160;part&#160;of&#160;a&#160;class.&#160;However,&#160;in<br/>contrast&#160;to&#160;instance&#160;variables,&#160;with&#160;a&#160;class&#160;variable&#160;there&#160;is&#160;only&#160;one&#160;copy&#160;of&#160;the<br/>variable&#160;which&#160;is&#160;shared&#160;by&#160;all&#160;instances&#160;of&#160;the&#160;class.&#160;Similar&#160;to&#160;an&#160;instance&#160;variable,<br/>a&#160;class&#160;variable&#160;can&#160;be&#160;accessed&#160;by&#160;any&#160;method&#160;in&#160;the&#160;class&#160;in&#160;which&#160;the&#160;variable&#160;is<br/>declared.&#160;Access&#160;to&#160;class&#160;variables&#160;from&#160;other&#160;classes&#160;is&#160;controlled&#160;by&#160;the&#160;variable’s<br/>visibility&#160;specifier&#160;(e.g.,&#160;<b>public&#160;</b>or&#160;<b>private</b>).&#160;Class&#160;variables&#160;that&#160;are&#160;<b>public&#160;</b>are<br/>accessible&#160;from&#160;methods&#160;in&#160;other&#160;classes&#160;while&#160;those&#160;that&#160;are&#160;<b>private&#160;</b>are&#160;not.<br/>
+        Syntactically,&#160;class&#160;variable&#160;declarations&#160;are&#160;distinguished&#160;from&#160;instance&#160;variable<br/>declarations&#160;by&#160;using&#160;the&#160;keyword&#160;<b>static&#160;</b>before&#160;the&#160;variable&#160;type&#160;in&#160;the&#160;variable<br/>declaration.&#160;Because&#160;of&#160;this,&#160;class&#160;variables&#160;are&#160;sometimes&#160;referred&#160;to&#160;as&#160;<b>static<br/></b>variables.&#160;Note&#160;that&#160;the&#160;constants&#160;you&#160;have&#160;seen&#160;so&#160;far&#160;were&#160;all&#160;in&#160;fact&#160;class<br/>variables,&#160;since&#160;they&#160;were&#160;defined&#160;using&#160;the&#160;keyword&#160;<b>static</b>,&#160;and&#160;it&#160;would&#160;make<br/>sense&#160;that&#160;all&#160;objects&#160;of&#160;a&#160;particular&#160;class&#160;would&#160;share&#160;the&#160;same&#160;value&#160;for&#160;some<br/>constant.<br/>
+        Class&#160;Variables&#160;Example<br/>
+        1<br/>
+        class&#160;Thing&#160;{<br/>
+        2<br/>
+        public&#160;Thing&#160;()&#160;{<br/>
+        3<br/>
+        x&#160;=&#160;0;<br/>
+        4<br/>
+        }<br/>
+        5<br/>
+        6<br/>
+        /*&#160;Public&#160;instance&#160;variable&#160;*/<br/>
+        7<br/>
+        public&#160;int&#160;x;<br/>
+        8<br/>
+        9<br/>
+        /*&#160;Public&#160;class&#160;variable&#160;*/<br/>
+        10<br/>
+        public&#160;static&#160;int&#160;y;<br/>
+        11<br/>
+        }<br/>
+        12<br/>
+        13<br/>
+        class&#160;MainProgram&#160;extends&#160;ConsoleProgram&#160;{<br/>
+        4<br/>
+        <hr/>
+        <a class="anchor" name=5></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+        14<br/>
+        15<br/>
+        public&#160;void&#160;run&#160;()&#160;{<br/>
+        16<br/>
+        Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
+        17<br/>
+        Thing&#160;th2&#160;=&#160;new&#160;Thing&#160;();<br/>
+        18<br/>
+        Thing&#160;th3&#160;=&#160;new&#160;Thing&#160;();<br/>
+        19<br/>
+        20<br/>
+        //&#160;NOTE&#160;:&#160;we&#160;can&#160;access&#160;a&#160;public&#160;class&#160;variable&#160;directly<br/>
+        via<br/>
+        21<br/>
+        //&#160;the&#160;class&#160;name&#160;(see&#160;below&#160;).<br/>
+        22<br/>
+        Thing&#160;.y&#160;=&#160;7;<br/>
+        23<br/>
+        24<br/>
+        //&#160;We&#160;can&#160;also&#160;access&#160;a&#160;public&#160;class&#160;variable&#160;by&#160;any<br/>
+        object<br/>
+        25<br/>
+        //&#160;of&#160;that&#160;class&#160;.<br/>
+        26<br/>
+        th1.y&#160;=&#160;8;<br/>
+        27<br/>
+        th2.y&#160;=&#160;17;<br/>
+        28<br/>
+        th3.y&#160;=&#160;18;<br/>
+        29<br/>
+        30<br/>
+        println&#160;(&#160;Thing&#160;.y);<br/>
+        31<br/>
+        println&#160;(th1.y);<br/>
+        32<br/>
+        println&#160;(th2.y);<br/>
+        33<br/>
+        println&#160;(th3.y);<br/>
+        34<br/>
+        }<br/>
+        35<br/>
+        }<br/>
+        In&#160;this&#160;case&#160;we&#160;have&#160;a&#160;class&#160;<b>Thing&#160;</b>which&#160;has&#160;a&#160;public&#160;instance&#160;variable&#160;x&#160;and&#160;a<br/>public&#160;class&#160;variable&#160;y.&#160;All&#160;instances&#160;(objects)&#160;of&#160;that&#160;class&#160;share&#160;the&#160;variable.&#160;Our<br/>main&#160;program&#160;creates&#160;three&#160;instances&#160;of&#160;the&#160;<b>Thing&#160;</b>class.&#160;When&#160;it&#160;changes&#160;the&#160;value<br/>of&#160;y,&#160;it&#160;is&#160;changing&#160;the&#160;value&#160;shared&#160;by&#160;all&#160;the&#160;instances.&#160;When&#160;we&#160;print&#160;the&#160;results,<br/>we’ll&#160;see:<br/>
+        1<br/>
+        18<br/>
+        2<br/>
+        18<br/>
+        3<br/>
+        18<br/>
+        As&#160;seen&#160;in&#160;the&#160;example&#160;above,&#160;a&#160;public&#160;class&#160;variable&#160;can&#160;be&#160;accessed&#160;via&#160;the&#160;name<br/>of&#160;the&#160;class&#160;instead&#160;of&#160;through&#160;an&#160;instance&#160;of&#160;the&#160;class&#160;like&#160;this:<br/>
+        1<br/>
+        Thing&#160;.y&#160;=&#160;7;<br/>
+        This&#160;has&#160;an&#160;important&#160;advantage&#160;over&#160;accessing&#160;the&#160;variable&#160;via&#160;the&#160;name&#160;of&#160;an<br/>instance&#160;of&#160;the&#160;object:&#160;it&#160;emphasizes&#160;that&#160;y&#160;is&#160;really&#160;a&#160;property&#160;of&#160;the&#160;class,&#160;shared<br/>by&#160;all&#160;the&#160;instances&#160;of&#160;a&#160;class,&#160;rather&#160;than&#160;a&#160;property&#160;of&#160;a&#160;particular&#160;instance&#160;of&#160;the<br/>class.&#160;Compare&#160;the&#160;following&#160;two&#160;code&#160;snippets:<br/>
+        1<br/>
+        Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
+        2<br/>
+        th1.y&#160;=&#160;7;<br/>
+        Example&#160;1<br/>
+        5<br/>
+        <hr/>
+        <a class="anchor" name=6></a><b>Lehrstuhl&#160;für Medieninformatik<br/>Institut&#160;für&#160;Information&#160;und&#160;Medien,&#160;Sprache&#160;und&#160;Kultur<br/>Universität&#160;Regensburg</b><br/>
+        1<br/>
+        Thing&#160;th1&#160;=&#160;new&#160;Thing&#160;();<br/>
+        2<br/>
+        Thing&#160;.y&#160;=&#160;7;<br/>
+        Example&#160;2<br/>
+        Looking&#160;at&#160;Example&#160;1,&#160;we&#160;cannot&#160;tell&#160;whether&#160;y&#160;is&#160;an&#160;instance&#160;variable&#160;or&#160;a&#160;class<br/>variable.&#160;In&#160;order&#160;to&#160;know&#160;for&#160;sure&#160;which&#160;type&#160;of&#160;variable&#160;is&#160;in&#160;use,&#160;we&#160;need&#160;to<br/>search&#160;out&#160;the&#160;declaration&#160;for&#160;the&#160;y&#160;variable&#160;and&#160;see&#160;if&#160;it&#160;used&#160;the&#160;<b>static&#160;</b>keyword.&#160;In<br/>contrast,&#160;looking&#160;at&#160;Example&#160;2,&#160;we&#160;see&#160;that&#160;y&#160;must&#160;be&#160;a&#160;class&#160;variable,&#160;because&#160;we<br/>cannot&#160;access&#160;an&#160;instance&#160;variable&#160;using&#160;a&#160;class&#160;name.&#160;Because&#160;of&#160;this&#160;reason,&#160;using<br/>the&#160;name&#160;of&#160;the&#160;class&#160;(rather&#160;than&#160;the&#160;name&#160;of&#160;an&#160;instance)&#160;is&#160;the&#160;preferred&#160;method<br/>for&#160;accessing&#160;a&#160;class&#160;variable.<br/>
+        Constants<br/>As&#160;we&#160;discussed&#160;in&#160;class,&#160;we&#160;will&#160;sometimes&#160;find&#160;it&#160;useful&#160;to&#160;define&#160;a&#160;“variable“<br/>whose&#160;value&#160;does&#160;not&#160;change&#160;during&#160;the&#160;entire&#160;program.&#160;Such&#160;a&#160;variable&#160;is&#160;called&#160;a<br/><b>constant</b>.&#160;In&#160;this&#160;case,&#160;the&#160;constant&#160;does&#160;not&#160;fulfill&#160;the&#160;traditional&#160;purpose&#160;of&#160;a<br/>variable&#160;(i.e.,&#160;storing&#160;a&#160;temporary&#160;program&#160;value).&#160;To&#160;declare&#160;a&#160;variable&#160;as&#160;a<br/>constant,&#160;use&#160;the&#160;keyword&#160;<b>final&#160;</b>when&#160;declaring&#160;the&#160;variable.&#160;As&#160;mentioned&#160;above,<br/>virtually&#160;all&#160;constants&#160;are&#160;class&#160;variables.&#160;However,&#160;it&#160;is&#160;possible&#160;to&#160;also&#160;define<br/>constant&#160;instance&#160;variables&#160;or&#160;constant&#160;local&#160;variables.<br/>
+        6<br/>
+
+        <!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+        <script language="JavaScript">
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+        </script>
+
+        <!--add navbar html: https://stackoverflow.com/a/33876057-->
+        <!--<script language='javascript' src="//code.jquery.com/jquery.min.js"></script>
+        <script language='javascript'>
+        $.get("navbar.html", function(data){
+            $("#helpPageNavBar").replaceWith(data);
+        });
+        </script>
+        -->
+    </section>
+</content>
+
 </body>
 </html>
