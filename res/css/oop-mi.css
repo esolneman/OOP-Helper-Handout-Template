@@ -140,29 +140,26 @@ td{
 
 tbody > tr > td  {
     font-weight: bold;
+    text-align: left;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-td > div>div {
-    text-align: left;
-    font-weight: normal;
-    border: none;
-}
-
 tr:hover {background-color: #ddd;}
 
 td > div>div {
-    text-align: left;
+    text-align: block;
     font-weight: normal;
     border: none;
 }
 
+/* css for points*/
 td > div>div:nth-child(2) {
     text-align: center;
     font-weight: bold;
+    margin-top: 5px;
     color: darkslategrey;
 }
 
