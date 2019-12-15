@@ -104,8 +104,18 @@ content .preview {
     margin: 1%;
 }
 
+cotent .imageTutorial {
+    width: 60%;
+    padding: 0;
+    margin: 1%;
+}
+
+
 content .image:hover {
-    cursor: zoom-in;
+    transform: scale(1.5);
+}
+
+content .imageTutorial:hover {
     transform: scale(1.5);
 }
 
