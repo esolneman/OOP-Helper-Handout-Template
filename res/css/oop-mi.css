@@ -92,7 +92,7 @@ content .option-label {
 content .gallery {
     display: block;
     width: 80%;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 
 content .preview-link {
@@ -158,6 +158,7 @@ td{
 tbody > tr > td  {
     font-weight: bold;
     text-align: left;
+    cursor: default;
 }
 
 tr:nth-child(even) {
