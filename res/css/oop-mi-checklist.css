@@ -281,3 +281,8 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
+
+
+li:has(i.fa fa-check-square){
+background: rgb(64, 128, 0) !important;
+}
