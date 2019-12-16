@@ -199,7 +199,7 @@ td > div>div:nth-child(2) {
 
 /*https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp*/
 /* Add a black background color to the top navigation */
-.topnav {
+.topnav, .topnavHandout {
   background-color: #333;
     
   /*https://www.w3schools.com/howto/howto_css_fixed_menu.asp*/
@@ -209,7 +209,7 @@ td > div>div:nth-child(2) {
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav, .topnavHandout a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -226,7 +226,7 @@ td > div>div:nth-child(2) {
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.topnav, .topnavHandout .icon {
   display: none;
 }
 
@@ -270,6 +270,11 @@ td > div>div:nth-child(2) {
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.topnavHandout a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
   color: white;
 }
