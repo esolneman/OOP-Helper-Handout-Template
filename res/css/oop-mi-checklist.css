@@ -192,7 +192,7 @@ ul li {
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
-  background: #eee;
+  background: #a6a6a6;
   font-size: 18px;
   transition: 0.2s;
    /* make the list items unselectable */
@@ -206,18 +206,18 @@ ul li div.editableLI{
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
-  background: #f9f9f9;
+  background: #cccccc;
 }
 
 /* Darker background-color on hover */
 ul li:hover {
-  background: #ddd;
+  background: #f2f2f2;
 }
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  background: #888;
-  color: #fff;
+  background: rgb(64, 128, 0);
+  color: white;
   text-decoration: line-through;
 }
 
@@ -255,7 +255,7 @@ ul li.checked::before {
   color: white;
   text-align: center;
   margin-top: 30px;
-
+  margin-bottom:50px;
 }
 
 /* Clear floats after the header */

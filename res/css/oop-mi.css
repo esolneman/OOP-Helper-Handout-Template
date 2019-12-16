@@ -104,10 +104,12 @@ content .preview {
     margin: 1%;
 }
 
-cotent .imageTutorial {
-    width: 60%;
+.imageTutorial {
+    width: 80%;
     padding: 0;
     margin: 1%;
+    height: auto;
+    display: block;
 }
 
 
