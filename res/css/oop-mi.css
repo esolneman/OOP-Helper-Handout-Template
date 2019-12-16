@@ -209,7 +209,7 @@ td > div>div:nth-child(2) {
 }
 
 /* Style the links inside the navigation bar */
-.topnav, .topnavHandout a {
+.topnav a, .topnavHandout a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -226,7 +226,7 @@ td > div>div:nth-child(2) {
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav, .topnavHandout .icon {
+.topnav .icon, .topnavHandout .icon {
   display: none;
 }
 
@@ -269,12 +269,7 @@ td > div>div:nth-child(2) {
 }
 
 /* Add a dark background on topnav links and the dropdown button on hover */
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-
-.topnavHandout a:hover, .dropdown:hover .dropbtn {
+.topnav a:hover, .dropdown:hover .dropbtn, .topntopnavHandoutav a:hover, .dropdown:hover .dropbtn{
   background-color: #555;
   color: white;
 }
