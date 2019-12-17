@@ -285,6 +285,7 @@ input {
 }
 
 
-li:has(i.fa fa-check-square){
-background: rgb(64, 128, 0) !important;
+.checked{
+background-color: rgb(94, 186, 140) !important;
 }
+
