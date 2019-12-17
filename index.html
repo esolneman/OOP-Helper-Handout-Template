@@ -41,29 +41,6 @@
         <section>
             <a class="anchor" name="WichtigeInformationen"></a>
             <h1>Wichtige Informationen</h1>
-
-            <h2>
-                Template: Links
-            </h2>
-
-            <h3>Links to Code</h3>
-
-            <br>
-            
-            Link zu einer Methode <a class="anchorLinktToHandout" id="Player.java/draw"
-                                     href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20draw()">
-            <code> draw </code> </a> in Klasse Player. Gleichzeitig auch Anchor für Link vom Code zum Handout. Link zu
-            einer Klasse <a class="anchorLinktToHandout" id="Player.java/Player"
-                            href="LinkToCode?class=Player.java&path=/src/world/&function=public%20class%20Player">
-            <code>Player</code> </a><br>
-
-
-            <h3> Links to specific page in PDF</h3>
-
-            <a href="https://regensburger-forscher.de/oop-slides/index.html?slides=01-Einfuerhung-in-die-Programmierung-und-die-Programmiersprachen&startAtSlide=5">
-                Example External
-                Topic </a>
-
             <p>
                 In dieser Studienleistung werden Sie ein Computerspiel implementieren. Um die Aufgabe zu bearbeiten,
                 müssen Sie zuerst das Projekt <a
@@ -223,18 +200,36 @@
             </p>
             <h3>Spielfigur</h3>
             <p>
-                Implementieren Sie für die Repräsentation der Spielfigur eine Klasse <code> Player </code>. Diese soll
+                Implementieren Sie für die Repräsentation der Spielfigur eine Klasse <a class="anchorLinktToHandout" id="Player.java/draw"
+                                     href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20draw()">
+            <code> draw </code> </a> . Diese soll
                 alle Variablen und Methoden beinhalten, die zur Realisierung der gewünschten Funktionalitäten benötigt
                 werden. Erstellen Sie in der Klasse öffentliche Methoden, über die die Spielfigur gesteuert werden kann,
                 sowie Methoden, um die Figur zu aktualisieren und zu zeichnen.
             </p>
+            
+                        <h3> Links to specific page in PDF</h3>
+
+            <a href="https://regensburger-forscher.de/oop-slides/index.html?slides=01-Einfuerhung-in-die-Programmierung-und-die-Programmiersprachen&startAtSlide=5">
+                Example External Topic
+            </a>
+            
+            
+            
             <ul>
-                <li><code>moveLeft</code>: Über den Aufruf dieser Methode wird eine Bewegung nach links ausgelöst.</li>
-                <li><code>moveRight</code>: Über den Aufruf dieser Methode wird eine Bewegung nach rechts ausgelöst.
+                
+
+                
+                
+                <li><a class="anchorLinktToHandout" id="Player.java/collidesWith" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20collidesWith()"><code> collidesWith(Projectile projectile) </code> </a>: Über den Aufruf dieser Methode wird eine Bewegung nach links ausgelöst.</li>
+                
+                <li><a class="anchorLinktToHandout" id="Player.java/setOrbitMovementType" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%setOrbitMovementType"><code>setOrbitMovementType(MovementType type)</code> </a>: Über den Aufruf dieser Methode wird eine Bewegung nach rechts ausgelöst.
                 </li>
-                <li><code>moveUp</code>: Über den Aufruf dieser Methode wird eine Bewegung nach oben ausgelöst.</li>
-                <li><code>moveDown</code>: Über den Aufruf dieser Methode wird eine Bewegung nach unten ausgelöst.</li>
-                <li><code>draw</code> : Über den Aufruf dieser Methode wird die Spielfigur an ihrer aktuellen
+                
+                <li>                
+                <a class="anchorLinktToHandout" id="Player.java/setRangeMovementType" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20setRangeMovementType("><code> setRangeMovementType(MovementType type) </code> </a>: Über den Aufruf dieser Methode wird eine Bewegung nach oben ausgelöst.</li>
+                
+                <li><a class="anchorLinktToHandout" id="Player.java/draw" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20draw()"><code> draw </code> </a>: Über den Aufruf dieser Methode wird die Spielfigur an ihrer aktuellen
                     Position gezeichnet.
                 </li>
                 <li><a class="anchorLinktToHandout" id="Player.java/update" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%update()"><code>update</code></a>
