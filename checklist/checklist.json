@@ -10,5 +10,8 @@
    "id": 4},
    {"taskDescription":"New Task Updated",
    "checked":"false",
-   "id": 6}
+   "id": 6},
+   {"taskDescription":"Create update method in Player class",
+   "checked":"false",
+   "id": 8}
  ]}
