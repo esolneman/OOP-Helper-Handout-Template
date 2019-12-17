@@ -188,7 +188,7 @@ ul {
 
 /* Style the list items */
 ul li {
-  cursor: pointer;
+  cursor: default;
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
@@ -199,7 +199,7 @@ ul li {
     user-select: none;
 }
 
-ul li div.editableLI{
+.editableLI{
      cursor: text !important;
      user-select: text !important;
 }
@@ -224,6 +224,8 @@ ul li:hover {
 }
 
 .checkbox{
+  cursor: pointer;
+
   position: absolute;
   left: 0;
   top: 0;
