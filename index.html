@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Studienleistung 2: Core Defense</title>
-    <link rel="stylesheet" type="text/css" href="../RepoLocalStorage/res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -199,7 +199,9 @@
             </p>
             <h3>Spielfigur</h3>
             <p>
-                Implementieren Sie für die Repräsentation der Spielfigur eine Klasse <a class="anchorLinktToHandout" id="Player.java" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20class%20Player">
+                <a name="Player.java" style="padding-top: 50px; margin-top: -50px;"> </a>
+
+                Implementieren Sie für die Repräsentation der Spielfigur eine Klasse <a id="Player.java" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20class%20Player">
             <code> Player </code> </a> . Diese soll
                 alle Variablen und Methoden beinhalten, die zur Realisierung der gewünschten Funktionalitäten benötigt
                 werden. Erstellen Sie in der Klasse öffentliche Methoden, über die die Spielfigur gesteuert werden kann,
@@ -214,18 +216,32 @@
             
             
             <ul>
-                <li><a class="anchorLinktToHandout" id="Player.java/collidesWith" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20boolean%20collidesWith("><code> collidesWith(Projectile projectile) </code> </a>: Über den Aufruf dieser Methode wird eine Bewegung nach links ausgelöst.</li>
-                
-                <li><a class="anchorLinktToHandout" id="Player.java/setOrbitMovementType" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20setOrbitMovementType("><code>setOrbitMovementType(MovementType type)</code> </a>: Über den Aufruf dieser Methode wird eine Bewegung nach rechts ausgelöst.
+                <li>
+                   <a name="Player.java/collidesWith" style="padding-top: 50px; margin-top: -50px;"> </a>
+                    <a id="Player.javacollidesWith" href="LinkToCode?class=Player.java&amp;path=/src/world/&amp;function=public%20boolean%20collidesWith(" >
+                        <code>collidesWith(Projectile projectile)</code>
+                    </a>: Über den Aufruf dieser Methode wird eine Bewegung nach links ausgelöst.
                 </li>
                 
-                <li>                
-                <a class="anchorLinktToHandout" id="Player.java/setRangeMovementType" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20setRangeMovementType("><code> setRangeMovementType(MovementType type) </code> </a>: Über den Aufruf dieser Methode wird eine Bewegung nach oben ausgelöst.</li>
+                <li>
+                    <a name="Player.java/setOrbitMovementType" style="padding-top: 50px; margin-top: -50px;"> </a>
+                    <a id="Player.java/setOrbitMovementType" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20setOrbitMovementType(">                              <code>setOrbitMovementType(MovementType type)</code> 
+                    </a>: Über den Aufruf dieser Methode wird eine Bewegung nach rechts ausgelöst.
+                </li>
                 
-                <li><a class="anchorLinktToHandout" id="Player.java/draw" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20draw()"><code> draw </code> </a>: Über den Aufruf dieser Methode wird die Spielfigur an ihrer aktuellen
+                <li>  
+                <a name="Player.java/setRangeMovementType" style="padding-top: 50px; margin-top: -50px;"> </a>
+                <a id="Player.java/setRangeMovementType" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20setRangeMovementType("><code> setRangeMovementType(MovementType type) </code> </a>: Über den Aufruf dieser Methode wird eine Bewegung nach oben ausgelöst.</li>
+                
+                <li>
+                    <a name="Player.java/draw" style="padding-top: 50px; margin-top: -50px;"> </a>
+                    <a id="Player.java/draw" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20draw()"><code> draw </code> </a>: Über den Aufruf dieser Methode wird die Spielfigur an ihrer aktuellen
                     Position gezeichnet.
                 </li>
-                <li><a class="anchorLinktToHandout" id="Player.java/update" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20update()"><code>update</code></a>
+                <li>
+                    <a name="Player.java/update" style="padding-top: 50px; margin-top: -50px;"> </a>
+
+                    <a class="anchorLinktToHandout" id="Player.java/update" href="LinkToCode?class=Player.java&path=/src/world/&function=public%20void%20update()"><code>update</code></a>
                     : Über den Aufruf dieser Methode wird die Position der Spielfigur aktualisiert.
                 </li>
 
