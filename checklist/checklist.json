@@ -1,5 +1,5 @@
 {"checklist":
- [{"taskDescription":"Create *Player* class Updated ",
+ [{"taskDescription":"Create *Player* class",
    "checked":"false",
    "id": 1},
   {"taskDescription":"Create *Projectile* class",
@@ -8,7 +8,7 @@
   {"taskDescription":"Create *SomeClass* class",
    "checked":"false",
    "id": 4},
-   {"taskDescription":"New Task yes",
+   {"taskDescription":"New Task",
    "checked":"false",
    "id": 6},
    {"taskDescription":"Create update method in Player class",
