@@ -1,6 +1,6 @@
 {"checklist":
- [{"taskDescription":"Create *Player* class",
-   "checked":"false",
+ [{"taskDescription":"Create *Player* class Update Test",
+   "checked":"false", 
    "id": 1},
   {"taskDescription":"Create *Projectile* class",
    "checked":"false",
