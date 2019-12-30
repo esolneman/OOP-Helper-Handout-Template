@@ -1,5 +1,5 @@
 {"checklist":
- [{"taskDescription":"Create Nothing hgf",
+ [{"taskDescription":"Create Class",
    "checked":"false", 
    "id": 1},
   {"taskDescription":"Create *Projectile* class",
@@ -8,9 +8,6 @@
   {"taskDescription":"Create *SomeClass* class",
    "checked":"false",
    "id": 3},
-   {"taskDescription":"Create test",
-   "checked":"false",
-   "id": 7},
    {"taskDescription":"Create update method in Player class",
    "checked":"false",
    "id": 8}
