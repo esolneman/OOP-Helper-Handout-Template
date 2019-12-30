@@ -5,10 +5,10 @@
   {"taskDescription":"Create *Projectile* class",
    "checked":"false",
    "id": 2},
-  {"taskDescription":"Create *SomeClass* class",
+  {"taskDescription":"Create *SomeClass* class update",
    "checked":"false",
    "id": 3},
-   {"taskDescription":"Create update method in Player class",
+  {"taskDescription":"Create *SomeClass*",
    "checked":"false",
-   "id": 8}
+   "id": 5}
  ]}
