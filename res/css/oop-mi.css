@@ -111,10 +111,6 @@ content .image:hover {
     transform: scale(1.5);
 }
 
-content .imageTutorial:hover {
-    transform: scale(1.5);
-}
-
 content video {
     width: 100%;
 }
