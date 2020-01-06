@@ -243,7 +243,7 @@ ul li:hover {
   background-color: gray;
   padding: 30px 40px;
   color: white;
-  text-align: center;
+  text-align: block;
   margin-top: 30px;
   margin-bottom:50px;
 }
