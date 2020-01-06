@@ -1,5 +1,5 @@
 {"checklist":
- [{"taskDescription":"Create Class",
+ [{"taskDescription":"Create Class XYZ",
    "checked":"false", 
    "id": 1},
   {"taskDescription":"Create *Projectile* class",
@@ -10,5 +10,8 @@
    "id": 3},
   {"taskDescription":"Create *SomeClass*",
    "checked":"false",
-   "id": 5}
+   "id": 5},
+  {"taskDescription":"Create Another *SomeClass*",
+   "checked":"false",
+   "id": 8}
  ]}
