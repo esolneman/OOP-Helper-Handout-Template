@@ -25,10 +25,9 @@
                         <a href="#WichtigeInformationen"> Wichtige Informationen</a>
                         <a href="#Bewertungskriterien"> Bewertungskriterien</a>
                         <a href="#Zusammenfassung">Zusammenfassung</a>
-                        <a href="#Vorgaben">Vorgaben</a>
-                        <a href="#Anforderungen">Anforderungen</a>
-                        <a href="#Screenshots">Screenshots</a>
-                        <a href="#Vorgehen">Vorgehen</a>
+                        <a href="#Vorgaben">Vorgaben und Anforderungen</a>
+                        <a href="#Demo">Demo-Video</a>
+                        <a href="#Vorgehen">Tipps zum Vorgehen</a>
                     </div>
                 </div>
 
@@ -41,11 +40,11 @@
         <section>
         <a class="anchor" name="WichtigeInformationen"></a>
             <h1>Wichtige Informationen</h1>
-            <p>In dieser Studienleistung implementieren Sie ein interaktives Spiel. Um die Aufgaben zu bearbeiten, müssen Sie zuerst das Projekt OOP-Studienleistung-WS19-03-Starterpaket.zip in IntelliJ öffnen. Nutzen Sie zum Lösen der einzelnen Aufgaben die bereitgestellten Klassendateien. Zum Einreichen Ihrer Aufgaben nutzen Sie die entsprechende Funktion in GRIPS. Falls Sie Problemen mit dem Starterpaket oder dem Einreichen der Aufgabe haben, können Sie sich in den Handouts auf GRIPS informieren.</p>
+            <p>In dieser Studienleistung implementieren Sie ein interaktives Spiel. Um die Aufgaben zu bearbeiten, müssen Sie zuerst das Projekt <code>OOP-Studienleistung-WS19-03-Starterpaket.zip</code> (Sie finden da Paket im <a href="https://elearning.uni-regensburg.de/mod/resource/view.php?id=1223115">GRIPS-Kurs</a>) in IntelliJ öffnen. <b>Nutzen Sie zum Lösen der einzelnen Aufgaben die bereitgestellten Klassendateien.</b> Zum Einreichen Ihrer Aufgaben nutzen Sie die entsprechende Funktion in GRIPS. Falls Sie Problemen mit dem Starterpaket oder dem Einreichen der Aufgabe haben, können Sie sich in den Handouts auf GRIPS informieren.</p>
             <p>Achtung: Eine Verlängerung der Abgabefrist ist nicht möglich. Einreichungen die uns (zu spät) per E-Mail erreichen, werden nicht mehr berücksichtigt. Alle nicht eingereichten Aufgaben werden mit nicht bestanden bewertet. Testen Sie den Upload am besten schon vor Ablauf der Frist in Ruhe: Sie können bis zum Abgabetermin beliebig viele neue Lösungen einreichen.</p>
 
             <p class="important">
-                <span class="first-word">Achtung</span>Eine Verlängerung der Abgabefrist ist nicht möglich. Einreichungen die uns (zu spät) per E-Mail erreichen, werden nicht mehr berücksichtigt. Alle nicht eingereichten Aufgaben werden mit nicht bestanden bewertet. Testen Sie den Upload am besten schon vor Ablauf der Frist in Ruhe: Sie können bis zum Abgabetermin beliebig viele neue Lösungen einreichen.
+                <span class="first-word">Achtung</span>Eine Verlängerung der Abgabefrist ist nicht möglich. Einreichungen die uns (zu spät) per E-Mail erreichen, werden nicht mehr berücksichtigt. Alle nicht eingereichten Aufgaben werden mit <b>nicht bestanden</b> bewertet. Testen Sie den Upload am besten schon vor Ablauf der Frist in Ruhe: Sie können bis zum Abgabetermin beliebig viele neue Lösungen einreichen.
             </p>
             <p class="important">
                 <span class="first-word">Abgabe</span>Geben Sie Ihre Lösung bis Montag, den 20.01.20, 23:55 Uhr über GRIPS ab.
@@ -54,7 +53,7 @@
                <p class="important">
                 <span class="first-word">Bewertungskriterien</span>Für die gesamte Studienleistung gilt, dass die eingereichten Lösungen nur die in der Aufgabenstellung beschriebenen Probleme lösen sollen. Lassen Sie keinen Teil der jeweiligen Aufgabe weg und interpretieren Sie die Fragestellung nicht selbstständig. Bewertet wird, in wie weit Sie das beschriebene Problem vollständig lösen. Wenn Sie die Aufgaben erfolgreich bearbeitet haben, können Sie Ihre Lösung gerne kreativ gestalten und erweitern; achten Sie dabei darauf, dass die eigentlichen Anforderungen weiterhin erfüllt bleiben.
             </p>
-            <p>Die Qualität Ihres Codes fließt in die Gesamtnote mit ein: Nutzen Sie Dekomposition um Ihre Programme übersichtlich zu gestalten. Verwenden Sie sinnvolle Bezeichner für Variablen und Methoden und kommentieren Sie ausreichend. Beachten Sie dazu die Kriterien für guten und schlechten Code, die in der Vorlesung erwähnt wurden.</p>
+            <p>Die <b>Qualität Ihres Codes</b> fließt in die Gesamtnote mit ein: Nutzen Sie Dekomposition um Ihre Programme übersichtlich zu gestalten. Verwenden Sie sinnvolle Bezeichner für Variablen und Methoden und kommentieren Sie ausreichend. Beachten Sie dazu die Kriterien für guten und schlechten Code, die in der Vorlesung erwähnt wurden.</p>
         </section>
         <section class="page-break">
             <a class="anchor" name="Zusammenfassung"></a>
@@ -64,12 +63,12 @@
             </p>
 
             <h2>Klassenmodellierung</h2>
-            <p>Im Starterpaket sind bereits zwei Klassen angelegt, die Sie aus Übungen mit der GraphicsApp bereits kennen:</p>
+            <p>Im Starterpaket sind bereits zwei Klassen angelegt, die Sie aus Übungen mit der <code>GraphicsApp</code> bereits kennen:</p>
             <ul>
-                <li>LunarLander enthält die GraphicsApp-Anwendung mit initialize() und draw()</li>
-                <li>LunarLanderLauncher enthält die main()-Methode</li>
+                <li><code>LunarLander</code> enthält die GraphicsApp-Anwendung mit <code>initialize()</code> und <code>draw()</code></li>
+                <li><code>LunarLanderLauncher</code> enthält die <code>main()</code>-Methode</li>
             </ul>
-            <p>Ihre Aufgabe ist es, die Spielelemente sinnvoll in weitere Klassen abzubilden. Die Hauptbestandteile der Anwendung sind die Mondoberfläche mit Landeplattform, der Lander und die Treibstoffanzeige. In der LunarLander-Klasse sollte Code zur Initialisierung, Zeichenaufrufe und Code zur Weitergabe der KeyPressedEvents liegen. Der Spielzustand kann hier verwaltet werden.</p>
+            <p>Ihre Aufgabe ist es, die Spielelemente sinnvoll in weitere Klassen abzubilden. Die Hauptbestandteile der Anwendung sind die Mondoberfläche mit Landeplattform, der Lander und die Treibstoffanzeige. In der <code>LunarLander</code>-Klasse sollte Code zur Initialisierung, Zeichenaufrufe und Code zur Weitergabe der <code>KeyPressedEvents</code> liegen. Der Spielzustand kann hier verwaltet werden.</p>
 
         </section>
     
@@ -82,27 +81,27 @@
             <code>
             private void smoothPoints(ArrayList<Integer> points) {
                 for (int i = 0; i < points.size(); i++) {
-                    float sum = 0;
-                    for (int j = -SMOOTHING_FILTER_SIZE/2; j < SMOOTHING_FILTER_SIZE/2; j++) {
-                        int newIndex = i + j;
-                        if (newIndex >= 0 && newIndex < points.size()) {
+                float sum = 0;
+                for (int j = -SMOOTHING_FILTER_SIZE/2; j < SMOOTHING_FILTER_SIZE/2; j++) {
+                    int newIndex = i + j;
+                    if (newIndex >= 0 && newIndex < points.size()) {
                         sum += points.get(i + j);
-                        }
                     }
-                    sum /= SMOOTHING_FILTER_SIZE;
-                    points.set(i, (int) sum);
+                }
+                sum /= SMOOTHING_FILTER_SIZE;
+                points.set(i, (int) sum);
                 }
             } 
             </code>
             </pre>
-            <p>Die Konstante SMOOTHING_FILTER_SIZE muss in der gleichen Klasse angelegt werden, in der die Methode eingesetzt wird.</p>
+            <p>Die Konstante <code>SMOOTHING_FILTER_SIZE</code> muss in der gleichen Klasse angelegt werden, in der die Methode eingesetzt wird.</p>
             
             <p><b>Landeplattform</b> Damit der Lander bequem landen kann, müssen die Rechtecke mindestens so breit sein wie dieser. Um erfolgreich zu landen, muss der Lander komplett auf dem Rechteck ankommen. Berührt der Lander andere Teile der Mondoberfläche, ist das Spiel verloren.</p>
 
             <h2>Lander</h2>
-            <p>Dem Lander sollen Spieler über die Pfeiltasten Lenkimpulse geben können, während er konstant nach unten gezogen wird, um die Schwerkraft zu simulieren. Probieren Sie aus, mit welcher Kombination aus Impulsstärke und Schwerkraft das Spiel gut spielbar wird. Im Ordner data\assets liegt ein Bild, welches Sie für den Lander verwenden können.</p>
+            <p>Dem Lander sollen Spieler über die Pfeiltasten Lenkimpulse geben können, während er konstant nach unten gezogen wird, um die Schwerkraft zu simulieren. Probieren Sie aus, mit welcher Kombination aus Impulsstärke und Schwerkraft das Spiel gut spielbar wird. Im Ordner <code>data\assets</code> liegt ein Bild, welches Sie für den Lander verwenden können.</p>
 
-            <p><b>Lenkimpuls</b>: Nach Drücken der entsprechenden Pfeiltaste soll der Lander beschleunigt werden. Über die nächsten Wiederholungen des draw()-Loops in LunarLander soll diese Beschleunigung wieder abnehmen. Im zur Verfügung gestellten Video ist zu sehen, wie das Lenkverhalten aussehen soll. Achten Sie darauf, eine Maximalgeschwindigkeit einzurichten, damit das Verhalten realistischer wirkt. Der Lander darf das Spielfeld nicht verlassen.</p>
+            <p><b>Lenkimpuls</b>: Nach Drücken der entsprechenden Pfeiltaste soll der Lander beschleunigt werden. Über die nächsten Wiederholungen des <code>draw()</code>-Loops in <code>LunarLander</code> soll diese Beschleunigung wieder abnehmen. Im zur Verfügung gestellten Video ist zu sehen, wie das Lenkverhalten aussehen soll. Achten Sie darauf, eine Maximalgeschwindigkeit einzurichten, damit das Verhalten realistischer wirkt. Der Lander darf das Spielfeld nicht verlassen.</p>
 
             <p>Jeder Lenkimpuls verbraucht Treibstoff. Ist aller Treibstoff verbraucht, bevor der Lander gelandet ist, ist das Spiel verloren.</p>
 
@@ -112,13 +111,9 @@
         </section>
 
         <section>
-            <a class="anchor" name="Anforderungen"></a>
-            <h1>Anforderungen</h1>
-        </section>
-
-        <section>
-            <a class="anchor" name="Screenshots"></a>
-            <h1>Screenshots</h1>
+            <a class="anchor" name="Demo"></a>
+            <h1>Demo-Video</h1>
+            <video src="videos/lunar_lander.mp4" controls></video>
         </section>
 
         <section>
