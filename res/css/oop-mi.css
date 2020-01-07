@@ -242,6 +242,7 @@ td > div>div:nth-child(2) {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+cursor: pointer
 }
 
 /* Style the dropdown content (hidden by default) */
