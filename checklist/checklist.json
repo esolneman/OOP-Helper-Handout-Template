@@ -1,18 +1,26 @@
-
 {"checklist":
- [{"taskDescription":"Create Class XYZ",
+ [{"taskDescription":"Die Mondoberflaeche wieder gezeichnet",
    "checked":"false", 
    "id": 1},
-  {"taskDescription":"Create *Projectile* class",
+  {"taskDescription":"Die Landeplattform wird markiert",
    "checked":"false",
    "id": 2},
-  {"taskDescription":"Create *SomeClass* class update",
+  {"taskDescription":"Der Lander und der restliche Treibstoff werden dargestellt",
    "checked":"false",
    "id": 3},
-  {"taskDescription":"Create *SomeClass*",
+  {"taskDescription":"Der Lander wird durch die Schwerkraft beeinflusst",
    "checked":"false",
    "id": 5},
-  {"taskDescription":"Create Another *SomeClass*",
+  {"taskDescription":"Der Lander ist steuerbar",
    "checked":"false",
-   "id": 8}
+   "id": 6},
+    {"taskDescription":"Der Treibstoffverbrauch wird korrekt erkannt",
+   "checked":"false",
+   "id": 7},
+     {"taskDescription":"Die sichere Landung wird erkannt",
+   "checked":"false",
+   "id": 8},
+     {"taskDescription":"Kollisionen mit der Oberflaeche werden erkannt",
+   "checked":"false",
+   "id": 9}
  ]}
