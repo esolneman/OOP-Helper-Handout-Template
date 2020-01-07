@@ -59,17 +59,16 @@
             <a class="anchor" name="Zusammenfassung"></a>
             <h1>Lunar Lander</h1>
             <p>
-                In dieser Studienleistung implementieren Sie ein Lunar-Lander-Spiel. SpielerInnen steuern eine Spielfigur, den Lander, der durch die Schwerkraft nach unten gezogen wird, und versuchen diesen zu landen. Eine Schwierigkeit dabei ist, dass der Lander nur begrenzt Treibstoff hat, der durch jeden Lenkimpuls verbraucht wird. Ist der Treibstoff aufgebraucht, bevor der Lander sicher gelandet ist, stürzt er ab. Die Mondoberfläche besteht aus Rechtecken zufälliger Höhe und fester Breite. Eines dieser Rechtecke repräsentiert die Landeplattform.
+                In dieser Studienleistung implementieren Sie ein <i>Lunar-Lander</i>-Spiel. SpielerInnen steuern eine Spielfigur, den Lander, der durch die Schwerkraft nach unten gezogen wird, und versuchen diesen zu landen. Eine Schwierigkeit dabei ist, dass der Lander nur begrenzt Treibstoff hat, der durch jeden Lenkimpuls verbraucht wird. Ist der Treibstoff aufgebraucht, bevor der Lander sicher gelandet ist, stürzt er ab. Die Mondoberfläche besteht aus Rechtecken zufälliger Höhe und fester Breite. Eines dieser Rechtecke repräsentiert die Landeplattform.
             </p>
 
             <h2>Klassenmodellierung</h2>
             <p>Im Starterpaket sind bereits zwei Klassen angelegt, die Sie aus Übungen mit der <code>GraphicsApp</code> bereits kennen:</p>
             <ul>
-                <a name="LunarLander.java/LunarLander" style="padding-top: 50px; margin-top: -50px;"/>
-                <li><a id="LunarLander.java/LunarLander" href="LinkToCode?class=LunarLander.java&path=/src/&function=public%class%Player"><code>Lunar</code></a>  enthält die GraphicsApp-Anwendung mit <code>initialize()</code> und <code>draw()</code></li>
-                <li><code>LunarLanderLauncher</code> enthält die <code>main()</code>-Methode</li>
+                <li><a style="padding-top: 50px; margin-top: -50px;" id="LunarLander.java/LunarLander" href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%class%LunarLander"><code>Lunar</code></a>  enthält die GraphicsApp-Anwendung mit <code>initialize()</code> und <code>draw()</code></li>
+                <li><a style="padding-top: 50px; margin-top: -50px;" id="LunarLanderLauncher.java/LunarLanderLauncher" href="LinkToCode?class=LunarLanderLauncher.jav&amp;path=/src/&am;function=public%class%LunarLanderLauncher"><code>LunarLanderLauncher</code></a> enthält die <code>main()</code>-Methode</li>
             </ul>
-            <p>Ihre Aufgabe ist es, die Spielelemente sinnvoll in weitere Klassen abzubilden. Die Hauptbestandteile der Anwendung sind die Mondoberfläche mit Landeplattform, der Lander und die Treibstoffanzeige. In der <code>LunarLander</code>-Klasse sollte Code zur Initialisierung, Zeichenaufrufe und Code zur Weitergabe der <code>KeyPressedEvents</code> liegen. Der Spielzustand kann hier verwaltet werden.</p>
+            <p>Ihre Aufgabe ist es, die Spielelemente sinnvoll in weitere Klassen abzubilden. Die Hauptbestandteile der Anwendung sind die Mondoberfläche mit Landeplattform, der Lander und die Treibstoffanzeige. In der <code>LunarLander</code>-Klasse sollte Code zur Initialisierung, Zeichenaufrufe und Code zur Weitergabe der <code>KeyPressedEvents</code> liegen. Die Grundlagen der eventbasierten Programmierung mit der GraphicsApp können Sie auch noch einmal <a href="https://regensburger-forscher.de/oop-slides/index.html?slides=08-Interfaces-und-Event-basierte-Programmierung&startAtSlide=28">hier</a> nachlesen. Der Spielzustand soll ebenfalls in der Klasse <code>LunarLander</code> verwaltet werden.</p>
 
         </section>
     
@@ -102,7 +101,7 @@
             <h2>Lander</h2>
             <p>Dem Lander sollen Spieler über die Pfeiltasten Lenkimpulse geben können, während er konstant nach unten gezogen wird, um die Schwerkraft zu simulieren. Probieren Sie aus, mit welcher Kombination aus Impulsstärke und Schwerkraft das Spiel gut spielbar wird. Im Ordner <code>data\assets</code> liegt ein Bild, welches Sie für den Lander verwenden können.</p>
 
-            <p><b>Lenkimpuls</b>: Nach Drücken der entsprechenden Pfeiltaste soll der Lander beschleunigt werden. Über die nächsten Wiederholungen des <code>draw()</code>-Loops in <code>LunarLander</code> soll diese Beschleunigung wieder abnehmen. Im zur Verfügung gestellten Video ist zu sehen, wie das Lenkverhalten aussehen soll. Achten Sie darauf, eine Maximalgeschwindigkeit einzurichten, damit das Verhalten realistischer wirkt. Der Lander darf das Spielfeld nicht verlassen.</p>
+            <p><b>Lenkimpuls</b>: Nach Drücken der entsprechenden Pfeiltaste soll der Lander beschleunigt werden. Über die nächsten Wiederholungen des <code>draw()</code></a>-Loops in <code>LunarLander</code> soll diese Beschleunigung wieder abnehmen. Im zur Verfügung gestellten Video ist zu sehen, wie das Lenkverhalten aussehen soll. Achten Sie darauf, eine Maximalgeschwindigkeit einzurichten, damit das Verhalten realistischer wirkt. Der Lander darf das Spielfeld nicht verlassen.</p>
 
             <p>Jeder Lenkimpuls verbraucht Treibstoff. Ist aller Treibstoff verbraucht, bevor der Lander gelandet ist, ist das Spiel verloren.</p>
 
