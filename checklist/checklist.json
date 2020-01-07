@@ -1,5 +1,5 @@
 {"checklist":
- [{"taskDescription":"Die Monoberfläche wieder gezeichnet",
+ [{"taskDescription":"Die Mondoberfl&auml;che wieder gezeichnet",
    "checked":"false", 
    "id": 1},
   {"taskDescription":"Die Landeplattform wird markiert",
@@ -20,7 +20,7 @@
      {"taskDescription":"Die sichere Landung wird erkannt",
    "checked":"false",
    "id": 8},
-     {"taskDescription":"Kollisionen mit der Oberfläche werden erkannt",
+     {"taskDescription":"Kollisionen mit der Oberfl&auml;che werden erkannt",
    "checked":"false",
    "id": 9}
  ]}
