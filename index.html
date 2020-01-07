@@ -11,21 +11,17 @@
 <header></header>
 <div id="navBar" class="topnavHandout">
     <div class="headerDiv">
-        <div class="headerText">
-            Studienleistung 3: Lunar Lander
+        <div class="headerText"> Studienleistung 3: Lunar Lander
             <div class="handoutBtns">
                 <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();" title="PDF Download"><i
                         class="fa fa-download"></i></button>
                 <div class="dropdownHandoutMenu" onclick="toggleShowContent()">
                     <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
                     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
-                    <div id="handoutDropdownContent" class="dropdownHandoutContent">
-                        <a href="#WichtigeInformationen"> Wichtige Informationen</a>
-                        <a href="#Bewertungskriterien"> Bewertungskriterien</a>
-                        <a href="#Zusammenfassung">Zusammenfassung</a>
-                        <a href="#Vorgaben">Vorgaben und Anforderungen</a>
-                        <a href="#Demo">Demo-Video</a>
-                        <a href="#Vorgehen">Tipps zum Vorgehen</a>
+                    <div id="handoutDropdownContent" class="dropdownHandoutContent"><a href="#WichtigeInformationen">
+                        Wichtige Informationen</a> <a href="#Bewertungskriterien"> Bewertungskriterien</a> <a
+                            href="#Zusammenfassung">Zusammenfassung</a> <a href="#Vorgaben">Vorgaben und
+                        Anforderungen</a> <a href="#Demo">Demo-Video</a> <a href="#Vorgehen">Tipps zum Vorgehen</a>
                     </div>
                 </div>
             </div>
@@ -34,8 +30,7 @@
 </div>
 <content>
     <article>
-        <section>
-            <a class="anchor" name="WichtigeInformationen"></a>
+        <section><a class="anchor" name="WichtigeInformationen"></a>
             <h1>Wichtige Informationen</h1>
             <p>In dieser Studienleistung implementieren Sie ein interaktives Spiel. Um die Aufgaben zu bearbeiten,
                 müssen Sie zuerst das Projekt <code>OOP-Studienleistung-WS19-03-Starterpaket.zip</code> (Sie finden da
@@ -54,8 +49,7 @@
                 schon vor Ablauf der Frist in Ruhe: Sie können bis zum Abgabetermin beliebig viele neue Lösungen
                 einreichen. </p>
             <p class="important"><span class="first-word">Abgabe</span>Geben Sie Ihre Lösung bis Montag, den 20.01.20,
-                23:55 Uhr über GRIPS ab. </p>
-            <a class="anchor" name="Bewertungskriterien"></a>
+                23:55 Uhr über GRIPS ab. </p>            <a class="anchor" name="Bewertungskriterien"></a>
             <p class="important"><span class="first-word">Bewertungskriterien</span>Für die gesamte Studienleistung
                 gilt, dass die eingereichten Lösungen nur die in der Aufgabenstellung beschriebenen Probleme lösen
                 sollen. Lassen Sie keinen Teil der jeweiligen Aufgabe weg und interpretieren Sie die Fragestellung nicht
@@ -65,10 +59,8 @@
             <p>Die <b>Qualität Ihres Codes</b> fließt in die Gesamtnote mit ein: Nutzen Sie Dekomposition um Ihre
                 Programme übersichtlich zu gestalten. Verwenden Sie sinnvolle Bezeichner für Variablen und Methoden und
                 kommentieren Sie ausreichend. Beachten Sie dazu die Kriterien für guten und schlechten Code, die in der
-                Vorlesung erwähnt wurden.</p>
-        </section>
-        <section class="page-break">
-            <a class="anchor" name="Zusammenfassung"></a>
+                Vorlesung erwähnt wurden.</p></section>
+        <section class="page-break"><a class="anchor" name="Zusammenfassung"></a>
             <h1>Lunar Lander</h1>
             <p> In dieser Studienleistung implementieren Sie ein <i>Lunar-Lander</i>-Spiel. SpielerInnen steuern eine
                 Spielfigur, den Lander, der durch die Schwerkraft nach unten gezogen wird, und versuchen diesen zu
@@ -83,28 +75,24 @@
                 <li><a name="LunarLander.java/LunarLander" style="padding-top: 50px; margin-top: -50px;"> </a> <a
                         id="LunarLander.java/LunarLander"
                         href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20class%20LunarLander%20"><code>LunarLander</code></a>
-                    enthält die GraphicsApp-Anwendung mit
-
-                    <a name="LunarLander.java/initialize"
-                       style="padding-top: 50px; margin-top: -50px;"> </a> <a
+                    enthält die GraphicsApp-Anwendung mit <a name="LunarLander.java/initialize"
+                                                             style="padding-top: 50px; margin-top: -50px;"> </a> <a
                             id="LunarLander.java/initialize"
                             href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20void%20initialize(">
-                        <code>initialize()</code>
-                    </a>
-
-                    und
-
-                    <a name="LunarLander.java/draw"
-                       style="padding-top: 50px; margin-top: -50px;"> </a> <a
+                        <code>initialize()</code> </a>, <a name="LunarLander.java/draw"
+                                                           style="padding-top: 50px; margin-top: -50px;"> </a> <a
                             id="LunarLander.java/draw"
                             href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20void%20draw(">
-                        <code>draw()</code>
-                    </a>
+                        <code>draw()</code> </a> und
 
-
-
+                    <a name="LunarLander.java/setupCanvas"
+                       style="padding-top: 50px; margin-top: -50px;"> </a> <a
+                            id="LunarLander.java/setupCanvas"
+                            href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=private%20void%20setupCanvas(">
+                        <code>setupCanvas()</code> </a>
 
                 </li>
+
                 <li><a name="LunarLanderLauncher.java/LunarLanderLauncher"
                        style="padding-top: 50px; margin-top: -50px;"> </a> <a
                         id="LunarLanderLauncher.java/LunarLanderLauncher"
@@ -124,86 +112,13 @@
                         href="https://regensburger-forscher.de/oop-slides/index.html?slides=08-Interfaces-und-Event-basierte-Programmierung&amp;startAtSlide=28">hier</a>
                 nachlesen. Der Spielzustand soll ebenfalls in der Klasse <code>LunarLander</code> verwaltet werden.</p>
         </section>
-        <section class="page-break">
-            <a class="anchor" name="Vorgaben"></a>
+        <section class="page-break"><a class="anchor" name="Vorgaben"></a>
             <h1>Vorgaben</h1>
             <h2>Mondoberfläche</h2>
             <p>Zeichnen Sie die Mondoberfläche mit Rechtecken zufälliger Höhe und fester Breite. Damit die Oberfläche
                 nicht ganz so wild aussieht, nutzen Sie die folgende Methode, um die erzeugten Höhenwerte zu
                 glätten:</p>
-            <pre>            <code>            private void smoothPoints(ArrayList
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       <integer>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         points) {                for (int i = 0; i &lt; points.size(); i++) {                float sum = 0;                for (int j = -SMOOTHING_FILTER_SIZE/2; j &lt; SMOOTHING_FILTER_SIZE/2; j++) {                    int newIndex = i + j;                    if (newIndex &gt;= 0 &amp;&amp; newIndex &lt; points.size()) {                        sum += points.get(i + j);                    }                }                sum /= SMOOTHING_FILTER_SIZE;                points.set(i, (int) sum);                }            }             
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       </integer></code>            </pre>
+            <pre>            <code>            private void smoothPoints(ArrayList                                                                                                                                                                        <integer>                                                                                                                                                                                                 points) {                for (int i = 0; i &lt; points.size(); i++) {                float sum = 0;                for (int j = -SMOOTHING_FILTER_SIZE/2; j &lt; SMOOTHING_FILTER_SIZE/2; j++) {                    int newIndex = i + j;                    if (newIndex &gt;= 0 &amp;&amp; newIndex &lt; points.size()) {                        sum += points.get(i + j);                    }                }                sum /= SMOOTHING_FILTER_SIZE;                points.set(i, (int) sum);                }            }                                                                                                                                                                                     </integer></code>            </pre>
             <p>Die Konstante <code>SMOOTHING_FILTER_SIZE</code> muss in der gleichen Klasse angelegt werden, in der die
                 Methode eingesetzt wird.</p>
             <p><b>Landeplattform</b> Damit der Lander bequem landen kann, müssen die Rechtecke mindestens so breit sein
@@ -223,31 +138,28 @@
                 ist das Spiel verloren.</p>
             <h2>Treibstoffanzeige</h2>
             <p>Der zur Verfügung stehende Treibstoff sollte als Balken links oben im Spielfeld angezeigt werden, und bei
-                jedem Lenkimpuls proportional verkleinert werden.</p>
-        </section>
-        <section>
-            <a class="anchor" name="Demo"></a>
+                jedem Lenkimpuls proportional verkleinert werden.</p></section>
+        <section><a class="anchor" name="Demo"></a>
             <h1>Demo-Video</h1>
             <video src="../LocalStorage/videos/lunar_lander.mp4" controls></video>
+            <video style="max-height: 500px; width: auto;" controls>
+                <source src="../LocalStorage/videos/lunar_lander.mp4" type="video/mp4">
+            </video>
         </section>
-        <section>
-            <a class="anchor" name="Vorgehen"></a>
+        <section><a class="anchor" name="Vorgehen"></a>
             <h1>Vorgehen</h1>
             <p>Die gestellte Aufgabe ist nicht trivial. Der Schlüssel zur Lösung liegt in einer sorgfältigen Analyse des
                 Problems, der sinnvollen Strukturierung des Programms und einer korrekten Behandlung der Steuerung und
                 Kollision mit der Oberfläche.</p>
             <p>Achten Sie bei der Modellierung des Landers darauf, dass die wirkenden Impulse sinnvoll modelliert
                 werden, so dass auch ein lineares Abklingen gut umgesetzt werden kann. In jedem Schleifendurchlauf muss
-                geprüft werden, ob der Lander mit einem Teil der Landschaft kollidiert.</p>
-        </section>
+                geprüft werden, ob der Lander mit einem Teil der Landschaft kollidiert.</p></section>
     </article>
 </content>
 <!--Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon  -->
 <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
 <script language="JavaScript">
-        // When the user clicks on the button, toggle between hiding and showing the dropdown content    function toggleShowContent() {    document.getElementById("handoutDropdownContent").classList.add("show");    }    // Close the dropdown if the user clicks outside of it -->    window.onclick = function(event) {        if (!event.target.matches('.dropbtn-handout')) {            var dropdowns = document.getElementsByClassName("dropdownHandoutContent");            var i;            for (i = 0; i < dropdowns.length; i++) {                var openDropdown = dropdowns[i];                if (openDropdown.classList.contains('show')) {                    openDropdown.classList.remove('show');      }    }  }}
-
-
+            // When the user clicks on the button, toggle between hiding and showing the dropdown content    function toggleShowContent() {    document.getElementById("handoutDropdownContent").classList.add("show");    }    // Close the dropdown if the user clicks outside of it -->    window.onclick = function(event) {        if (!event.target.matches('.dropbtn-handout')) {            var dropdowns = document.getElementsByClassName("dropdownHandoutContent");            var i;            for (i = 0; i < dropdowns.length; i++) {                var openDropdown = dropdowns[i];                if (openDropdown.classList.contains('show')) {                    openDropdown.classList.remove('show');      }    }  }}
 
 </script>
 </body>
