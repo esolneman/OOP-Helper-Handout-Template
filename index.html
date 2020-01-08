@@ -99,21 +99,8 @@
                 <p>Zeichnen Sie die Mondoberfläche mit Rechtecken zufälliger Höhe und fester Breite. Damit die Oberfläche
                     nicht ganz so wild aussieht, nutzen Sie die folgende Methode, um die erzeugten Höhenwerte zu
                     glätten:</p>
-                <pre class="prettyprint"> 
-private void smoothPoints(ArrayList<Integer> points) {
-    for (int i = 0; i < points.size(); i++) {
-        float sum = 0;
-        for (int j = -SMOOTHING_FILTER_SIZE/2; j < SMOOTHING_FILTER_SIZE/2; j++) {
-            int newIndex = i + j;
-            if (newIndex >= 0 && newIndex < points.size()) {
-                sum += points.get(i + j);
-            }
-        }
-        sum /= SMOOTHING_FILTER_SIZE;
-        points.set(i, (int) sum);
-    }
-}      
-                </pre>
+                            <pre class="prettyprint"> private void smoothPoints(ArrayList&lt;Integer&gt; points) { <br>    for (int i = 0; i &lt; points.size(); i++) {<br>      float sum = 0;<br>      for (int j = -SMOOTHING_FILTER_SIZE/2; j &lt; SMOOTHING_FILTER_SIZE/2; j++) {<br>         int newIndex = i + j;<br>         if (newIndex &gt;= 0 &amp;&amp; newIndex &lt; points.size()){ <br>            sum += points.get(i + j);<br>         }<br>      }<br>      sum /= SMOOTHING_FILTER_SIZE;<br>      points.set(i, (int) sum);<br>   }<br>}
+            </pre>
                 <p>Die Konstante <code>SMOOTHING_FILTER_SIZE</code> muss in der gleichen Klasse angelegt werden, in der die
                     Methode eingesetzt wird.</p>
                 <p><b>Landeplattform</b> Damit der Lander bequem landen kann, müssen die Rechtecke mindestens so breit sein
