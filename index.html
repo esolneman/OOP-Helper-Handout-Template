@@ -1,167 +1,164 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Studienleistung 3: Lunar Lander</title>
     <link rel="stylesheet" type="text/css" href="../LocalStorage/res/css/oop-mi.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
+
 <body>
-<header></header>
-<div id="navBar" class="topnavHandout">
-    <div class="headerDiv">
-        <div class="headerText"> Studienleistung 3: Lunar Lander
-            <div class="handoutBtns">
-                <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();" title="PDF Download"><i
-                        class="fa fa-download"></i></button>
-                <div class="dropdownHandoutMenu" onclick="toggleShowContent()">
-                    <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
-                    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
-                    <div id="handoutDropdownContent" class="dropdownHandoutContent"><a href="#WichtigeInformationen">
-                        Wichtige Informationen</a> <a href="#Bewertungskriterien"> Bewertungskriterien</a> <a
-                            href="#Zusammenfassung">Zusammenfassung</a> <a href="#Vorgaben">Vorgaben und
-                        Anforderungen</a> <a href="#Demo">Demo-Video</a> <a href="#Vorgehen">Tipps zum Vorgehen</a>
+    <header></header>
+    <div id="navBar" class="topnavHandout">
+        <div class="headerDiv">
+            <div class="headerText"> Studienleistung 3: Lunar Lander
+                <div class="handoutBtns">
+                    <button class="handoutDownloadButton" onclick="downloadHtml.downloadHandout();" title="PDF Download"><i class="fa fa-download"></i></button>
+                    <div class="dropdownHandoutMenu" onclick="toggleShowContent()">
+                        <button onclick="toggleShowContent()" class="dropbtn-handout"><i class="fa fa-bars"></i></button>
+                        <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
+                        <div id="handoutDropdownContent" class="dropdownHandoutContent"><a href="#WichtigeInformationen">
+                                Wichtige Informationen</a> <a href="#Bewertungskriterien"> Bewertungskriterien</a> <a href="#Zusammenfassung">Zusammenfassung</a> <a href="#Vorgaben">Vorgaben und
+                                Anforderungen</a> <a href="#Demo">Demo-Video</a> <a href="#Vorgehen">Tipps zum Vorgehen</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<content>
-    <article>
-        <section><a class="anchor" name="WichtigeInformationen"></a>
-            <h1>Wichtige Informationen</h1>
-            <p>In dieser Studienleistung implementieren Sie ein interaktives Spiel. Um die Aufgaben zu bearbeiten,
-                müssen Sie zuerst das Projekt <code>OOP-Studienleistung-WS19-03-Starterpaket.zip</code> (Sie finden da
-                Paket im <a href="https://elearning.uni-regensburg.de/mod/resource/view.php?id=1223115">GRIPS-Kurs</a>)
-                in IntelliJ öffnen. <b>Nutzen Sie zum Lösen der einzelnen Aufgaben die bereitgestellten
-                    Klassendateien.</b> Zum Einreichen Ihrer Aufgaben nutzen Sie die entsprechende Funktion in GRIPS.
-                Falls Sie Problemen mit dem Starterpaket oder dem Einreichen der Aufgabe haben, können Sie sich in den
-                Handouts auf GRIPS informieren.</p>
-            <p>Achtung: Eine Verlängerung der Abgabefrist ist nicht möglich. Einreichungen die uns (zu spät) per E-Mail
-                erreichen, werden nicht mehr berücksichtigt. Alle nicht eingereichten Aufgaben werden mit nicht
-                bestanden bewertet. Testen Sie den Upload am besten schon vor Ablauf der Frist in Ruhe: Sie können bis
-                zum Abgabetermin beliebig viele neue Lösungen einreichen.</p>
-            <p class="important"><span class="first-word">Achtung</span>Eine Verlängerung der Abgabefrist ist nicht
-                möglich. Einreichungen die uns (zu spät) per E-Mail erreichen, werden nicht mehr berücksichtigt. Alle
-                nicht eingereichten Aufgaben werden mit <b>nicht bestanden</b> bewertet. Testen Sie den Upload am besten
-                schon vor Ablauf der Frist in Ruhe: Sie können bis zum Abgabetermin beliebig viele neue Lösungen
-                einreichen. </p>
-            <p class="important"><span class="first-word">Abgabe</span>Geben Sie Ihre Lösung bis Montag, den 20.01.20,
-                23:55 Uhr über GRIPS ab. </p>            <a class="anchor" name="Bewertungskriterien"></a>
-            <p class="important"><span class="first-word">Bewertungskriterien</span>Für die gesamte Studienleistung
-                gilt, dass die eingereichten Lösungen nur die in der Aufgabenstellung beschriebenen Probleme lösen
-                sollen. Lassen Sie keinen Teil der jeweiligen Aufgabe weg und interpretieren Sie die Fragestellung nicht
-                selbstständig. Bewertet wird, in wie weit Sie das beschriebene Problem vollständig lösen. Wenn Sie die
-                Aufgaben erfolgreich bearbeitet haben, können Sie Ihre Lösung gerne kreativ gestalten und erweitern;
-                achten Sie dabei darauf, dass die eigentlichen Anforderungen weiterhin erfüllt bleiben. </p>
-            <p>Die <b>Qualität Ihres Codes</b> fließt in die Gesamtnote mit ein: Nutzen Sie Dekomposition um Ihre
-                Programme übersichtlich zu gestalten. Verwenden Sie sinnvolle Bezeichner für Variablen und Methoden und
-                kommentieren Sie ausreichend. Beachten Sie dazu die Kriterien für guten und schlechten Code, die in der
-                Vorlesung erwähnt wurden.</p></section>
-        <section class="page-break"><a class="anchor" name="Zusammenfassung"></a>
-            <h1>Lunar Lander</h1>
-            <p> In dieser Studienleistung implementieren Sie ein <i>Lunar-Lander</i>-Spiel. SpielerInnen steuern eine
-                Spielfigur, den Lander, der durch die Schwerkraft nach unten gezogen wird, und versuchen diesen zu
-                landen. Eine Schwierigkeit dabei ist, dass der Lander nur begrenzt Treibstoff hat, der durch jeden
-                Lenkimpuls verbraucht wird. Ist der Treibstoff aufgebraucht, bevor der Lander sicher gelandet ist,
-                stürzt er ab. Die Mondoberfläche besteht aus Rechtecken zufälliger Höhe und fester Breite. Eines dieser
-                Rechtecke repräsentiert die Landeplattform. </p>
-            <h2>Klassenmodellierung</h2>
-            <p>Im Starterpaket sind bereits zwei Klassen angelegt, die Sie aus Übungen mit der <code>GraphicsApp</code>
-                bereits kennen:</p>
-            <ul>
-                <li><a name="LunarLander.java/LunarLander" style="padding-top: 50px; margin-top: -50px;"> </a> <a
-                        id="LunarLander.java/LunarLander"
-                        href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20class%20LunarLander%20"><code>LunarLander</code></a>
-                    enthält die GraphicsApp-Anwendung mit <a name="LunarLander.java/initialize"
-                                                             style="padding-top: 50px; margin-top: -50px;"> </a> <a
-                            id="LunarLander.java/initialize"
-                            href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20void%20initialize(">
-                        <code>initialize()</code> </a>, <a name="LunarLander.java/draw"
-                                                           style="padding-top: 50px; margin-top: -50px;"> </a> <a
-                            id="LunarLander.java/draw"
-                            href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20void%20draw(">
-                        <code>draw()</code> </a> und
-
-                    <a name="LunarLander.java/setupCanvas"
-                       style="padding-top: 50px; margin-top: -50px;"> </a> <a
-                            id="LunarLander.java/setupCanvas"
-                            href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=private%20void%20setupCanvas(">
-                        <code>setupCanvas()</code> </a>
-
-                </li>
-
-                <li><a name="LunarLanderLauncher.java/LunarLanderLauncher"
-                       style="padding-top: 50px; margin-top: -50px;"> </a> <a
-                        id="LunarLanderLauncher.java/LunarLanderLauncher"
-                        href="LinkToCode?class=LunarLanderLauncher.java&amp;path=/src/&amp;function=public%20class%20LunarLanderLauncher"><code>LunarLanderLauncher</code></a>
-                    enthält die <a name="LunarLanderLauncher.java/main"
-                                   style="padding-top: 50px; margin-top: -50px;"> </a> <a
-                            id="LunarLanderLauncher.java/main"
-                            href="LinkToCode?class=LunarLanderLauncher.java&amp;path=/src/&amp;function=public%20static%20void%20main(">
-                        <code>main()</code> </a>-Methode
-                </li>
-            </ul>
-            <p>Ihre Aufgabe ist es, die Spielelemente sinnvoll in weitere Klassen abzubilden. Die Hauptbestandteile der
-                Anwendung sind die Mondoberfläche mit Landeplattform, der Lander und die Treibstoffanzeige. In der
-                <code>LunarLander</code>-Klasse sollte Code zur Initialisierung, Zeichenaufrufe und Code zur Weitergabe
-                der <code>KeyPressedEvents</code> liegen. Die Grundlagen der eventbasierten Programmierung mit der
-                GraphicsApp können Sie auch noch einmal <a
-                        href="https://regensburger-forscher.de/oop-slides/index.html?slides=08-Interfaces-und-Event-basierte-Programmierung&amp;startAtSlide=28">hier</a>
-                nachlesen. Der Spielzustand soll ebenfalls in der Klasse <code>LunarLander</code> verwaltet werden.</p>
-        </section>
-        <section class="page-break"><a class="anchor" name="Vorgaben"></a>
-            <h1>Vorgaben</h1>
-            <h2>Mondoberfläche</h2>
-            <p>Zeichnen Sie die Mondoberfläche mit Rechtecken zufälliger Höhe und fester Breite. Damit die Oberfläche
-                nicht ganz so wild aussieht, nutzen Sie die folgende Methode, um die erzeugten Höhenwerte zu
-                glätten:</p>
-            <pre>            <code>            private void smoothPoints(ArrayList                                                                                                                                                                        <integer>                                                                                                                                                                                                 points) {                for (int i = 0; i &lt; points.size(); i++) {                float sum = 0;                for (int j = -SMOOTHING_FILTER_SIZE/2; j &lt; SMOOTHING_FILTER_SIZE/2; j++) {                    int newIndex = i + j;                    if (newIndex &gt;= 0 &amp;&amp; newIndex &lt; points.size()) {                        sum += points.get(i + j);                    }                }                sum /= SMOOTHING_FILTER_SIZE;                points.set(i, (int) sum);                }            }                                                                                                                                                                                     </integer></code>            </pre>
-            <p>Die Konstante <code>SMOOTHING_FILTER_SIZE</code> muss in der gleichen Klasse angelegt werden, in der die
-                Methode eingesetzt wird.</p>
-            <p><b>Landeplattform</b> Damit der Lander bequem landen kann, müssen die Rechtecke mindestens so breit sein
-                wie dieser. Um erfolgreich zu landen, muss der Lander komplett auf dem Rechteck ankommen. Berührt der
-                Lander andere Teile der Mondoberfläche, ist das Spiel verloren.</p>
-            <h2>Lander</h2>
-            <p>Dem Lander sollen Spieler über die Pfeiltasten Lenkimpulse geben können, während er konstant nach unten
-                gezogen wird, um die Schwerkraft zu simulieren. Probieren Sie aus, mit welcher Kombination aus
-                Impulsstärke und Schwerkraft das Spiel gut spielbar wird. Im Ordner <code>data\assets</code> liegt ein
-                Bild, welches Sie für den Lander verwenden können.</p>
-            <p><b>Lenkimpuls</b>: Nach Drücken der entsprechenden Pfeiltaste soll der Lander beschleunigt werden. Über
-                die nächsten Wiederholungen des <code>draw()</code>-Loops in <code>LunarLander</code> soll diese
-                Beschleunigung wieder abnehmen. Im zur Verfügung gestellten Video ist zu sehen, wie das Lenkverhalten
-                aussehen soll. Achten Sie darauf, eine Maximalgeschwindigkeit einzurichten, damit das Verhalten
-                realistischer wirkt. Der Lander darf das Spielfeld nicht verlassen.</p>
-            <p>Jeder Lenkimpuls verbraucht Treibstoff. Ist aller Treibstoff verbraucht, bevor der Lander gelandet ist,
-                ist das Spiel verloren.</p>
-            <h2>Treibstoffanzeige</h2>
-            <p>Der zur Verfügung stehende Treibstoff sollte als Balken links oben im Spielfeld angezeigt werden, und bei
-                jedem Lenkimpuls proportional verkleinert werden.</p></section>
-        <section><a class="anchor" name="Demo"></a>
-            <h1>Demo-Video</h1>
-            <div style="width: 80%; margin: 0 auto; display: block; overflow:hidden">
-                <video controls>
-                    <source style="" src="../LocalStorage/videos/lunar_lander.mp4" type="video/mp4">
-                </video>
-            </div>
-        </section>
-        <section><a class="anchor" name="Vorgehen"></a>
-            <h1>Vorgehen</h1>
-            <p>Die gestellte Aufgabe ist nicht trivial. Der Schlüssel zur Lösung liegt in einer sorgfältigen Analyse des
-                Problems, der sinnvollen Strukturierung des Programms und einer korrekten Behandlung der Steuerung und
-                Kollision mit der Oberfläche.</p>
-            <p>Achten Sie bei der Modellierung des Landers darauf, dass die wirkenden Impulse sinnvoll modelliert
-                werden, so dass auch ein lineares Abklingen gut umgesetzt werden kann. In jedem Schleifendurchlauf muss
-                geprüft werden, ob der Lander mit einem Teil der Landschaft kollidiert.</p></section>
-    </article>
-</content>
-<!--Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon  -->
-<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
-<script language="JavaScript">
-            // When the user clicks on the button, toggle between hiding and showing the dropdown content    function toggleShowContent() {    document.getElementById("handoutDropdownContent").classList.add("show");    }    // Close the dropdown if the user clicks outside of it -->    window.onclick = function(event) {        if (!event.target.matches('.dropbtn-handout')) {            var dropdowns = document.getElementsByClassName("dropdownHandoutContent");            var i;            for (i = 0; i < dropdowns.length; i++) {                var openDropdown = dropdowns[i];                if (openDropdown.classList.contains('show')) {                    openDropdown.classList.remove('show');      }    }  }}
-
-</script>
+    <content>
+        <article>
+            <section><a class="anchor" name="WichtigeInformationen"></a>
+                <h1>Wichtige Informationen</h1>
+                <p>In dieser Studienleistung implementieren Sie ein interaktives Spiel. Um die Aufgaben zu bearbeiten,
+                    müssen Sie zuerst das Projekt <code>OOP-Studienleistung-WS19-03-Starterpaket.zip</code> (Sie finden da
+                    Paket im <a href="https://elearning.uni-regensburg.de/mod/resource/view.php?id=1223115">GRIPS-Kurs</a>)
+                    in IntelliJ öffnen. <b>Nutzen Sie zum Lösen der einzelnen Aufgaben die bereitgestellten
+                        Klassendateien.</b> Zum Einreichen Ihrer Aufgaben nutzen Sie die entsprechende Funktion in GRIPS.
+                    Falls Sie Problemen mit dem Starterpaket oder dem Einreichen der Aufgabe haben, können Sie sich in den
+                    Handouts auf GRIPS informieren.</p>
+                <p>Achtung: Eine Verlängerung der Abgabefrist ist nicht möglich. Einreichungen die uns (zu spät) per E-Mail
+                    erreichen, werden nicht mehr berücksichtigt. Alle nicht eingereichten Aufgaben werden mit nicht
+                    bestanden bewertet. Testen Sie den Upload am besten schon vor Ablauf der Frist in Ruhe: Sie können bis
+                    zum Abgabetermin beliebig viele neue Lösungen einreichen.</p>
+                <p class="important"><span class="first-word">Achtung</span>Eine Verlängerung der Abgabefrist ist nicht
+                    möglich. Einreichungen die uns (zu spät) per E-Mail erreichen, werden nicht mehr berücksichtigt. Alle
+                    nicht eingereichten Aufgaben werden mit <b>nicht bestanden</b> bewertet. Testen Sie den Upload am besten
+                    schon vor Ablauf der Frist in Ruhe: Sie können bis zum Abgabetermin beliebig viele neue Lösungen
+                    einreichen. </p>
+                <p class="important"><span class="first-word">Abgabe</span>Geben Sie Ihre Lösung bis Montag, den 20.01.20,
+                    23:55 Uhr über GRIPS ab. </p> <a class="anchor" name="Bewertungskriterien"></a>
+                <p class="important"><span class="first-word">Bewertungskriterien</span>Für die gesamte Studienleistung
+                    gilt, dass die eingereichten Lösungen nur die in der Aufgabenstellung beschriebenen Probleme lösen
+                    sollen. Lassen Sie keinen Teil der jeweiligen Aufgabe weg und interpretieren Sie die Fragestellung nicht
+                    selbstständig. Bewertet wird, in wie weit Sie das beschriebene Problem vollständig lösen. Wenn Sie die
+                    Aufgaben erfolgreich bearbeitet haben, können Sie Ihre Lösung gerne kreativ gestalten und erweitern;
+                    achten Sie dabei darauf, dass die eigentlichen Anforderungen weiterhin erfüllt bleiben. </p>
+                <p>Die <b>Qualität Ihres Codes</b> fließt in die Gesamtnote mit ein: Nutzen Sie Dekomposition um Ihre
+                    Programme übersichtlich zu gestalten. Verwenden Sie sinnvolle Bezeichner für Variablen und Methoden und
+                    kommentieren Sie ausreichend. Beachten Sie dazu die Kriterien für guten und schlechten Code, die in der
+                    Vorlesung erwähnt wurden.</p>
+            </section>
+            <section class="page-break"><a class="anchor" name="Zusammenfassung"></a>
+                <h1>Lunar Lander</h1>
+                <p> In dieser Studienleistung implementieren Sie ein <i>Lunar-Lander</i>-Spiel. SpielerInnen steuern eine
+                    Spielfigur, den Lander, der durch die Schwerkraft nach unten gezogen wird, und versuchen diesen zu
+                    landen. Eine Schwierigkeit dabei ist, dass der Lander nur begrenzt Treibstoff hat, der durch jeden
+                    Lenkimpuls verbraucht wird. Ist der Treibstoff aufgebraucht, bevor der Lander sicher gelandet ist,
+                    stürzt er ab. Die Mondoberfläche besteht aus Rechtecken zufälliger Höhe und fester Breite. Eines dieser
+                    Rechtecke repräsentiert die Landeplattform. </p>
+                <h2>Klassenmodellierung</h2>
+                <p>Im Starterpaket sind bereits zwei Klassen angelegt, die Sie aus Übungen mit der <code>GraphicsApp</code>
+                    bereits kennen:</p>
+                <ul>
+                    <li><a name="LunarLander.java/LunarLander" style="padding-top: 50px; margin-top: -50px;"> </a> <a id="LunarLander.java/LunarLander" href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20class%20LunarLander%20"><code>LunarLander</code></a>
+                        enthält die GraphicsApp-Anwendung mit <a name="LunarLander.java/initialize" style="padding-top: 50px; margin-top: -50px;"> </a> <a id="LunarLander.java/initialize" href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20void%20initialize(">
+                            <code>initialize()</code> </a>, <a name="LunarLander.java/draw" style="padding-top: 50px; margin-top: -50px;"> </a> <a id="LunarLander.java/draw" href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20void%20draw(">
+                            <code>draw()</code> </a> und
+                        <a name="LunarLander.java/setupCanvas" style="padding-top: 50px; margin-top: -50px;"> </a> <a id="LunarLander.java/setupCanvas" href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=private%20void%20setupCanvas(">
+                            <code>setupCanvas()</code> </a>
+                    </li>
+                    <li><a name="LunarLanderLauncher.java/LunarLanderLauncher" style="padding-top: 50px; margin-top: -50px;"> </a> <a id="LunarLanderLauncher.java/LunarLanderLauncher" href="LinkToCode?class=LunarLanderLauncher.java&amp;path=/src/&amp;function=public%20class%20LunarLanderLauncher"><code>LunarLanderLauncher</code></a>
+                        enthält die <a name="LunarLanderLauncher.java/main" style="padding-top: 50px; margin-top: -50px;"> </a> <a id="LunarLanderLauncher.java/main" href="LinkToCode?class=LunarLanderLauncher.java&amp;path=/src/&amp;function=public%20static%20void%20main(">
+                            <code>main()</code> </a>-Methode
+                    </li>
+                </ul>
+                <p>Ihre Aufgabe ist es, die Spielelemente sinnvoll in weitere Klassen abzubilden. Die Hauptbestandteile der
+                    Anwendung sind die Mondoberfläche mit Landeplattform, der Lander und die Treibstoffanzeige. In der
+                    <code>LunarLander</code>-Klasse sollte Code zur Initialisierung, Zeichenaufrufe und Code zur Weitergabe
+                    der <code>KeyPressedEvents</code> liegen. Die Grundlagen der eventbasierten Programmierung mit der
+                    GraphicsApp können Sie auch noch einmal <a href="https://regensburger-forscher.de/oop-slides/index.html?slides=08-Interfaces-und-Event-basierte-Programmierung&amp;startAtSlide=28">hier</a>
+                    nachlesen. Der Spielzustand soll ebenfalls in der Klasse <code>LunarLander</code> verwaltet werden.</p>
+            </section>
+            <section class="page-break"><a class="anchor" name="Vorgaben"></a>
+                <h1>Vorgaben</h1>
+                <h2>Mondoberfläche</h2>
+                <p>Zeichnen Sie die Mondoberfläche mit Rechtecken zufälliger Höhe und fester Breite. Damit die Oberfläche
+                    nicht ganz so wild aussieht, nutzen Sie die folgende Methode, um die erzeugten Höhenwerte zu
+                    glätten:</p>
+                <pre class="prettyprint"> 
+private void smoothPoints(ArrayList<Integer> points) {
+    for (int i = 0; i < points.size(); i++) {
+        float sum = 0;
+        for (int j = -SMOOTHING_FILTER_SIZE/2; j < SMOOTHING_FILTER_SIZE/2; j++) {
+            int newIndex = i + j;
+            if (newIndex >= 0 && newIndex < points.size()) {
+                sum += points.get(i + j);
+            }
+        }
+        sum /= SMOOTHING_FILTER_SIZE;
+        points.set(i, (int) sum);
+    }
+}      
+                </pre>
+                <p>Die Konstante <code>SMOOTHING_FILTER_SIZE</code> muss in der gleichen Klasse angelegt werden, in der die
+                    Methode eingesetzt wird.</p>
+                <p><b>Landeplattform</b> Damit der Lander bequem landen kann, müssen die Rechtecke mindestens so breit sein
+                    wie dieser. Um erfolgreich zu landen, muss der Lander komplett auf dem Rechteck ankommen. Berührt der
+                    Lander andere Teile der Mondoberfläche, ist das Spiel verloren.</p>
+                <h2>Lander</h2>
+                <p>Dem Lander sollen Spieler über die Pfeiltasten Lenkimpulse geben können, während er konstant nach unten
+                    gezogen wird, um die Schwerkraft zu simulieren. Probieren Sie aus, mit welcher Kombination aus
+                    Impulsstärke und Schwerkraft das Spiel gut spielbar wird. Im Ordner <code>data\assets</code> liegt ein
+                    Bild, welches Sie für den Lander verwenden können.</p>
+                <p><b>Lenkimpuls</b>: Nach Drücken der entsprechenden Pfeiltaste soll der Lander beschleunigt werden. Über
+                    die nächsten Wiederholungen des <code>draw()</code>-Loops in <code>LunarLander</code> soll diese
+                    Beschleunigung wieder abnehmen. Im zur Verfügung gestellten Video ist zu sehen, wie das Lenkverhalten
+                    aussehen soll. Achten Sie darauf, eine Maximalgeschwindigkeit einzurichten, damit das Verhalten
+                    realistischer wirkt. Der Lander darf das Spielfeld nicht verlassen.</p>
+                <p>Jeder Lenkimpuls verbraucht Treibstoff. Ist aller Treibstoff verbraucht, bevor der Lander gelandet ist,
+                    ist das Spiel verloren.</p>
+                <h2>Treibstoffanzeige</h2>
+                <p>Der zur Verfügung stehende Treibstoff sollte als Balken links oben im Spielfeld angezeigt werden, und bei
+                    jedem Lenkimpuls proportional verkleinert werden.</p>
+            </section>
+            <section><a class="anchor" name="Demo"></a>
+                <h1>Demo-Video</h1>
+                <div style="width: 80%; margin: 0 auto; display: block; overflow:hidden">
+                    <video controls>
+                        <source style="" src="../LocalStorage/videos/lunar_lander.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+            <section><a class="anchor" name="Vorgehen"></a>
+                <h1>Vorgehen</h1>
+                <p>Die gestellte Aufgabe ist nicht trivial. Der Schlüssel zur Lösung liegt in einer sorgfältigen Analyse des
+                    Problems, der sinnvollen Strukturierung des Programms und einer korrekten Behandlung der Steuerung und
+                    Kollision mit der Oberfläche.</p>
+                <p>Achten Sie bei der Modellierung des Landers darauf, dass die wirkenden Impulse sinnvoll modelliert
+                    werden, so dass auch ein lineares Abklingen gut umgesetzt werden kann. In jedem Schleifendurchlauf muss
+                    geprüft werden, ob der Lander mit einem Teil der Landschaft kollidiert.</p>
+            </section>
+        </article>
+    </content>
+    <!--Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon  -->
+    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown -->
+    <script language="JavaScript">
+    // When the user clicks on the button, toggle between hiding and showing the dropdown content    function toggleShowContent() {    document.getElementById("handoutDropdownContent").classList.add("show");    }    // Close the dropdown if the user clicks outside of it -->    window.onclick = function(event) {        if (!event.target.matches('.dropbtn-handout')) {            var dropdowns = document.getElementsByClassName("dropdownHandoutContent");            var i;            for (i = 0; i < dropdowns.length; i++) {                var openDropdown = dropdowns[i];                if (openDropdown.classList.contains('show')) {                    openDropdown.classList.remove('show');      }    }  }}
+    </script>
 </body>
+
 </html>
