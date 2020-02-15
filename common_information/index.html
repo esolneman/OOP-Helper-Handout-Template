@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OOP-Nachschlagewerk</title>
+    <link rel="stylesheet" type="text/css" href="../res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi-print.css" media="print"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<div id="navBar" class="topnav">
+    <a href="index.html" class="active">Start</a>
+    <div class="dropdown">
+        <button onclick="window.location.href='OOP_17WS_Handout_CodingStyles.html'" class="dropbtn">Coding Styles
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_CodingStyles.html#messycode">The messy code trap</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#readable">Readable</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#varnames">Variable names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#methodnames">Method names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#whitespaces">Whitespace</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#indentation">Indentation</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#comments">Comments</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button  onclick="window.location.href='OOP_17WS_Handout_Variablens.html'" class="dropbtn">Variables
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_Variablens.html#localVar">Local Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#blockScope">Block Scope</a>
+            <a href="OOP_17WS_Handout_Variablens.html#instanceVar">Instance Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#classVar">Class Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#constants">Constants</a>
+        </div>
+    </div>
+    <a href="shortcuts.html">Shortcuts</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<content>
+    <section class="descritpion">
+        <h1>Nachschlagewerk</h1>
+        Dies ist ein Nachschlagewerk für die Studierenden des OOP-Kurses. Hier findet ihr Informationen bezüglich
+        allgemeiner Bewertungskriterien (             <a href="OOP_17WS_Handout_CodingStyles.html">Coding Styles</a>
+,             <a href="OOP_17WS_Handout_Variablens.html">Variablen</a>
+) und häufig vorkommender <a href="shortcuts.html">Shortcuts</a>
+        <p>Des Weiteren findet ihr hier ein <a href="tutorial.html">Tutorial</a> für die Benutzung des Plugins, in dem alle Funktionen erklärt werden.
+        </p>
+        Viel Erfolg beim Bearbeiten der Studienleistung.
+    </section>
+</content>
+
+
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<script language="JavaScript">
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+<!--
+
+add navbar html: https://stackoverflow.com/a/33876057
+
+<script language='javascript' src="//code.jquery.com/jquery.min.js"></script>
+<script language='javascript'>
+function getNavBar(){
+$.get("navbar.html", function(data){
+    $("#helpPageNavBar").replaceWith(data);
+});
+}
+</script>
+
+-->
+
+
+</body>
+</html>

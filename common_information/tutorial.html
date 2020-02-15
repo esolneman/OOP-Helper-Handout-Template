@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>OOP-Nachschlagewerk</title>
+    <link rel="stylesheet" type="text/css" href="../res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi-print.css" media="print"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<div id="navBar" class="topnav">
+    <a href="index.html">Start</a>
+    <div class="dropdown">
+        <button onclick="window.location.href='OOP_17WS_Handout_CodingStyles.html'" class="dropbtn">Coding Styles
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_CodingStyles.html#messycode">The messy code trap</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#readable">Readable</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#varnames">Variable names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#methodnames">Method names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#whitespaces">Whitespace</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#indentation">Indentation</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#comments">Comments</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button  onclick="window.location.href='OOP_17WS_Handout_Variablens.html'" class="dropbtn">Variables
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_Variablens.html#localVar">Local Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#blockScope">Block Scope</a>
+            <a href="OOP_17WS_Handout_Variablens.html#instanceVar">Instance Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#classVar">Class Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#constants">Constants</a>
+        </div>
+    </div>
+    <a href="shortcuts.html">Shortcuts</a>
+    <a href="tutorial.html" class="active">Tutorial</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<body>
+<content>
+    <article>
+    <section>
+        <h1>Funktionen des Plugins im Überblick</h1>
+        Dieses Plugin dient der Unterstützung während der Bearbeitung der Studienleistung. Inhalte, die für die Studienleistung benötigt werden, werden teilweise interaktiv dargestellt. <br>
+        Das Plugin teit sich auf in einen zusätzlichen <b>Menüeintrag</b> (a) und ein <b>ToolWindow</b> (b) mit weiteren Tabs.
+        
+        <span class="gallery">
+            <img src="../img/pligin_appearance.PNG" alt="link to code" class="imageTutorial">       
+        </span>
+        <p>
+        <b>Menüeintrag</b> <br>
+        Das Menü gliedert sich in die Funktionen "Tutorial" und "Update Handout Data".
+        Über "Tutorial" wird direkt dieser Tutorial-Eintrag im ToolWindow geöffnet und über "Update Handout Data" kannst du manuell überprüfen, ob Änderungen der Inhalte zum Herunterladen vorhanden sind.
+         </p>
+        
+        
+        <p>
+        <b>ToolWindow</b> <br>
+        Das ToolWindow besteht aus verschiedenen <b>Tabs</b> (a) und Funktionen in der <b>Toolbar</b> (b)
+        <span class="gallery">
+            <img src="../img/toolBar.PNG" alt="link to code" class="imageTutorial" si>       
+        </span>
+            
+        Sollte das ToolWindow so schmal sein, dass nicht alle Tabs nebeneinander passen, sind die übrigen eingeklappt neben dem letzten sichtbaren Tab zu finden. 
+        <br>
+        Wenn der Button für das ToolWindow verschwunden ist. Kann man das ToolWindow über den Menüreiter "View/ToolWindows/Aufgabe(OOP)" wieder herstellen.
+        <img src="../img/getToolWindow.PNG" alt="link to code" class="imageTutorial" style="width: 50%; height: 50%"> 
+            
+        Die Tabs gliedern sich in folgende Funktionsbereiche:
+        </p>
+        <ul>
+            <li> <a href="#InteraktivesHandout">Handout</a> </li>
+            <li> <a href="#Aufgaben">Aufgaben</a> </li>
+            <li> <a href="#Notizen">Notizen</a> </li>
+            <li> <a href="#Bewertungskriterien">Bewertungskriterien</a> </li>
+            <li> <a href="#Hilfe">Hilfe</a> </li>
+        </ul>
+  
+        
+    </section>
+        
+        
+    <section class="descritpion">
+        <a class="anchor" name="InteraktivesHandout"></a>
+        <h2>Interaktives Handout</h2>
+        In dem Tab "Handout" wird das Handout für die aktuelle Studienleistung dargestellt. 
+        Dieses ist interaktiv konzipiert. <br>
+        
+        Du kannst durch einen Klick auf einen hervorgehobenen Klassen- oder Methodennamen, direkt zur passenden Stelle im Code springen.
+         <br>
+        <span class="gallery">
+            <img src="../img/linkFromHandoutToCode.png" alt="link to code" class="imageTutorial">       
+        </span>
+        <br>
+        Des Weiteren funktioniert dies auch umgekehrt. Führst du einen Doppelklick auf den Namen einer Methoden im Code aus, öffnet sich das Handout an der Stelle, an dem diese Methode oder Klasse erklärt wird. Dies funktioniert nur mit den Methoden, von denen du auch in den Code springen kannst und die im Handout erklärt werden.
+    </section>
+        
+    <section class="descritpion">
+        <a class="anchor" name="Aufgaben"></a>
+        <h2>Aufgaben</h2>
+        Dieser Bereich ist unterteilt in zwei verschieden ToDo-Listen, die du bei abhaken kannst, wenn du die Aufgabe erfüllt hast. <br>Zum einen wird dir bei den "Anforderungen" eine Liste an Aufgaben angezeigt, die dir die Dozenten zur Verfügung stellen. Die Liste kann dir als Unterstützung dienen, die Studienleistung zu bearbeiten, sodass du keine wesentlichen Schritte vergisst. Die Aufgabenbeschreibungen kannst du nicht verändern und auch keine Elemente löschen. 
+        <br>
+        Deine "Eigenen Aufgaben" kannst du beiebig anpassen: Aufgabenbeschreibeungen ändern Aufgaben löschen und neue Aufgaben hinzufügen.
+    </section>
+
+    <section class="descritpion">
+        <a class="anchor" name="Notizen"></a>
+        <h2>Notizen</h2>
+        In diesem Tab hast du die Möglichkeit dir Notizen zu machen. Zum Beipiel um dir zu notieren, was du bereits erledigt hast oder dir zu merken, woran du als nächstes arbeiten willst, wenn du eine Pause machst. <br>
+        Beim Editieren kannst du den kompletten Text mit Hilfe eines HTML-Editors anpassen und dir selbst ausuchen in welcher Form du diese speichern willst.
+    </section>
+        
+    <section class="descritpion">
+        <a class="anchor" name="Bewertungskriterien"></a>
+        <h2>Bewertungskriterien</h2>
+        In diesem Tab findest du die Bewertungskriterien für die aktuelle Studienleistungen. Diese ist identisch zu der in Grips hinterlegten.
+    </section>
+        
+    <section class="descritpion">
+        <a class="anchor" name="Hilfe"></a>
+        <h2>Hilfe</h2>
+        Der "Hilfe"-Tab enthält informationen über Variablen, Coding Styles, nützliche Shortcuts für die Benutzung der Entwicklungsumgebung, sowie dieses Tutorial.
+        <p></p>    
+        </section>
+        
+    </article>
+</content>
+
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<script language="JavaScript">
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+</body>
+</html>

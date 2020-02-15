@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Notizen</title>
+    <link rel="stylesheet" type="text/css" href="../LocalStorage/res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<div id="navBar" class="topnav">
+    <div class="headerDiv">
+        <div class="headerText">Deine Notizen
+        <!-- call function in java: https://stackoverflow.com/a/34547416 -->
+        <button onclick="noteAddingFrame.showAddNoteFrame();" class="editNotesButton" title="Editiere die Notizen"><i class="fa fa-edit"></i></button>
+        </div>
+    </div>
+</div>
+<content>
+    <section>
+        <div class="notesList" id="notesList">
+            <p id=date style="text-align: right;">23.11.2019 14:15</p>
+            <p><strong>Die erste Notiz</strong></p>
+            <p>Hier kannst du Notizen verfassen, zum Beispiel um zu notieren</p>
+            <ul>
+                <li>woran du als letztes gearbeitet hast, wenn du eine Pause machst,</li>
+                <li>was du vorhast als nächstes zu machen oder</li>
+                <li>was du dir sonst noch merken willst</li>
+            </ul>
+            <p>Du kannst deine Notizen bearbeiten, indem du auf den "Edit-Button" neben der Seitenüberschrift
+                klickst.</p>
+            <hr>
+            <br>
+        </div>
+    </section>
+</content>
+</body>
+</html>

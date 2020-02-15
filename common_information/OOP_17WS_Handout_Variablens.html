@@ -1,0 +1,276 @@
+<!-- 
+Source: Mehran Sahami, October 2013, Variables, variables, everywhere...
+http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/18-variables.pdf
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OOP-Nachschlagewerk</title>
+    <link rel="stylesheet" type="text/css" href="../res/css/oop-mi.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="res/css/oop-mi-print.css" media="print"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<!--add navbar html: https://stackoverflow.com/a/33876057-->
+<!--<div id="helpPageNavBar"></div>-->
+
+
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<div id="navBar" class="topnav">
+    <a href="index.html">Start</a>
+    <div class="dropdown">
+        <button onclick="window.location.href='OOP_17WS_Handout_CodingStyles.html'"  class="dropbtn">Coding Styles
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_CodingStyles.html#messycode">The messy code trap</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#readable">Readable</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#varnames">Variable names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#methodnames">Method names</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#whitespaces">Whitespace</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#indentation">Indentation</a>
+            <a href="OOP_17WS_Handout_CodingStyles.html#comments">Comments</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button  onclick="window.location.href='OOP_17WS_Handout_Variablens.html'" class="dropbtn active">Variables
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="OOP_17WS_Handout_Variablens.html#localVar">Local Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#blockScope">Block Scope</a>
+            <a href="OOP_17WS_Handout_Variablens.html#instanceVar">Instance Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#classVar">Class Variables</a>
+            <a href="OOP_17WS_Handout_Variablens.html#constants">Constants</a>
+        </div>
+    </div>
+    <a href="shortcuts.html">Shortcuts</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<content>
+    <section>
+         <h1>Variables, variables, everywhere...</h1>
+            <p>
+            Einführung in die objektorientierte Programmierung mit Java, WS1718 - Alexander Bazo, Florin Schwappach 10. Oktober 2017 
+            </p>
+            
+            <p class="roundBorder"> Dieser Text stammt aus einem Handout für den Kurs CS106A der Universität Stanford: <a href="http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/
+18-variables.pdf">http://stanford.edu/class/archive/cs/cs106a/cs106a.1142/handouts/
+18-variables.pdf </a>       
+                <br>
+                <i>Most of this handout was written by Nick Parlante</i>
+            </p>
+<a class="anchor" name="localVar"></a>
+<h2>Local Variables</h2>
+<p>
+When writing a paper, you can have well-crafted, correctly spelled sentences and
+create “A“ work. Or you can hack out the text in a hurry. It will not look as good,
+but it can convey your thoughts and get the job done; it’s worth maybe a “B“ or a
+“C“. Computer code is not like that. Code that is messy tends to have all sorts of
+bugs and other problems. Messy code attracts problems like a half-eaten lollipop
+attracts lint. The problems and bugs in poorly written code tend to compound each
+other and pile up, so the code ends up nearly worthless. It has bugs. Nobody
+knows how to fix them or add features without creating more bugs. Once code is in
+that state, it is hard to escape. In a sense, code tends to be more either “A“, or “D“
+or “F“. Therefore, it is best to write code that is clean to start, and keep it clean as
+you add features. This is one of the lessons in CS for successfully building large
+projects. For that reason CS 106A emphasizes the habits of clean, well-engineered
+            code right from the start, building the right habits for the future.</p> 
+<p>
+One reason to write clean, well-structured code is that it works better and takes less
+time in the end. The other reason to write clean code is that it is just more
+satisfying to do a good job on something. Clear, elegant code feels right, just like
+any other engineering or artistic creation. Doing it right the first time is better for
+your engineering soul.
+        </p>
+        <h2>Local Variables Example</h2>
+        <p>Consider, for example, the following snippet of code.</p>
+<span class="gallery">
+<img src="img-var/img-localVar.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+<p>
+The variables <i>a</i> and <i>b</i> are local variables declared within different methods in the
+class <b>AnExample</b>. Because these variables are local variables, <i>a</i> can only be referred
+to within <b>methodOne</b> and variable <i>b</i> can only be accessed within <b>methodTwo</b>. Our
+attempt to initialize <i>b</i> using the value of <i>a</i> is illegal, as code in <b>methodTwo</b> cannot
+access local variables from <b>methodOne</b> or any other method. Because local variable values do not persist after their containing method has
+completed, the variable <i>a</i> will be destroyed when <b>methodOne</b> has completed
+execution. The next time <b>methodOne</b> is called, <i>a</i> new variable a will be created.
+</p>
+</section>
+<section>
+<a class="anchor" name="blockScope"></a>
+<h2>Block Scope</h2>
+<p>While we typically think of local variables as local to a particular method, in Java
+local variables are actually local to a <i>block</i> of code. While a method defines a block
+of code (since the opening and closing braces of the method define a block), <i>for</i> and
+<i>while</i> loops, <i>if</i> -statements, and other constructs are also considered blocks of code.
+If we declare a local variable inside one of these constructs, the local variable will
+be created when it is declared in the block and destroyed when the block ends
+execution. Consider the following example:</p>
+    
+<span class="gallery">
+<img src="img-var/img-block.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+
+<p>
+The variable <i>a</i> is local to <b>methodThree</b>, so accessing a within the <b>for</b> loop, or in the <b>println</b> is fine. The variables <i>i</i> and <i>b</i> are only in scope (i.e., “alive“) within the
+confines of the for loop in which they are declared. They are no longer available by
+the time the last two printlns try to access them. The variable <i>c</i> is only in scope within the confines of the <b>if</b> statement body in which it is declared. Note that <i>a</i> new
+copy of <i>c</i> will get created each time the <b>if</b> statement body is executed, therefore it
+cannot be used to store values across iterations of the <b>for</b> loop.
+</p>
+</section>
+
+<section>
+<a class="anchor" name="instanceVar"></a>
+<h2>Instance Variables</h2>
+<p>Instance variables (also known as “ivars“) are defined as part of a class, but not
+within any particular method of the class. Each object of the class will have its own
+independent copy of all the instance variables defined in a class. Instance variables
+are created when an object is created. They are destroyed when their corresponding
+object is destroyed. Instance variables can be accessed from any method defined as
+part of the class in which the instance variable is defined. Access to instance
+variables from <i>other</i> classes is controlled by the variable’s visibility specifier (e.g.,
+<b>public</b> or <b>private</b>). Instance variables that are <b>public</b> are accessible from methods in
+other classes while those that are <b>private</b> (which is by far the more common case)
+are not.
+</p>
+<h2>Instance Variables Examples</h2>
+<span class="gallery">
+<img src="img-var/img-inst1.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+    
+<p>
+In this case we have a class <b>Thing</b> which has an instance variable <i>x</i>. Each instance
+of the class has its own independent copy of the variable. Our main program creates
+three instances (objects) of the <b>Thing</b> class. It then sets the value of each instance’s
+<i>x</i> variable. Because there are three different Thing objects, there are three different
+<i>x</i> variables—one <i>x</i> variable per instance. We can change the variable values
+independently from one another. When we print out the results we’ll see:
+</p>
+<span class="gallery">
+<img src="img-var/img-inst2.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+</section>
+
+<section>
+<a class="anchor" name="classVar"></a>
+<h2>Class Variables</h2>
+    
+<p>
+As with instance variables, class variables are defined as part of a class. However, in
+contrast to instance variables, with a class variable there is only one copy of the
+variable which is shared by all instances of the class. Similar to an instance variable,
+a class variable can be accessed by any method in the class in which the variable is
+declared. Access to class variables from other classes is controlled by the variable’s
+visibility specifier (e.g., <b>public</b> or <b>private</b>). Class variables that are <b>public</b> are
+accessible from methods in other classes while those that are <b>private</b> are not.
+</p>
+    
+<p>
+Syntactically, class variable declarations are distinguished from instance variable
+declarations by using the keyword <b>static</b> before the variable type in the variable
+declaration. Because of this, class variables are sometimes referred to as <b>static</b>
+variables. Note that the constants you have seen so far were all in fact class
+variables, since they were defined using the keyword <b>static</b>, and it would make
+sense that all objects of a particular class would share the same value for some
+constant.
+</p>
+    
+<h2>Class Variables Examples</h2>
+<span class="gallery">
+<img src="img-var/img-class1-1.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+    <span class="gallery">
+<img src="img-var/img-class1-2.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+
+
+<p>
+In this case we have a class <b>Thing</b> which has a public instance variable <i>x</i> and <i>a</i>
+public class variable <i>y</i>. All instances (objects) of that class share the variable. Our
+main program creates three instances of the <b>Thing</b> class. When it changes the value
+of <i>y</i>, it is changing the value shared by all the instances. When we print the results,
+we’ll see:
+</p>
+    
+<span class="gallery">
+<img src="img-var/img-class2.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+
+<p>
+As seen in the example above, a public class variable can be accessed via the name
+of the class instead of through an instance of the class like this:
+</p>
+    
+<span class="gallery">
+<img src="img-var/img-class3.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+    
+<p>
+This has an important advantage over accessing the variable via the name of an
+instance of the object: it emphasizes that <i>y</i> is really a property of the class, shared
+by all the instances of a class, rather than a property of a particular instance of the
+class. Compare the following two code snippets:
+</p>
+<i>Example 1</i>
+<span class="gallery">
+<img src="img-var/img-class4.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+<i>Example 2</i>
+<span class="gallery">
+<img src="img-var/img-class5.PNG" alt="link to code" class="imageTutorial" si> 
+</span>
+    
+
+<p>
+Looking at <i>Example 1</i>, we cannot tell whether <i>y</i> is an instance variable or a class
+variable. In order to know for sure which type of variable is in use, we need to
+search out the declaration for the <i>y</i> variable and see if it used the <b>static</b> keyword. In
+contrast, looking at <i>Example 2</i>, we see that <i>y</i> must be a class variable, because we
+cannot access an instance variable using a class name. Because of this reason, using
+the name of the class (rather than the name of an instance) is the preferred method
+for accessing a class variable.
+</p>
+    
+</section>
+    
+<section>
+<a class="anchor" name="constants"></a>
+<h2>Constants</h2>
+
+<p>
+As we discussed in class, we will sometimes find it useful to define a “variable“
+whose value does not change during the entire program. Such a variable is called a
+<b>constant</b>. In this case, the constant does not fulfill the traditional purpose of a
+variable (i.e., storing a temporary program value). To declare a variable as a
+constant, use the keyword <b>final</b> when declaring the variable. As mentioned above,
+virtually all constants are <i>class</i> variables. However, it is possible to also define
+constant instance variables or constant local variables.
+</p>
+
+</section>
+
+
+</content>
+        <!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+        <script language="JavaScript">
+            function myFunction() {
+                var x = document.getElementById("navBar");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+        </script>
+</body>
+</html>

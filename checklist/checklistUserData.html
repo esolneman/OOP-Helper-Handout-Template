@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>User Data Checklist</title>
+ <link rel="stylesheet" type="text/css" href="../../LocalStorage/res/css/oop-mi-checklist.css" media="screen">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+    
+<body>
+<div id="navBar" class="topnav">
+    <a href="checklistPredefined.html">Anforderungen</a>
+    <a href="checklistUserData.html"class="active">Eigene Aufgaben</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<content>
+    <div id="myDIV" class="checklistHeader">
+        <input type="text" id="newTaskDescription" placeholder="Neue Aufgabe...">
+        <span class="addBtn" id="addTaskButton">Hinzufügen</span>
+    </div>
+    <ul id="userDataTaskList">
+    </ul>
+    
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<script language="JavaScript">
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</content>
+</body>
+</html>

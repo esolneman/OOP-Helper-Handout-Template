@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Predefined Checklist</title>
+    <link rel="stylesheet" type="text/css" href="../../LocalStorage/res/css/oop-mi-checklist.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div id="navBar" class="topnav">
+    <a href="checklistPredefined.html" class="active" >Anforderungen</a>
+    <a href="checklistUserData.html" >Eigene Aufgaben</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></div>
+<content>
+    <div id="myDIV" class="checklistHeader"> 
+        Diese Aufgaben sollen dir Helfen deine Studienleistung zu bearbeiten und wurden dir von deinem Dozenten bereit gestellt. <br>
+        Du kann kannst die Aufgaben abhaken , wenn du sie erledigt hast.
+        Diese Aufgabenbschreibungen sind nicht veränderbar oder löschbar. 
+    </div>
+    <ul id="predefinedTaskList"></ul>
+    
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+<script language="JavaScript">
+function myFunction() {
+  var x = document.getElementById("navBar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</content>
+</body>
+</html>
