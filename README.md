@@ -20,8 +20,7 @@ Speichere die Datei im Starterpaket der Studienleistung / Übungsaufgabe im Wurz
 ### Handout
 Das Handout befindet sich im Wurzelverzeichnis mit den Namen *index.html*. Folgende zusätzliche Änderungen können vorgenommen werden:
 
-** Links vom Handout zum Code **
-Für die Erstellung eines Links vom Handout zum Code wird ein Hyperlink erstellt mit einer *id* und einem *href*-Attribut, welches die Url spezifiziert. Die Url besteht aus einem Bezeichner für die Art des Links *LinkToCode* und Parameter für den Klassennamen *class*, den Pfad im Projektverzeichnis *path* und des Funktionsnamens *function*. Im Fall eines Linkes auf eine Klasse ist der Funktionsname wieder der Klassenname. Im Fall eines Linkes auf eine Funktion werden zusätzliche Inforamtionen der ersten Zeile der Funktion mit eingefügt um sicherzustellen, dass der Link zu der Funktion führt und nicht zu einem Aufruf dieser Funktion.
+**Links vom Handout zum Code** Für die Erstellung eines Links vom Handout zum Code wird ein Hyperlink erstellt mit einer *id* und einem *href*-Attribut, welches die Url spezifiziert. Die Url besteht aus einem Bezeichner für die Art des Links *LinkToCode* und Parameter für den Klassennamen *class*, den Pfad im Projektverzeichnis *path* und des Funktionsnamens *function*. Im Fall eines Linkes auf eine Klasse ist der Funktionsname wieder der Klassenname. Im Fall eines Linkes auf eine Funktion werden zusätzliche Inforamtionen der ersten Zeile der Funktion mit eingefügt um sicherzustellen, dass der Link zu der Funktion führt und nicht zu einem Aufruf dieser Funktion.
 ```
 Link auf eine Methode
 <a id="LunarLanderLauncher.java/LunarLanderLauncher" href="LinkToCode?class=LunarLanderLauncher.java&amp;path=/src/&amp;function=public%20class%20LunarLanderLauncher">
@@ -32,20 +31,19 @@ Link auf eine Klasse
 <a id="LunarLander.java/LunarLander" href="LinkToCode?class=LunarLander.java&amp;path=/src/&amp;function=public%20class%20LunarLander%20"><code>LunarLander</code></a>
 ```
 
-** Links vom Code zum Handout **
-Für die Erstellung des Linkes in die entgegengesetzte Richtung wird ein Hyperlink gesetzt mit einem *name*-Attribut, welches aus dem Klassennamen und dem Namen der Methode oder Funktion zusammengesetzt ist.
+**Links vom Code zum Handout** Für die Erstellung des Linkes in die entgegengesetzte Richtung wird ein Hyperlink gesetzt mit einem *name*-Attribut, welches aus dem Klassennamen und dem Namen der Methode oder Funktion zusammengesetzt ist.
 ```
 <a name="LunarLander.java/LunarLander" style="padding-top: 50px; margin-top: -50px;"></a>
 ```
 
-** Links zu einer speziellen Folie im Foliensatz **
+**Links zu einer speziellen Folie im Foliensatz**
 
 Zur Erstellung eines Links für eine bestimmte Seite im foliensatz, um zum Beispiel auf ein Konzept zu verweisen, wird die entsprechende als Parameter *startAtSlide* mitgegeben.
 ```
 <a href="https://regensburger-forscher.de/oop-slides/index.html?slides=08-Interfaces-und-Event-basierte-Programmierung&amp;startAtSlide=28">hier</a>
 ```
 
-** Einbinden des Videos **
+**Einbinden des Videos**
 
 Zum Einbinden des Videos muss dieses in den dafür vorhergesehenen Ordner im Repository speichern */videos* und den Pfad für das Video entsprechend anpassen. Das Foramt des Videos sollte zur Sicherstellung der Funktionalität *mp4* sein.
 
