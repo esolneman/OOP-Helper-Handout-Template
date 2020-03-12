@@ -1,5 +1,7 @@
 # OOP-Helper-Handout-Template
 
+Dies ist ein Template für die Kursmaterialien, die im Plugin [OOP-Helper-Handout] (https://github.com/esolneman/OOP-Helper-Handout-Plugin) dargestellt werden.
+
 ## Anleitung
 
 Kopiere den Masterbranch und passe den Inhalt an. Hierbei ist zu beachten, dass die Struktur nich verändert werden darf, sondern nur der Inhalt.
