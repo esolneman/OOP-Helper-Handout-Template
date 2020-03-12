@@ -1,6 +1,6 @@
 # OOP-Helper-Handout-Template
 
-Dies ist ein Template für die Kursmaterialien, die im Plugin [OOP-Helper-Handout] (https://github.com/esolneman/OOP-Helper-Handout-Plugin) dargestellt werden.
+Dies ist ein Template für die Kursmaterialien, die im Plugin [OOP-Helper-Handout](https://github.com/esolneman/OOP-Helper-Handout-Plugin) dargestellt werden.
 
 ## Anleitung
 
