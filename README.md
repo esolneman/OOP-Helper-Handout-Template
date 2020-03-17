@@ -50,7 +50,7 @@ Zur Erstellung eines Links für eine bestimmte Seite im foliensatz, um zum Beisp
 Zum Einbinden des Videos muss dieses in den dafür vorhergesehenen Ordner im Repository speichern */videos* und den Pfad für das Video entsprechend anpassen. Das Foramt des Videos sollte zur Sicherstellung der Funktionalität *mp4* sein.
 
 
-### Vordefinierte Anforderungen (checkliste)
+### Vordefinierte Anforderungen (Aufgabenliste)
 
 Die vordefinierte Checkliste kann in der Datei */checklist/checklist.json* angepasst werden. 
 Ein einzelner Task besteht aus einer Aufgabenbeschreibung *taskDescription*, einer Kennzeichnung für den Status Aufgabe *checked* und einem eindeutigen Bezeichner *id*.
