@@ -1,11 +1,5 @@
 # OOP-Helper-Handout-Template
 
-Descritpion
---> copy template branch
---> adapt to task
---> copy branch name in configuration file and add it to the project folder
+Dies ist das Template, das während der Arbeit an dem Plugin benutzt wurde
 
-TODO: Write detailed description
-ToDo: Merge in Master
-
-Test text
+Die verwendetetn Icons stammen von Fontawesome, CC BY 4.0 License
