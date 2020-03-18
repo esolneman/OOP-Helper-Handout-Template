@@ -71,3 +71,7 @@ Dazu werden die Bewertungkriterien in die HTML-Tabelle eingefügt. Hierbei ist z
     Die restlichen Dateien und Inhalte müssen nicht extra für eine Studienleistung angepasst werden.
     Bei Bedarf können weitere Shortcuts */common_information/shortcuts.html* hinzugefügt werden.
     
+    
+    
+Die verwendetetn Icons stammen von Fontawesome, CC BY 4.0 License
+    
