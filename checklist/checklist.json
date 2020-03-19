@@ -5,13 +5,10 @@
   {"taskDescription":"Create *Projectile* class",
    "checked":"false",
    "id": 2},
-  {"taskDescription":"Create *SomeClass*",
-   "checked":"false",
-   "id": 5},
   {"taskDescription":"Create Another *SomeClass*",
    "checked":"false",
    "id": 8},
-  {"taskDescription":"New  Task",
+  {"taskDescription":"Task",
    "checked":"false",
    "id": 9}     
  ]}
